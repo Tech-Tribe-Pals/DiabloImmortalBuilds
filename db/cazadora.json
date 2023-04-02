@@ -1,0 +1,191 @@
+{
+  "skills": [],
+  "items": {
+    "charm": {
+      "title": "Dije Normativo Sobervio",
+      "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680460513/DH/charm/dijeNormativoSobervio_vuytoz.png",
+      "bonus": [
+        "Cortina de humo 2% de daño",
+        "Disparo de ballesta +8% de daño",
+        "Lluvia de venganza +4% de daño",
+        "Venganza +8% de daño",
+        "Disparo múltiple +4% de daño"
+      ]
+    },
+    "head": {
+      "title": "Yelmo de Reservista",
+      "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680460513/DH/head/yelmodeReservista_dxowhh.png",
+      "bonus": [
+        "Habilidad de bonificación (Clasificación 6)",
+        "Habilidad de bonificación (Clasificación 11)",
+        "Habilidad de bonificación (Clasificación 16)"
+      ],
+      "req": [
+        "Nivel necesario: 55",
+        "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+      ]
+    },
+    "shoulders": {
+      "title": "Espaldares del Reselvista",
+      "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680460514/DH/shoulders/EspaldaresdelReselvista_x3t7fu.png",
+      "bonus": [
+        "Habilidad de bonificación (Clasificación 6)",
+        "Habilidad de bonificación (Clasificación 11)",
+        "Habilidad de bonificación (Clasificación 16)"
+      ],
+      "req": ["Nivel necesario: 55", "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"]
+    },
+    "torso": {
+      "title": "Peto del Reservista",
+      "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680460514/DH/torso/petodelReservista_ejfpvl.png",
+      "bonus": [
+        "Habilidad de bonificación (Clasificación 6)",
+        "Habilidad de bonificación (Clasificación 11)",
+        "Habilidad de bonificación (Clasificación 16)"
+      ],
+      "req": [
+        "Nivel necesario: 55",
+        "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+      ]
+    },
+    "wrists": {
+      "title": "Ansia de la Lumbrera",
+      "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680460514/DH/wrists/ansiadelaLumbrera_be7dcy.png",
+      "set": [
+        "Ansias de Vithu",
+        "Manos: Ansia de la lumbrera",
+        "Pies: Ansia de la almenara",
+        "Cintura: Ansia del ejemplar",
+        "Cuello: Ansia del despertador",
+        "Dedo: Ansia modesta",
+        "Dedo: Ansia impudente"
+      ],
+      "bonus": [
+        "Aumenta un 30% la duración de todos los efectos beneficios que afectan a los miembros del grupo o a ti. (2 objetos de conjunto equipados)",
+        "Aumenta un 30% la velocidad de ataque del objetivo durante 3 s cada vez que usas una habilidad para otorgar un efecto beneficioso a un miembro del grupo o a ti. (4 objetos de conjunto equipados)",
+        "Cada vez que utilices una habilidad para otorgaros un beneficio a ti o a un miembro del grupo, creas una zona de apoteosis durante 12 s que os otorga un 12% de drenaje de vida a ti y a los miembros del grupo en su interior. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+      ],
+      "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+    },
+    "waist": {
+      "title": "Ciñetormentas de Shal'baas",
+      "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680460514/DH/waist/ci%C3%B1etormentasdeShalbaasPNG_cwdxwb.png",
+      "set": [
+        "Andrajos de guerra de Shal'baas",
+        "Manos: Doce impactos de Shal'baas",
+        "Pies: Aplastavientos de Shal'baas",
+        "Cintura: Ciñetormentas de Shal'baas",
+        "Cuello: Corazón ardiente de Shal'baas",
+        "Dedo: Sierpe entrelazada de Shal'baas",
+        "Dedo: Colmillos en reposo de Shal'baas"
+      ],
+      "bonus": [
+        "Daño de ataque primario aumentado un 15%. (2 objetos de conjunto equipados)",
+        "Tus ataques primarios aumentan gradualmente tu velocidad de ataque primario hasta un máximo de un 25%. (4 objetos de conjunto equipados)",
+        "Tus ataques primarios tienen un (0.05)*100% de probabilidad de aumentar tu velocidad de ataque primario durante 12 s. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+      ],
+      "req": ["Nivel necesario: 55", "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"]
+    },
+    "weapon": {
+      "title": "Rencorardor",
+      "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680460514/DH/weapon/laHambrienta_byytsj.png",
+      "description": [
+        "Legendario",
+        "Ahora Disparo múltiple dispara flechas flamígeras que infligen daño y queman a los enemigos.",
+        "Tiempo de reutilización de Disparo múltiple reducido un 10%. (Despertada)"
+      ],
+      "bonus": [
+        "Habilidad de bonificación (Clasificación 6)",
+        "Habilidad de bonificación (Clasificación 11)",
+        "Habilidad de bonificación (Clasificación 16)"
+      ],
+      "req": ["Nivel necesario: 55", "Clase: Cazadora de Demonios"]
+    },
+    "offhand": {
+      "title": "La Hambrienta",
+      "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680460513/DH/offhand/reconrador_z7mjfy.png",
+      "description": [
+        "Legendario",
+        "Ahora Disparo de ballesta atraviesa a los enemigos y golpea a los que están detrás.",
+        "Daño de Disparo de ballesta aumentado un 10%. (Despertada)"
+      ],
+      "bonus": [
+        "Habilidad de bonificación (Clasificación 6)",
+        "Habilidad de bonificación (Clasificación 11)",
+        "Habilidad de bonificación (Clasificación 16)"
+      ],
+      "req": ["Nivel necesario: 55", "Clase: Cazadora de Demonios"]
+    },
+    "legs": {
+      "title": "Pantalones del Reservista",
+      "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680460513/DH/legs/pantalonesdelReservista_reqdia.png",
+      "bonus": [
+        "Habilidad de bonificación (Clasificación 6)",
+        "Habilidad de bonificación (Clasificación 11)",
+        "Habilidad de bonificación (Clasificación 16)"
+      ],
+      "req": ["Nivel necesario: 55", "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"]
+    },
+    "feet": {
+      "title": "Ansia de la Almenara",
+      "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680460513/DH/feet/ansiadelaAlmenara_soju1e.png",
+      "set": [
+        "Ansias de Vithu",
+        "Manos: Ansia de la lumbrera",
+        "Pies: Ansia de la almenara",
+        "Cintura: Ansia del ejemplar",
+        "Cuello: Ansia del despertador",
+        "Dedo: Ansia modesta",
+        "Dedo: Ansia impudente"
+      ],
+      "bonus": [
+        "Aumenta un 30% la duración de todos los efectos beneficios que afectan a los miembros del grupo o a ti. (2 objetos de conjunto equipados)",
+        "Aumenta un 30% la velocidad de ataque del objetivo durante 3 s cada vez que usas una habilidad para otorgar un efecto beneficioso a un miembro del grupo o a ti. (4 objetos de conjunto equipados)",
+        "Cada vez que utilices una habilidad para otorgaros un beneficio a ti o a un miembro del grupo, creas una zona de apoteosis durante 12 s que os otorga un 12% de drenaje de vida a ti y a los miembros del grupo en su interior. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+      ],
+      "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+    },
+    "amulet": {
+      "title": "Corazon Ardiente de Shal'baas",
+      "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680460513/DH/amulet/corazonArditntedeSalbaasPNG_jxppp9.png",
+      "set": [
+        "Andrajos de guerra de Shal'baas",
+        "Manos: Doce impactos de Shal'baas",
+        "Pies: Aplastavientos de Shal'baas",
+        "Cintura: Ciñetormentas de Shal'baas",
+        "Cuello: Corazón ardiente de Shal'baas",
+        "Dedo: Sierpe entrelazada de Shal'baas",
+        "Dedo: Colmillos en reposo de Shal'baas"
+      ],
+      "bonus": [
+        "Daño de ataque primario aumentado un 15%. (2 objetos de conjunto equipados)",
+        "Tus ataques primarios aumentan gradualmente tu velocidad de ataque primario hasta un máximo de un 25%. (4 objetos de conjunto equipados)",
+        "Tus ataques primarios tienen un (0.05)*100% de probabilidad de aumentar tu velocidad de ataque primario durante 12 s. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+      ],
+      "req": ["Nivel necesario: 55", "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"]
+    },
+    "rings": [
+      {
+        "title": "Flotabyrecta",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680460513/DH/rings/flotaByecta_wpkcrh.png",
+        "bonus": [
+          "Obtienes Mil vientos al estar en combate, que aumenta un 15% tu velocidad de movimiento. Si sufres daño, Mil vientos se desactiva durante 2 s. (2 objetos de conjunto equipados)",
+          "Aumenta un 20% el daño que infliges mientras dure Mil vientos. (4 objetos de conjunto equipados)",
+          "Obtienes un escudo que te vuelve inmune al daño 5 veces mientras dure Mil vientos. No se puede obtener este escudo más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      },
+      {
+        "title": "Flotajusta",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680460513/DH/rings/flotajusta_xawacp.png",
+        "bonus": [
+          "Obtienes Mil vientos al estar en combate, que aumenta un 15% tu velocidad de movimiento. Si sufres daño, Mil vientos se desactiva durante 2 s. (2 objetos de conjunto equipados)",
+          "Aumenta un 20% el daño que infliges mientras dure Mil vientos. (4 objetos de conjunto equipados)",
+          "Obtienes un escudo que te vuelve inmune al daño 5 veces mientras dure Mil vientos. No se puede obtener este escudo más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      }
+    ]
+  },
+  "gems": []
+}
