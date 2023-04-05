@@ -1,0 +1,23 @@
+@use "build";
+@use "boss";
+@use 'fonts';
+
+header {
+  nav {
+    ul {
+      display: flex;
+      gap: 20px;
+      li {
+        list-style: none;
+        a {
+          &:hover {
+            background-color: #fff;
+            color: #000;
+          }
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

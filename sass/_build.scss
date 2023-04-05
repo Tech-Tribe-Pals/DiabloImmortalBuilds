@@ -1,0 +1,223 @@
+* {
+  padding: 0;
+  margin: 0;
+  
+}
+
+body {
+  background-color: #222;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* -- */ /* CLASES */ /* -- */
+main {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.class {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.class img {
+  height: 250px;
+}
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.btns button {
+  border: solid 2px transparent;
+  background-color: transparent;
+  transition: ease-in 0.1s;
+}
+.btns button img {
+  width: 50px;
+  height: 50px;
+}
+.btns button:hover {
+  scale: 1.5;
+  /* animation: roll .3s infinite; */
+  border-radius: 20px;
+}
+.class .btnBuild {
+  color: #fff;
+  padding: 10px;
+  background-color: transparent;
+  border: solid 2px transparent;
+  margin: 10px 0;
+}
+.class .btnBuild:hover {
+  border: solid 2px #fff;
+}
+progress {
+  transition: ease-in 0.1s;
+}
+/* -- */ /* FIN CLASES */ /* -- */
+
+/* -- */ /* -- // BUILD // -- */ /* -- */
+.build {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  background-color: #222;
+}
+.build .buildGrid {
+  width: 300px;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  flex-wrap: wrap;
+
+  grid-template-columns: repeat(100px, 1fr);
+  grid-template-rows: repeat(80px, 1fr);
+  grid-template-areas:
+    "shoulders head charm"
+    "wrists torso amulet"
+    "weapon waist offhand"
+    "ringL legs ringR"
+    "feet feet feet";
+}
+.build img {
+  /* height: 150px; */
+  width: 70px;
+}
+.build img:hover {
+  cursor: pointer;
+}
+.green {
+  background-color: #231;
+  justify-self: center;
+  align-self: center;
+  border: solid 2px #000;
+}
+.orange {
+  background-color: #633b2c;
+  justify-self: center;
+  align-self: center;
+  border: solid 2px #000;
+}
+.orange.title {
+  background-color: transparent;
+  color: #fdbf82;
+  border: none;
+}
+.build .close {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.build .close:hover {
+  color: #222;
+  background-color: #fff;
+}
+.build .btnBuild {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.build .btnBuild button {
+  background-color: transparent;
+  border: solid 2px transparent;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.build .btnBuild button:hover {
+  color: #000;
+  background-color: #fff;
+}
+.show {
+  display: block;
+}
+.build .charm {
+  grid-area: charm;
+  background-color: #89812144;
+  justify-self: center;
+  align-self: center;
+  border: solid 2px #000;
+}
+.build .head {
+  grid-area: head;
+}
+.build .soulders {
+  grid-area: shoulders;
+}
+.build .torso {
+  grid-area: torso;
+}
+.build .wrists {
+  grid-area: wrists;
+}
+.build .waist {
+  grid-area: waist;
+}
+.build .weapon {
+  grid-area: weapon;
+}
+.build .offhand {
+  grid-area: offhand;
+}
+.build .legs {
+  grid-area: legs;
+}
+.build .feet {
+  grid-area: feet;
+}
+.build .amulet {
+  grid-area: amulet;
+}
+.build .ringR {
+  grid-area: ringR;
+}
+.build .ringL {
+  grid-area: ringL;
+}
+.detail {
+  position: absolute;
+}
+/* -- */ /* -- // FIN BUILD // -- */ /* -- */
+
+/* -- */ /* -- // BUILD DESCRIPTION // -- */ /* -- */
+.bgModal {
+  width: 100%;
+  height: 150%;
+  top: -200px;
+  left: 0;
+  position: absolute;
+  background-color: hsla(0, 9%, 9%, 0.5);
+}
+.buildDescription {
+  /* display: none; */
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #444;
+  width: 400px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 440px) {
+  .buildDescription {
+    width: 100%;
+  }
+}
+/* -- */ /* -- // FIN BUILD DESCRIPTION // -- */ /* -- */

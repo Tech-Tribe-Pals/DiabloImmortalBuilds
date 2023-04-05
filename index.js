@@ -1,6 +1,7 @@
 const myClass = document.getElementById("class");
 const myBtns = document.getElementById("btnClass");
 const build = document.getElementById("build");
+let data = []
 
 const classes = [
   {
@@ -53,8 +54,22 @@ const classes = [
   },
 ];
 
-// funcion para sacar tildes del nombre como por ej: 'barbaro'.
-function sacaTildes(texto) {
+// -- // Funciones internas para optimizar codigo // -- //
+
+const getFetched = async () => {
+  const response = await fetch("./db/cazadora.json");
+  data = await response.json();
+}
+
+const find = (e) => {
+  let found = ''
+  data.items.map(search => {
+    if (search.type === e) found = search
+  })
+  return found
+}
+
+const sacaTildes = (texto) => {
   return texto
     .normalize("NFD")
     .replace(
@@ -63,6 +78,8 @@ function sacaTildes(texto) {
     )
     .normalize();
 }
+
+// -- // -- // --- // -- // -- // -- // -- // --- // -- //
 
 // Genera la clase en cuestion que se seleccione en el div myBtns
 const getClass = (e) => {
@@ -90,65 +107,122 @@ const getBtns = (e) => {
 };
 
 // Genera la build del personaje en cuestion.
-// * en mantenimiento hasta terminar JSON
 const getBuild = async () => {
-  const response = await fetch("./db/cazadora.json");
-  const data = await response.json();
-
+  const grid = document.createElement('article')
+  grid.className = 'buildGrid'
+  grid.id = 'buildGrid'
   build.style.display = "block";
   build.innerHTML = `
-  <button onclick="closed()">X</button>
-  <img onclick="getDescription('head')" src=${data.items.head.img}>
-  <img onclick="getDescription('shoulders')" src=${data.items.shoulders.img}>
-  <img onclick="getDescription('weapon')" src=${data.items.weapon.img}>
-  <img onclick="getDescription('offhand')" src=${data.items.offhand.img}>
-  <img onclick="getDescription('legs')" src=${data.items.legs.img}>
-  <img onclick="getDescription('torso')" src=${data.items.torso.img}>
-  <img onclick="getDescription('rings', 1)" src=${data.items.rings[0].img}>
-  <img onclick="getDescription('rings', 2)" src=${data.items.rings[1].img}>
-  <img onclick="getDescription('wrists')" src=${data.items.wrists.img}>
-  <img onclick="getDescription('feet')" src=${data.items.feet.img}>
-  <img onclick="getDescription('waist')" src=${data.items.waist.img}>
-  `;
+  <button class="close" onclick="closed()">X</button>
+  `
+  data.items.forEach(e => {
+    grid.innerHTML += `
+    <div onmouseover="showDetails('${e.type}')" onmouseleave="hideDetails('${e.type}')" class='${e.class} ${e.type}'>
+    <img onclick="getDescription('${e.type}')" src=${e.img}>
+    </div>
+    `
+  })
+  build.innerHTML += `
+  <div class="btnBuild">
+  <button onclick="goTo('Paragon')">Paragon</button>
+  <button onclick="goTo('Skills')">Skills</button>
+  <button onclick="goTo('Gems')">Gems</button>
+  </div>
+  `
+  build.appendChild(grid)
+};
+
+const showDetails = async (e) => {
+  const elem = document.getElementsByClassName(e)[0];
+  const found = find(e)
+  // Este if es para que no se creen un millon de details.
+  if (elem.childNodes.length !== 4) {
+    const div = document.createElement("div");
+    div.className = "detail";
+    div.innerText = found.title;
+    elem.appendChild(div);
+  }
+};
+
+const hideDetails = (e) => {
+  const elem = document.getElementsByClassName(e)[0];
+  elem.removeChild(elem.lastChild);
 };
 
 // Genera la descripcion de cada item
-// * De esto se encargan ustedes
-const getDescription = async (e, aux) => {
-  const response = await fetch("./db/cazadora.json");
-  const data = await response.json();
-  let obj = [];
-
-  // Si el item en cuestion es un array de objetos, se buscara el numero del array con 'aux'
-  if (aux) {
-    obj = data.items[e][aux - 1];
-  } else {
-    obj = data.items[e];
-  }
-
-  // Si ya hay un item seleccionado se borrara el ultimo seleccionado para mostarar uno nuevo
-  if (build.childNodes[25]) {
-    build.removeChild(build.childNodes[25]);
-    const div = document.createElement("div");
-    div.className = "buildDescription";
-    div.innerHTML = `
-  <p>${obj.title}</p>
+const getDescription = async (e) => {
+  const bg = document.createElement("div");
+  const div = document.createElement("div");
+  const found = find(e)
+  bg.classList = "bgModal";
+  div.className = "buildDescription";
+  div.innerHTML = `
+  <button class="close" onclick="closeSubmodal()">X</button>
+  <h3 class='${found.class} title'>${found.title}</h3>
+  <hr>
   `;
-    build.appendChild(div);
-  } else {
-    const div = document.createElement("div");
-    div.className = "buildDescription";
-    div.innerHTML = `
-  <p>${obj.title}</p>
-  `;
-    build.appendChild(div);
+  if (found.description) {
+    found.description.forEach((e) => {
+      div.innerHTML += `
+      <p>${e}</p>
+      `;
+    });
+    div.innerHTML += `
+    <hr>
+    `;
   }
+  if (found.set) {
+    found.set.map((e, i) => {
+      if (i === 0) {
+        div.innerHTML += `
+        <p>Set: ${e}</p>
+        `;
+      } else {
+        div.innerHTML += `
+        <p>${e}</p>
+        `;
+      }
+    });
+    div.innerHTML += `
+    <hr>
+    `;
+  }
+  found.bonus.forEach((e) => {
+    div.innerHTML += `
+    <p>${e}</p>
+    `;
+  });
+
+  if (found.req) {
+    div.innerHTML += `
+    <hr>
+    `;
+    found.req.forEach((e) => {
+      div.innerHTML += `
+    <p>${e}</p>
+    `;
+    });
+  }
+  bg.appendChild(div);
+  build.appendChild(bg);
 };
 
 const closed = () => {
   build.style.display = "none";
+  build.innerHTML = ""
 };
 
-// Ejecuto las funciones para mostrar clases y botones
+const closeSubmodal = () => {
+  build.removeChild(build.lastChild);
+};
+
+const goTo = (e) => {
+  const grid = document.querySelector(".buildGrid")
+  grid.innerHTML = ''
+  grid.innerText = e
+}
+
+// Ejecuto las funciones para mostrar clases, botones, etc.
 getClass(classes[0]);
 getBtns(classes);
+getFetched()
