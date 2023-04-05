@@ -1,6 +1,7 @@
 const myClass = document.getElementById("class");
 const myBtns = document.getElementById("btnClass");
 const build = document.getElementById("build");
+let data = []
 
 const classes = [
   {
@@ -53,8 +54,22 @@ const classes = [
   },
 ];
 
-// funcion para sacar tildes del nombre como por ej: 'barbaro'.
-function sacaTildes(texto) {
+// -- // Funciones internas para optimizar codigo // -- //
+
+const getFetched = async () => {
+  const response = await fetch("./db/cazadora.json");
+  data = await response.json();
+}
+
+const find = (e) => {
+  let found = ''
+  data.items.map(search => {
+    if (search.type === e) found = search
+  })
+  return found
+}
+
+const sacaTildes = (texto) => {
   return texto
     .normalize("NFD")
     .replace(
@@ -63,6 +78,8 @@ function sacaTildes(texto) {
     )
     .normalize();
 }
+
+// -- // -- // --- // -- // -- // -- // -- // --- // -- //
 
 // Genera la clase en cuestion que se seleccione en el div myBtns
 const getClass = (e) => {
@@ -90,54 +107,40 @@ const getBtns = (e) => {
 };
 
 // Genera la build del personaje en cuestion.
-// * en mantenimiento hasta terminar JSON
 const getBuild = async () => {
-  const response = await fetch("./db/cazadora.json");
-  const data = await response.json();
-
-  build.style.display = "grid";
+  const grid = document.createElement('article')
+  grid.className = 'buildGrid'
+  grid.id = 'buildGrid'
+  build.style.display = "block";
   build.innerHTML = `
-  <button onclick="closed()">X</button>
-  <div onmouseover="showDetails('charm')" onmouseleave="hideDetails('charm')" class="charm">
-  <img onclick="getDescription('charm')" src=${data.items.charm.img}>
+  <button class="close" onclick="closed()">X</button>
+  `
+  data.items.forEach(e => {
+    grid.innerHTML += `
+    <div onmouseover="showDetails('${e.type}')" onmouseleave="hideDetails('${e.type}')" class='${e.class} ${e.type}'>
+    <img onclick="getDescription('${e.type}')" src=${e.img}>
+    </div>
+    `
+  })
+  build.innerHTML += `
+  <div class="btnBuild">
+  <button onclick="goTo('Paragon')">Paragon</button>
+  <button onclick="goTo('Skills')">Skills</button>
+  <button onclick="goTo('Gems')">Gems</button>
   </div>
-  <div onmouseover="showDetails('head')" onmouseleave="hideDetails('head')" class="head orange">
-  <img onclick="getDescription('head')" src=${data.items.head.img}>
-  </div>
-  <img onclick="getDescription('shoulders')" class="orange shoulders" src=${data.items.shoulders.img}>
-  <img onclick="getDescription('weapon')" class="orange weapon" src=${data.items.weapon.img}>
-  <img onclick="getDescription('offhand')" class="orange offhand" src=${data.items.offhand.img}>
-  <img onclick="getDescription('legs')" class="orange legs" src=${data.items.legs.img}>
-  <img onclick="getDescription('torso')" class="orange torso" src=${data.items.torso.img}>
-  <img onclick="getDescription('amulet')" class="green amulet" src=${data.items.amulet.img}>
-  <img onclick="getDescription('rings', 1)" class="green ringLeft" src=${data.items.rings[0].img}>
-  <img onclick="getDescription('rings', 2)" class="green ringRight" src=${data.items.rings[1].img}>
-  <img onclick="getDescription('wrists')" class="green wrists" src=${data.items.wrists.img}>
-  <img onclick="getDescription('feet')" class="green feet" src=${data.items.feet.img}>
-  <img onclick="getDescription('waist')" class="green waist" src=${data.items.waist.img}>
-  `;
+  `
+  build.appendChild(grid)
 };
 
-const showDetails = async (e, aux) => {
-  const response = await fetch("./db/cazadora.json");
-  const data = await response.json();
-  let obj = [];
-
-  // Si el item en cuestion es un array de objetos, se buscara el numero del array con 'aux'
-  if (aux) {
-    obj = data.items[e][aux - 1];
-  } else {
-    obj = data.items[e];
-  }
-  const elem = document.getElementsByClassName(e);
-  if (elem[0].childNodes.length >= 3) {
-
-    console.log(elem[0].childNodes);
-  } else {
+const showDetails = async (e) => {
+  const elem = document.getElementsByClassName(e)[0];
+  const found = find(e)
+  // Este if es para que no se creen un millon de details.
+  if (elem.childNodes.length !== 4) {
     const div = document.createElement("div");
     div.className = "detail";
-    div.innerText = obj.title;
-    elem[0].appendChild(div);
+    div.innerText = found.title;
+    elem.appendChild(div);
   }
 };
 
@@ -147,30 +150,19 @@ const hideDetails = (e) => {
 };
 
 // Genera la descripcion de cada item
-// * De esto se encargan ustedes
-const getDescription = async (e, aux) => {
-  const response = await fetch("./db/cazadora.json");
-  const data = await response.json();
-  let obj = [];
-
-  // Si el item en cuestion es un array de objetos, se buscara el numero del array con 'aux'
-  if (aux) {
-    obj = data.items[e][aux - 1];
-  } else {
-    obj = data.items[e];
-  }
-
+const getDescription = async (e) => {
   const bg = document.createElement("div");
   const div = document.createElement("div");
+  const found = find(e)
   bg.classList = "bgModal";
   div.className = "buildDescription";
   div.innerHTML = `
-  <button onclick="closeSubmodal()">X</button>
-  <h3>${obj.title}</h3>
+  <button class="close" onclick="closeSubmodal()">X</button>
+  <h3 class='${found.class} title'>${found.title}</h3>
   <hr>
   `;
-  if (obj.description) {
-    obj.description.forEach((e) => {
+  if (found.description) {
+    found.description.forEach((e) => {
       div.innerHTML += `
       <p>${e}</p>
       `;
@@ -179,8 +171,8 @@ const getDescription = async (e, aux) => {
     <hr>
     `;
   }
-  if (obj.set) {
-    obj.set.map((e, i) => {
+  if (found.set) {
+    found.set.map((e, i) => {
       if (i === 0) {
         div.innerHTML += `
         <p>Set: ${e}</p>
@@ -195,17 +187,17 @@ const getDescription = async (e, aux) => {
     <hr>
     `;
   }
-  obj.bonus.forEach((e) => {
+  found.bonus.forEach((e) => {
     div.innerHTML += `
     <p>${e}</p>
     `;
   });
 
-  if (obj.req) {
+  if (found.req) {
     div.innerHTML += `
     <hr>
     `;
-    obj.req.forEach((e) => {
+    found.req.forEach((e) => {
       div.innerHTML += `
     <p>${e}</p>
     `;
@@ -217,12 +209,20 @@ const getDescription = async (e, aux) => {
 
 const closed = () => {
   build.style.display = "none";
+  build.innerHTML = ""
 };
 
 const closeSubmodal = () => {
   build.removeChild(build.lastChild);
 };
 
-// Ejecuto las funciones para mostrar clases y botones
+const goTo = (e) => {
+  const grid = document.querySelector(".buildGrid")
+  grid.innerHTML = ''
+  grid.innerText = e
+}
+
+// Ejecuto las funciones para mostrar clases, botones, etc.
 getClass(classes[0]);
 getBtns(classes);
+getFetched()
