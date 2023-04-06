@@ -64,7 +64,7 @@ main {
   border: solid 2px #fff;
 }
 
-progress {
+.classs progress {
   transition: ease-in 0.1s;
 }
 
@@ -72,6 +72,7 @@ progress {
 /* -- */ /* -- // BUILD // -- */ /* -- */
 .build {
   display: none;
+  align-items: center;
   position: absolute;
   width: 100%;
   height: 90%;
@@ -79,19 +80,27 @@ progress {
 }
 
 .build .buildGrid {
-  width: 300px;
-  height: 100%;
+  background-image: url("../img/gridImg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: 600px;
   margin: 0 auto;
   display: grid;
   flex-wrap: wrap;
   grid-template-columns: repeat(100px, 1fr);
   grid-template-rows: repeat(80px, 1fr);
-  grid-template-areas: "shoulders head charm" "wrists torso amulet" "weapon waist offhand" "ringL legs ringR" "feet feet feet";
+  grid-template-areas: "shoulders head charm" "shoulders head charm" "wrists torso amulet" "ringL waist ringR" "ringL legs ringR" "weapon feet offhand";
 }
 
-.build img {
+.build .buildGrid img {
   /* height: 150px; */
-  width: 70px;
+  width: 50px;
+}
+
+.build .classImg {
+  height: 450px;
 }
 
 .build img:hover {
@@ -237,14 +246,28 @@ progress {
   border-radius: 5px;
   background-color: #444;
   width: 400px;
+  max-height: 600px;
+  overflow-y: scroll;
   position: absolute;
   text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.buildDescription::-webkit-scrollbar {
+  background-color: #444;
+  width: 7px;
+}
+.buildDescription::-webkit-scrollbar-thumb {
+  background-color: #222;
+  width: 15px;
+}
 
-@media (max-width: 440px) {
+@media (max-width: 450px) {
+  .class img {
+    width: 100%;
+    height: auto;
+  }
   .buildDescription {
     width: 100%;
   }
@@ -354,20 +377,70 @@ h5 {
   font-family: "Exocet", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-header nav ul {
-  display: flex;
-  gap: 20px;
+header {
+  height: 87.8vh;
+  width: 100%;
+  align-items: start;
 }
-header nav ul li {
-  list-style: none;
+header video {
+  height: 100%;
+  width: 75%;
 }
-header nav ul li a {
-  color: #fff;
-  text-decoration: none;
+
+nav {
+  height: 100px !important;
 }
-header nav ul li a:hover {
-  background-color: #fff;
-  color: #000;
+nav a:hover {
+  color: rgb(108, 117, 125) !important;
+  transition: color 0.4s ease-in-out;
+}
+nav img:hover {
+  filter: brightness(150%);
+  transition: filter 0.4s ease-in-out;
+}
+
+h1 {
+  margin-left: 7rem;
+}
+
+.blur {
+  content: "";
+  width: 35%;
+  left: 25%;
+  background: linear-gradient(to right, rgb(0, 0, 0), transparent);
+}
+
+@media (max-width: 1199.98px) {
+  header {
+    align-items: center;
+  }
+  header video {
+    width: 100%;
+    filter: brightness(40%);
+  }
+  nav {
+    height: auto !important;
+  }
+  .nav-items-desktop {
+    filter: invert(32%) sepia(99%) saturate(1134%) hue-rotate(336deg) brightness(77%) contrast(89%);
+    width: 79% !important;
+  }
+  .nav-items-desktop ul {
+    display: none;
+  }
+  .nav-items-desktop li {
+    display: none;
+  }
+  .text-title {
+    width: 75% !important;
+  }
+  .blur {
+    left: 0;
+    height: 20% !important;
+    width: 100% !important;
+    bottom: 0;
+    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
+  }
 }
 
 /*# sourceMappingURL=output.css.map */
