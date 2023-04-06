@@ -2,6 +2,7 @@ const myClass = document.getElementById("class");
 const myBtns = document.getElementById("btnClass");
 const build = document.getElementById("build");
 let data = []
+let actual = []
 
 const classes = [
   {
@@ -9,61 +10,61 @@ const classes = [
     pve: 90,
     pvp: 5,
     dif: 20,
-    icon: "./img/barbaro/barbarian.svg",
-    img: "./img/barbaro/img.png",
+    icon: "../img/barbaro/barbarian.svg",
+    img: "../img/barbaro/img.png",
   },
   {
     name: "Cruzada",
     pve: 60,
     pvp: 80,
     dif: 10,
-    icon: "./img/cruzada/cruzada.svg",
-    img: "./img/cruzada/img.png",
+    icon: "../img/cruzada/cruzada.svg",
+    img: "../img/cruzada/img.png",
   },
   {
     name: "Cazadora de Demonios",
     pve: 30,
     pvp: 10,
     dif: 10,
-    icon: "./img/cazadora/cazadora.svg",
-    img: "./img/cazadora/img.png",
+    icon: "../img/cazadora/icon.svg",
+    img: "../img/cazadora/img.png",
   },
   {
     name: "Monje",
     pve: 50,
     pvp: 50,
     dif: 50,
-    icon: "./img/monje/monje.svg",
-    img: "./img/monje/img.png",
+    icon: "../img/monje/monje.svg",
+    img: "../img/monje/img.png",
   },
   {
     name: "Nigromante",
     pve: 10,
     pvp: 100,
     dif: 80,
-    icon: "./img/nigromante/nigromante.svg",
-    img: "./img/nigromante/img.png",
+    icon: "../img/nigromante/nigromante.svg",
+    img: "../img/nigromante/img.png",
   },
   {
     name: "Maga",
     pve: 50,
     pvp: 50,
     dif: 90,
-    icon: "./img/maga/maga.svg",
-    img: "./img/maga/img.png",
+    icon: "../img/maga/maga.svg",
+    img: "../img/maga/img.png",
   },
 ];
 
 // -- // Funciones internas para optimizar codigo // -- //
 
 const getFetched = async () => {
-  const response = await fetch("./db/cazadora.json");
+  const response = await fetch("../db/db.json");
   data = await response.json();
 }
 
 const find = (e) => {
   let found = ''
-  data.items.map(search => {
+  actual.items.map(search => {
     if (search.type === e) found = search
   })
   return found
@@ -82,14 +83,14 @@ const sacaTildes = (texto) => {
 // -- // -- // --- // -- // -- // -- // -- // --- // -- //
 
 // Genera la clase en cuestion que se seleccione en el div myBtns
-const getClass = (e) => {
+const getClass = (e, value) => {
   myClass.innerHTML = `
     <p>${e.name}</p>
     <img src="${e.img}">
     PvE<progress value='${e.pve}' max="100"></progress>
     PvP<progress value='${e.pvp}' max="100"></progress>
     Dificultad<progress value='${e.dif}' max="100"></progress>
-    <button class="btnBuild" onclick="getBuild()">Ver builds</button>
+    <button class="btnBuild" onclick="getBuild(${value})">Ver builds</button>
     `;
 };
 
@@ -101,21 +102,25 @@ const getBtns = (e) => {
     img.src = e.icon;
     btn.value = i;
     btn.appendChild(img);
-    btn.onclick = () => getClass(classes[i]);
+    btn.onclick = () => getClass(classes[i], i);
     myBtns.appendChild(btn);
   });
 };
 
 // Genera la build del personaje en cuestion.
-const getBuild = async () => {
+const getBuild = async (e) => {
   const grid = document.createElement('article')
+  const img = document.createElement('img')
+  img.src = classes[e].img
+  img.className = 'classImg'
+  actual = data[e]
   grid.className = 'buildGrid'
   grid.id = 'buildGrid'
-  build.style.display = "block";
+  build.style.display = "flex";
   build.innerHTML = `
   <button class="close" onclick="closed()">X</button>
   `
-  data.items.forEach(e => {
+  data[e].items.forEach(e => {
     grid.innerHTML += `
     <div onmouseover="showDetails('${e.type}')" onmouseleave="hideDetails('${e.type}')" class='${e.class} ${e.type}'>
     <img onclick="getDescription('${e.type}')" src=${e.img}>
@@ -129,6 +134,7 @@ const getBuild = async () => {
   <button onclick="goTo('Gems')">Gems</button>
   </div>
   `
+  build.appendChild(img)
   build.appendChild(grid)
 };
 
@@ -223,6 +229,6 @@ const goTo = (e) => {
 }
 
 // Ejecuto las funciones para mostrar clases, botones, etc.
-getClass(classes[0]);
+getClass(classes[0], 0);
 getBtns(classes);
 getFetched()
