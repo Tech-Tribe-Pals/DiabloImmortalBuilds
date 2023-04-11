@@ -1,0 +1,22 @@
+{
+  "name": "diabloimmortalbuilds-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass --watch sass/input.scss css/output.css",
+    "sass": "npm i -g sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BudHamud/DiabloImmortalBuilds-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BudHamud/DiabloImmortalBuilds-1/issues"
+  },
+  "homepage": "https://github.com/BudHamud/DiabloImmortalBuilds-1#readme"
+}
