@@ -9,13 +9,15 @@ body {
 }
 
 /* -- */ /* CLASES */ /* -- */
+
 main {
-  height: 90vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .class {
   display: flex;
   flex-direction: column;

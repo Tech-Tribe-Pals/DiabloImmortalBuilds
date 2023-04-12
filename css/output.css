@@ -9,14 +9,6 @@ body {
 }
 
 /* -- */ /* CLASES */ /* -- */
-main {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .class {
   display: flex;
   flex-direction: column;
@@ -447,9 +439,16 @@ h5 {
   font-family: "Exocet", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-header {
+#inicio {
   width: 100%;
   align-items: start;
+}
+#inicio h1 {
+  margin-left: 7rem;
+}
+
+.inicio-video {
+  right: 0;
 }
 
 nav {
@@ -459,33 +458,28 @@ nav a:hover {
   color: rgb(108, 117, 125) !important;
   transition: color 0.4s ease-in-out;
 }
+
 nav img:hover {
   filter: brightness(150%);
   transition: filter 0.4s ease-in-out;
 }
-.videoHome {
-  height: 100vh;
-  width: 100vw;
-}
-.videoHome h1 {
-  margin-left: 7rem;
-}
-.videoHome .blur {
+
+
+.blur {
   content: "";
   width: 35%;
   left: 25%;
   background: linear-gradient(to right, rgb(0, 0, 0), transparent);
 }
-.videoHome video {
-  width: 100%;
-}
+
 
 @media (max-width: 1199.98px) {
-  header {
+  #inicio {
     align-items: center;
   }
-  header video {
-    width: 100%;
+  .inicio-video {
+    width: 100% !important;
+
     filter: brightness(40%);
   }
   nav {
@@ -503,6 +497,9 @@ nav img:hover {
   }
   .text-title {
     width: 75% !important;
+
+    align-self: center;
+
   }
   .blur {
     left: 0;
@@ -511,6 +508,7 @@ nav img:hover {
     bottom: 0;
     background: linear-gradient(to top, rgb(0, 0, 0), transparent);
   }
+
 }
 
 /*# sourceMappingURL=output.css.map */
