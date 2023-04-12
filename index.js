@@ -84,7 +84,7 @@ const sacaTildes = (texto) => {
 // Genera la clase en cuestion que se seleccione en el div myBtns
 const getClass = (e) => {
   myClass.innerHTML = `
-    <p>${e.name}</p>
+    <p class="p-header">${e.name}</p>
     <img src="${e.img}">
     PvE<progress value='${e.pve}' max="100"></progress>
     PvP<progress value='${e.pvp}' max="100"></progress>

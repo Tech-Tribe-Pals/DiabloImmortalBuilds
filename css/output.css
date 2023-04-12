@@ -6,18 +6,9 @@
 body {
   background-color: #222;
   color: #fff;
-  overflow: hidden;
 }
 
 /* -- */ /* CLASES */ /* -- */
-main {
-  height: 90vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .class {
   display: flex;
   flex-direction: column;
@@ -354,14 +345,16 @@ h5 {
   font-family: "Exocet", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-header {
-  height: 87.8vh;
+#inicio {
   width: 100%;
   align-items: start;
 }
-header video {
-  height: 100%;
-  width: 75%;
+#inicio h1 {
+  margin-left: 7rem;
+}
+
+.inicio-video {
+  right: 0;
 }
 
 nav {
@@ -376,10 +369,6 @@ nav img:hover {
   transition: filter 0.4s ease-in-out;
 }
 
-h1 {
-  margin-left: 7rem;
-}
-
 .blur {
   content: "";
   width: 35%;
@@ -388,11 +377,11 @@ h1 {
 }
 
 @media (max-width: 1199.98px) {
-  header {
+  #inicio {
     align-items: center;
   }
-  header video {
-    width: 100%;
+  .inicio-video {
+    width: 100% !important;
     filter: brightness(40%);
   }
   nav {
@@ -410,6 +399,7 @@ h1 {
   }
   .text-title {
     width: 75% !important;
+    align-self: center;
   }
   .blur {
     left: 0;
@@ -419,20 +409,10 @@ h1 {
     background: linear-gradient(to top, rgb(0, 0, 0), transparent);
   }
 }
-header nav ul {
-  display: flex;
-  gap: 20px;
-}
-header nav ul li {
-  list-style: none;
-}
-header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-}
-header nav ul li a:hover {
-  background-color: #fff;
-  color: #000;
+#story {
+  background: url("../img/story") center no-repeat;
+  background-size: contain;
+  height: 85vh;
 }
 
 /*# sourceMappingURL=output.css.map */

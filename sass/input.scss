@@ -1,24 +1,5 @@
 @use "build";
 @use "boss";
-@use 'fonts';
-@use 'header-nav';
-
-header {
-  nav {
-    ul {
-      display: flex;
-      gap: 20px;
-      li {
-        list-style: none;
-        a {
-          &:hover {
-            background-color: #fff;
-            color: #000;
-          }
-          color: #fff;
-          text-decoration: none;
-        }
-      }
-    }
-  }
-}
+@use "fonts";
+@use "header-nav";
+@use "story";
