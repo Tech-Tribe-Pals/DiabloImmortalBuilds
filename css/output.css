@@ -79,6 +79,7 @@ main {
   background-color: #222;
   grid-template-areas: "gridL imgClass gridR buildDesc" "btns btns btns btns";
 }
+
 .build .buildGridL {
   grid-area: gridL;
 }
@@ -243,6 +244,7 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .skillsModal img {
   width: 50px;
 }
@@ -461,7 +463,6 @@ nav img:hover {
   filter: brightness(150%);
   transition: filter 0.4s ease-in-out;
 }
-
 .videoHome {
   height: 100vh;
   width: 100vw;
