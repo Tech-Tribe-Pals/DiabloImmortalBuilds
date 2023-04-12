@@ -1,13 +1,11 @@
 * {
   padding: 0;
   margin: 0;
-  
 }
 
 body {
   background-color: #222;
   color: #fff;
-  overflow: hidden;
 }
 
 /* -- */ /* CLASES */ /* -- */
@@ -17,7 +15,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 .class {
   display: flex;
@@ -66,45 +63,60 @@ main {
 .build {
   display: none;
   align-items: center;
+  justify-content: center;
   position: absolute;
   width: 100%;
   height: 90%;
   background-color: #222;
+  grid-template-areas: "gridL imgClass gridR buildDesc" "btns btns btns btns";
+  .buildGridL {
+    grid-area: gridL;
+  }
+  .imgContainer {
+    grid-area: imgClass;
+  }
+  .buildGridR {
+    grid-area: gridR;
+    width: 200px;
+    height: 580px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(40px, 1fr);
+  }
+  .buildDescription {
+    grid-area: buildDesc;
+    margin-left: 20px;
+  }
 }
-.build .buildGrid {
-  background-image: url('../img/gridImg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  width: 400px;
-  height: 600px;
-  margin: 0 auto;
-  display: grid;
-  flex-wrap: wrap;
-  grid-template-columns: repeat(100px, 1fr);
-  grid-template-rows: repeat(80px, 1fr);
-  grid-template-areas:
-    "shoulders head charm"
-    "shoulders head charm"
-    "wrists torso amulet"
-    "ringL waist ringR"
-    "ringL legs ringR"
-    "weapon feet offhand";
+.build .imgContainer {
+  position: relative;
 }
-.build .buildGrid img {
+.build .imgContainer .charm {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.build .buildGridL img,
+.build .buildGridR img {
   /* height: 150px; */
-  width: 50px;
+  width: 80px;
 }
 .build .classImg {
-  height: 450px;
-}
-.build img:hover {
-  cursor: pointer;
+  height: 550px;
 }
 .green {
   background-color: #231;
+  border: solid 2px #000;
   justify-self: center;
   align-self: center;
+}
+.green.bg {
+  background-color: transparent;
+  border: none;
+  border: solid 2px transparent;
+}
+.green.bg:hover {
+  background-color: #231;
   border: solid 2px #000;
 }
 .orange {
@@ -113,13 +125,9 @@ main {
   align-self: center;
   border: solid 2px #000;
 }
-.orange.title {
-  background-color: transparent;
-  color: #fdbf82;
-  border: none;
-}
 .build .close {
   position: absolute;
+  padding: 0 5px;
   right: 15px;
   top: 15px;
   font-size: 20px;
@@ -128,17 +136,20 @@ main {
   color: #fff;
   cursor: pointer;
   border-radius: 20px;
+  z-index: 5;
+}
+.build .close.closeModal {
+  top: 0;
+  right: 0;
 }
 .build .close:hover {
   color: #222;
   background-color: #fff;
 }
 .build .btnBuild {
+  grid-area: btns;
   display: flex;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  justify-content: center;
 }
 .build .btnBuild button {
   background-color: transparent;
@@ -155,50 +166,14 @@ main {
   display: block;
 }
 .build .charm {
-  grid-area: charm;
   background-color: #89812144;
   justify-self: center;
   align-self: center;
   border: solid 2px #000;
 }
-.build .head {
-  grid-area: head;
-}
-.build .soulders {
-  grid-area: shoulders;
-}
-.build .torso {
-  grid-area: torso;
-}
-.build .wrists {
-  grid-area: wrists;
-}
-.build .waist {
-  grid-area: waist;
-}
-.build .weapon {
-  grid-area: weapon;
-}
-.build .offhand {
-  grid-area: offhand;
-}
-.build .legs {
-  grid-area: legs;
-}
-.build .feet {
-  grid-area: feet;
-}
-.build .amulet {
-  grid-area: amulet;
-}
-.build .ringR {
-  grid-area: ringR;
-}
-.build .ringL {
-  grid-area: ringL;
-}
 .detail {
   position: absolute;
+  z-index: 2;
 }
 /* -- */ /* -- // FIN BUILD // -- */ /* -- */
 
@@ -215,15 +190,10 @@ main {
   /* display: none; */
   padding: 5px;
   border-radius: 5px;
-  background-color: #444;
   width: 400px;
   max-height: 600px;
   overflow-y: scroll;
-  position: absolute;
   text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   &::-webkit-scrollbar {
     background-color: #444;
     width: 7px;
@@ -231,6 +201,111 @@ main {
   &::-webkit-scrollbar-thumb {
     background-color: #222;
     width: 15px;
+  }
+}
+.skillsModal {
+  max-height: 500px;
+  min-width: 200px;
+  padding: 5px;
+  overflow-y: scroll;
+  position: absolute;
+  text-align: left;
+  background-color: #444;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  img {
+    width: 50px;
+  }
+  &::-webkit-scrollbar {
+    background-color: #444;
+    width: 7px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #222;
+    width: 15px;
+  }
+}
+@media (max-width: 1080px) {
+  .build {
+    width: 100%;
+    flex-wrap: wrap;
+    grid-template-areas: "imgClass buildDesc" "gridR gridR" "gridL gridL" "btns btns";
+    .classImg {
+      height: 500px;
+    }
+    .buildGridR, .buildGridL {
+      display: flex;
+      justify-content: center;
+      height: auto;
+      width: 100%;
+      gap: 10px;
+      margin-top: 10px;
+      img {
+        width: 110px;
+      }
+    }
+    .skillsModal {
+      width: 90%;
+    }
+    .buildDescription {
+      height: 500px;
+    }
+    .btnBuild {
+      justify-content: space-evenly;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .build {
+    .buildGridR, .buildGridL {
+      img {
+        width: 86px;
+      }
+    }
+    .classImg {
+      height: 300px;
+    }
+    .buildDescription {
+      height: 300px;
+      margin: 0;
+      img {
+        width: 50px;
+      }
+    }
+  }
+}
+@media (max-width: 630px) {
+  .build {
+    .imgContainer {
+      .classImg {
+        display: none;
+      }
+      .charm {
+        width: 85px;
+        position: relative;
+        left: 0;
+      }
+    }
+    .buildDescription {
+      width: 96%;
+    }
+    grid-template-areas: "imgClass imgClass" "buildDesc buildDesc" "gridR gridR" "gridL gridL" "btns btns";
+    .buildGridR, .buildGridL {
+      overflow-x: scroll;
+      justify-content: flex-start;
+    }
+    .btnBuild {
+      top: 0;
+      justify-content: space-around;
+      padding: 10px;
+    }
+    .detail {
+      display: none;
+    }
+    .skillsModal {
+      width: 100%;
+    }
   }
 }
 @media (max-width: 450px) {
