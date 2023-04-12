@@ -1,0 +1,1687 @@
+[
+  {
+    "class": "Bárbaro",
+    "skills": [
+      {
+        "title": "Lacerar",
+        "description": "Ejecuta una serie de ataques que infligen 1050-1512 p. de daño por golpe. Cada tercer golpe, te cura un 15% del daño infligido.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681225253/skills/barbarian/lacerar_jxiacq.webp"
+      },
+      {
+        "title": "Ira Imperecedera",
+        "description": "Te hace entrar en un estado de ira durante 6.25 s que evita que mueras y hace que tus ataques te curen un 30% del daño infligido. Ira imperecedera se activa automáticamente cuando sufres daño letal.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681225253/skills/barbarian/iraImperecedera_lizoph.webp"
+      },
+      {
+        "title": "Torbellino",
+        "description": "Te convierte en un torbellino de acero que golpea continuamente a todos los enemigos cercanos y les inflige 346 p. de daño mientras te mueves con velocidad reducida un 70%. Al usar Torbellino, su energía se consume lentamente, pero se recupera cuando la habilidad no está en uso.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681225253/skills/barbarian/torbellino_wcdsbg.webp"
+      },
+      {
+        "title": "Carga brutal",
+        "description": "Cargas hacia delante para repeler a todos los enemigos a tu paso e infligirles 1115 p. de daño. Máximo de 3 cargas. Los jugadores solo se pueden ver afectados una vez cada 3 s por esta habilidad.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681225253/skills/barbarian/cargaBrutal_kkleue.webp"
+      },
+      {
+        "title": "Cólera de berserker",
+        "description": "Te hace entrar en un estado de ira enloquecida que aumenta un 50% tu velocidad de ataque y un 20% tu velocidad de movimiento durante 7.5 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681225253/skills/barbarian/coleraDelBerserker_r0olf6.webp"
+      }
+    ],
+    "items": [
+      {
+        "type": "charm",
+        "class": "charm",
+        "title": "Dije Enorme Poderoso Sublime",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715781/DH/charm/charm_jlzoyk.png",
+        "bonus": [
+          "Ira imperecedera +2% de daño",
+          "Cólera de berserker +4% de daño",
+          "Torbellino +2% de daño",
+          "Lacerar +2% de daño",
+          "Carga brutal +2% de daño"
+        ],
+        "req": ["Nivel necesario: 56"]
+      },
+      {
+        "type": "head",
+        "class": "orange",
+        "title": "Odio Duradero",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680737938/items/head/odioDuradero_eeurdr.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Duración de Cólera de berserker aumentada un 30%.",
+          "Tiempo de reutilización de Cólera de berserker reducido un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Bárbaro"]
+      },
+      {
+        "type": "shoulders",
+        "class": "orange",
+        "title": "Espaldares del Reservista",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715782/DH/shoulders/shoulders_xoedzi.webp",
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "torso",
+        "class": "orange",
+        "title": "Peto del Reservista",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715782/DH/torso/torso_emyfsp.webp",
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "wrists",
+        "class": "green",
+        "title": "Ansia de la Lumbrera",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715782/DH/wrists/wrists_zwvkus.webp",
+        "set": [
+          "Ansias de Vithu",
+          "Manos: Ansia de la lumbrera",
+          "Pies: Ansia de la almenara",
+          "Cintura: Ansia del ejemplar",
+          "Cuello: Ansia del despertador",
+          "Dedo: Ansia modesta",
+          "Dedo: Ansia impudente"
+        ],
+        "bonus": [
+          "Aumenta un 30% la duración de todos los efectos beneficios que afectan a los miembros del grupo o a ti. (2 objetos de conjunto equipados)",
+          "Aumenta un 30% la velocidad de ataque del objetivo durante 3 s cada vez que usas una habilidad para otorgar un efecto beneficioso a un miembro del grupo o a ti. (4 objetos de conjunto equipados)",
+          "Cada vez que utilices una habilidad para otorgaros un beneficio a ti o a un miembro del grupo, creas una zona de apoteosis durante 12 s que os otorga un 12% de drenaje de vida a ti y a los miembros del grupo en su interior. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      },
+      {
+        "type": "waist",
+        "class": "green",
+        "title": "Ciñetormentas de Shal'baas",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715782/DH/waist/waist_qmkjqw.webp",
+        "set": [
+          "Andrajos de guerra de Shal'baas",
+          "Manos: Doce impactos de Shal'baas",
+          "Pies: Aplastavientos de Shal'baas",
+          "Cintura: Ciñetormentas de Shal'baas",
+          "Cuello: Corazón ardiente de Shal'baas",
+          "Dedo: Sierpe entrelazada de Shal'baas",
+          "Dedo: Colmillos en reposo de Shal'baas"
+        ],
+        "bonus": [
+          "Daño de ataque primario aumentado un 15%. (2 objetos de conjunto equipados)",
+          "Tus ataques primarios aumentan gradualmente tu velocidad de ataque primario hasta un máximo de un 25%. (4 objetos de conjunto equipados)",
+          "Tus ataques primarios tienen un (0.05)*100% de probabilidad de aumentar tu velocidad de ataque primario durante 12 s. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "weapon",
+        "class": "orange",
+        "title": "Vientamargo",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680738028/items/weapon/vientamargo_l5z5h8.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Ahora Torbellino absorbe el poder del viento para infligir más daño y ya no reduce tu velocidad de movimiento.",
+          "La energía de Torbellino se consume un 10% más lento. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Bárbaro"]
+      },
+      {
+        "type": "offhand",
+        "class": "orange",
+        "title": "Legado Hendido",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680738011/items/offhand/legadoHendido_vu605m.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Ahora Cólera de berserker aplica quemaduras a los enemigos cercanos.",
+          "Tiempo de reutilización de Cólera de berserker reducido un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Bárbaro"]
+      },
+      {
+        "type": "legs",
+        "class": "orange",
+        "title": "Alapresta",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680738071/items/legs/alapresta_gls0ol.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Ahora Esprint también aumenta la velocidad de movimiento de los aliados cercanos.",
+          "Tiempo de reutilización de Esprint reducido un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Bárbaro"]
+      },
+      {
+        "type": "feet",
+        "class": "green",
+        "title": "Issatar el Bruto",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680738151/items/feet/isstarElBruto_j3yeyd.webp",
+        "set": [
+          "Issatar imbuido",
+          "Manos: Mano abierta de Issatar",
+          "Pies: Issatar el Bruto",
+          "Cintura: Issatar contenido",
+          "Cuello: Issatar reposado",
+          "Dedo: Issatar airado",
+          "Dedo: Issatar arruinado"
+        ],
+        "bonus": [
+          "Cada vez que derrotas a un enemigo, obtienes un aumento de velocidad de movimiento de un 30% durante 3 s. (2 objetos de conjunto equipados)",
+          "El daño infligido aumenta un 2.5% por cada 5% que aumenta tu velocidad de movimiento, hasta un incremento máximo de un 25%. (4 objetos de conjunto equipados)",
+          "Cada vez que derrotas a un enemigo, tienes un 10% de probabilidad de obtener un orbe de alma que orbita a tu alrededor durante 12 s e inflige 577 p. de daño al atravesar a un enemigo. No puedes obtener un orbe de alma más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      },
+      {
+        "type": "amulet",
+        "class": "green",
+        "title": "Ansia del Despertador",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680733381/items/neck/ansiaDelDespertador_jcbm7t.webp",
+        "set": [
+          "Ansias de Vithu",
+          "Manos: Ansia de la lumbrera",
+          "Pies: Ansia de la almenara",
+          "Cintura: Ansia del ejemplar",
+          "Cuello: Ansia del despertador",
+          "Dedo: Ansia modesta",
+          "Dedo: Ansia impudente"
+        ],
+        "bonus": [
+          "Aumenta un 30% la duración de todos los efectos beneficios que afectan a los miembros del grupo o a ti. (2 objetos de conjunto equipados)",
+          "Aumenta un 30% la velocidad de ataque del objetivo durante 3 s cada vez que usas una habilidad para otorgar un efecto beneficioso a un miembro del grupo o a ti. (4 objetos de conjunto equipados)",
+          "Cada vez que utilices una habilidad para otorgaros un beneficio a ti o a un miembro del grupo, creas una zona de apoteosis durante 12 s que os otorga un 12% de drenaje de vida a ti y a los miembros del grupo en su interior. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      },
+      {
+        "type": "ringR",
+        "class": "green",
+        "title": "Instantes de Pánico",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680732366/items/finger/instantesDePanico_orrrk6.webp",
+        "set": [
+          "Premio del guía sombrío",
+          "Manos: Nervio del excursionista",
+          "Pies: Zancada invisible",
+          "Cintura: Dientembleque",
+          "Cuello: Lamento Ahogado",
+          "Dedo: Instantes de pánico",
+          "Dedo: Sombra enroscada"
+        ],
+        "bonus": [
+          "Aumenta tu daño infligido un 15% durante 3 s tras usar una habilidad de carrera. (2 objetos de conjunto equipados)",
+          "Aumenta tu probabilidad de golpe crítico un 22.5% durante 3 s tras usar una habilidad de carrera. (4 objetos de conjunto equipados)",
+          "Cuando termina tu habilidad de carrera, provoca una ola de terror que inflige 2625 p. de daño y hace que los enemigos cercanos huyan amedrentados durante 3 s. La oleada de terror solo se activa cuando hay enemigos cerca y no puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "ringL",
+        "class": "green",
+        "title": "Sombra Enroscada",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680732366/items/finger/instantesDePanico_orrrk6.webp",
+        "set": [
+          "Premio del guía sombrío",
+          "Manos: Nervio del excursionista",
+          "Pies: Zancada invisible",
+          "Cintura: Dientembleque",
+          "Cuello: Lamento Ahogado",
+          "Dedo: Instantes de pánico",
+          "Dedo: Sombra enroscada"
+        ],
+        "bonus": [
+          "Aumenta tu daño infligido un 15% durante 3 s tras usar una habilidad de carrera. (2 objetos de conjunto equipados)",
+          "Aumenta tu probabilidad de golpe crítico un 22.5% durante 3 s tras usar una habilidad de carrera. (4 objetos de conjunto equipados)",
+          "Cuando termina tu habilidad de carrera, provoca una ola de terror que inflige 2625 p. de daño y hace que los enemigos cercanos huyan amedrentados durante 3 s. La oleada de terror solo se activa cuando hay enemigos cerca y no puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      }
+    ],
+    "gems": []
+  },
+  {
+    "class": "Cruzada",
+    "skills": [
+      {
+        "title": "Fuego sacro",
+        "description": "Prende el aire con llamas sagradas que emanan de tu arma e infligen 866-1386 p. de daño a un enemigo y un 25% de ese daño a todos los demás enemigos frente a ti.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681229592/skills/crusader/fuegoSacro_y4snos.webp"
+      },
+      {
+        "title": "Desmembrar",
+        "description": "Te monta a lomos de un caballo de guerra celestial durante 5 s, lo que disipa todos los efectos de pérdida de movimiento, aumenta un 60% tu velocidad de movimiento y sustituye tu ataque primario. Unas cadenas sagradas atan a hasta 6 monstruos cercanos y los arrastran contigo para infligirles 338 p. de daño de manera repetida.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681229592/skills/crusader/desmembrar_y7nlim.webp"
+      },
+      {
+        "title": "Escudo giratorio",
+        "description": "Arroja un escudo giratorio que inflige 831 p. de daño a todos los enemigos a su paso. El escudo vuelve, atrae a los enemigos a su paso e inflige 554 p. de daño adicional. Máximo de 3 cargas. Los jugadores solo se pueden ver afectados por Escudo giratorio una vez cada 3 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681229592/skills/crusader/escudoGiratorio_i1ocmu.webp"
+      },
+      {
+        "title": "Espada fulminante",
+        "description": "Ahora Espada fulminante invoca cinco espadas electrificadas en una formación a tu alrededor que dura 6 s. De forma periódica, se generará un arco entre las espadas y tú que infligirá 354 p. de daño a los enemigos que queden dentro de él. El tiempo de reutilización de Espada fulminante es ahora de 15 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681229592/skills/crusader/espadaFulminante_d41pxx.webp"
+      },
+      {
+        "title": "Estandarte sagrado",
+        "description": "Coloca un estandarte sagrado que inspira a los aliados cercanos durante 10 s, lo que aumenta la probabilidad de golpe crítico un 100%, pero reduce el daño de golpe crítico del doble a un 135%. La probabilidad de golpe crítico superior al 100% otorga hasta un 65% de daño de golpe crítico adicional.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681229592/skills/crusader/estandarteSagrado_xxbmgv.webp"
+      }
+    ],
+    "items": [
+      {
+        "type": "charm",
+        "class": "charm",
+        "title": "Dije Enorme Inflexible Sublime",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715781/DH/charm/charm_jlzoyk.png",
+        "bonus": [
+          "Consagración +2% de daño",
+          "Desmembrar +2% de daño",
+          "Espada Fulminante +2% de daño",
+          "Castigo +2% de daño",
+          "Escudo Giratorio +2% de daño"
+        ],
+        "req": ["Nivel necesario: 56"]
+      },
+      {
+        "type": "head",
+        "class": "orange",
+        "title": "Salvaflechas",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680736155/items/head/salvaflechas_vvgoct.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Ahora la inspiración de Estandarte sagrado se mueve contigo.",
+          "Tiempo de reutilización de Estandarte sagrado reducido un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Cruzado"]
+      },
+      {
+        "type": "shoulders",
+        "class": "orange",
+        "title": "La Locura de los Zakarum",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680736177/items/shoulders/laLocuraDeLosZakarum_uwdyq9.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Duración de Estandarte sagrado aumentada un 30%.",
+          "Tiempo de reutilización de Estandarte sagrado reducido un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Cruzado"]
+      },
+      {
+        "type": "torso",
+        "class": "orange",
+        "title": "Malla de Resortes",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680736231/items/torso/mallaDeResortes_ooftom.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Daño de Escudo giratorio aumentado un 10%.",
+          "Tiempo de reutilización de Escudo giratorio reducido un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Cruzado"]
+      },
+      {
+        "type": "wrists",
+        "class": "green",
+        "title": "Acero Precipitado",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680737554/items/wrists/aceroPrecipitado_ivihil.webp",
+        "set": [
+          "Perfección del ático ventoso",
+          "Manos: Acero precipitado",
+          "Pies: Remuevetocones",
+          "Cintura: Trallazo",
+          "Cuello: Filo de la sabiduría",
+          "Dedo: Flotajusta",
+          "Dedo: Flotabyecta"
+        ],
+        "bonus": [
+          "Obtienes Mil vientos al estar en combate, que aumenta un 15% tu velocidad de movimiento. Si sufres daño, Mil vientos se desactiva durante 2 s. (2 objetos de conjunto equipados)",
+          "Aumenta un 20% el daño que infliges mientras dure Mil vientos. (4 objetos de conjunto equipados)",
+          "Obtienes un escudo que te vuelve inmune al daño 5 veces mientras dure Mil vientos. No se puede obtener este escudo más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "waist",
+        "class": "green",
+        "title": "Ciñetormentas de Shal'baas",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715782/DH/waist/waist_qmkjqw.webp",
+        "set": [
+          "Andrajos de guerra de Shal'baas",
+          "Manos: Doce impactos de Shal'baas",
+          "Pies: Aplastavientos de Shal'baas",
+          "Cintura: Ciñetormentas de Shal'baas",
+          "Cuello: Corazón ardiente de Shal'baas",
+          "Dedo: Sierpe entrelazada de Shal'baas",
+          "Dedo: Colmillos en reposo de Shal'baas"
+        ],
+        "bonus": [
+          "Daño de ataque primario aumentado un 15%. (2 objetos de conjunto equipados)",
+          "Tus ataques primarios aumentan gradualmente tu velocidad de ataque primario hasta un máximo de un 25%. (4 objetos de conjunto equipados)",
+          "Tus ataques primarios tienen un (0.05)*100% de probabilidad de aumentar tu velocidad de ataque primario durante 12 s. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "weapon",
+        "class": "orange",
+        "title": "Tumulto",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680737610/items/weapon/tumulto_afhldt.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Ahora Espada fulminante desata una tormenta de cuchillas a su alrededor que inflige daño continuamente a todos los enemigos cercanos, pero ya no se puede volver a activar para movimiento.",
+          "Tiempo de reutilización de Espada fulminante reducido un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Cruzado"]
+      },
+      {
+        "type": "offhand",
+        "class": "orange",
+        "title": "Pavés de Diez Alas",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680737668/items/offhand/pavesDeDiezAlas_zwccdr.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Ahora Escudo giratorio gira a tu alrededor y no regresa.",
+          "Daño de Escudo giratorio aumentado un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Cruzado"]
+      },
+      {
+        "type": "legs",
+        "class": "orange",
+        "title": "Greba de Cuchillas",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680737691/items/legs/grebasDeCuchillas_mients.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "La montura de Desmembrar se convierte en un corcel fogoso que quema el suelo y a los enemigos, pero ya no los atrae.",
+          "Daño de Desmembrar aumentada un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Cruzado"]
+      },
+      {
+        "type": "feet",
+        "class": "green",
+        "title": "Ansia de la Almenara",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715781/DH/feet/feet_ftrwzw.webp",
+        "set": [
+          "Ansias de Vithu",
+          "Manos: Ansia de la lumbrera",
+          "Pies: Ansia de la almenara",
+          "Cintura: Ansia del ejemplar",
+          "Cuello: Ansia del despertador",
+          "Dedo: Ansia modesta",
+          "Dedo: Ansia impudente"
+        ],
+        "bonus": [
+          "Aumenta un 30% la duración de todos los efectos beneficios que afectan a los miembros del grupo o a ti. (2 objetos de conjunto equipados)",
+          "Aumenta un 30% la velocidad de ataque del objetivo durante 3 s cada vez que usas una habilidad para otorgar un efecto beneficioso a un miembro del grupo o a ti. (4 objetos de conjunto equipados)",
+          "Cada vez que utilices una habilidad para otorgaros un beneficio a ti o a un miembro del grupo, creas una zona de apoteosis durante 12 s que os otorga un 12% de drenaje de vida a ti y a los miembros del grupo en su interior. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      },
+      {
+        "type": "amulet",
+        "class": "green",
+        "title": "Corazón Ardiente de Shal'baas",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715781/DH/amulet/amulet_yiymrb.webp",
+        "set": [
+          "Andrajos de guerra de Shal'baas",
+          "Manos: Doce impactos de Shal'baas",
+          "Pies: Aplastavientos de Shal'baas",
+          "Cintura: Ciñetormentas de Shal'baas",
+          "Cuello: Corazón ardiente de Shal'baas",
+          "Dedo: Sierpe entrelazada de Shal'baas",
+          "Dedo: Colmillos en reposo de Shal'baas"
+        ],
+        "bonus": [
+          "Daño de ataque primario aumentado un 15%. (2 objetos de conjunto equipados)",
+          "Tus ataques primarios aumentan gradualmente tu velocidad de ataque primario hasta un máximo de un 25%. (4 objetos de conjunto equipados)",
+          "Tus ataques primarios tienen un (0.05)*100% de probabilidad de aumentar tu velocidad de ataque primario durante 12 s. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "ringR",
+        "class": "green",
+        "title": "Pastor y Padre",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680737755/items/finger/pastorYPadre_jw9vhd.webp",
+        "set": [
+          "Llamada del pastor a los lobos",
+          "Manos: Pastor y bestiario",
+          "Pies: Pastor y líder",
+          "Cintura: Pastor y progenitor",
+          "Cuello: Pastor y arquitecto",
+          "Dedo: Pastor y padre",
+          "Dedo: Pastor y madre"
+        ],
+        "bonus": [
+          "Tus invocaciones infligen un 15% más de daño. (2 objetos de conjunto equipados)",
+          "Probabilidad de golpe crítico aumentada un 3% por cada una de tus invocaciones, hasta un máximo de un 18%. (4 objetos de conjunto equipados)",
+          "Tus invocaciones entran en un estado de frenesí durante 12 s cada vez que una de ellas asesta un golpe crítico. Este estado aumenta un 60% su velocidad de ataque. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "ringL",
+        "class": "green",
+        "title": "Ansia del Despertador",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680733381/items/neck/ansiaDelDespertador_jcbm7t.webp",
+        "set": [
+          "Ansias de Vithu",
+          "Manos: Ansia de la lumbrera",
+          "Pies: Ansia de la almenara",
+          "Cintura: Ansia del ejemplar",
+          "Cuello: Ansia del despertador",
+          "Dedo: Ansia modesta",
+          "Dedo: Ansia impudente"
+        ],
+        "bonus": [
+          "Aumenta un 30% la duración de todos los efectos beneficios que afectan a los miembros del grupo o a ti. (2 objetos de conjunto equipados)",
+          "Aumenta un 30% la velocidad de ataque del objetivo durante 3 s cada vez que usas una habilidad para otorgar un efecto beneficioso a un miembro del grupo o a ti. (4 objetos de conjunto equipados)",
+          "Cada vez que utilices una habilidad para otorgaros un beneficio a ti o a un miembro del grupo, creas una zona de apoteosis durante 12 s que os otorga un 12% de drenaje de vida a ti y a los miembros del grupo en su interior. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      }
+    ],
+    "gems": []
+  },
+  {
+    "class": "Cazadora de Demonios",
+    "skills": [
+      {
+        "title": "Disparo de ballesta",
+        "description": "Dispara una flecha que inflige 840-1176 p. de daño mientras te mueves con velocidad reducida.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230193/skills/DH/disparoDeBallesta_ydfzk8.webp"
+      },
+      {
+        "title": "Venganza",
+        "description": "Activa: Te transforma en la encarnación de la venganza durante 6 s y hace que cada ataque primario lance 2 disparos adicionales que infligen 211 p. de daño cada uno.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230193/skills/DH/venganza_zqtley.webp"
+      },
+      {
+        "title": "Empalar",
+        "description": "Lanza cuchillos con rapidez en una dirección e inflige 396 p. de daño continuamente a todos los enemigos alcanzados. Al usar Empalar, su energía se consume lentamente, pero se recupera cuando la habilidad no está en uso.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230193/skills/DH/empalar_wyvqgp.webp"
+      },
+      {
+        "title": "Huida",
+        "description": "Ejecuta una estocada para infligir 1044 p. de daño a todos los enemigos frente a ti y reducir su velocidad de movimiento un 80% durante 4 s antes de saltar hacia atrás para escapar.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230193/skills/DH/huida_qw8qym.webp"
+      },
+      {
+        "title": "Acrobacia",
+        "description": "Usa una cuerda para columpiarte a una ubicación cercana e infligir 1115 p. de daño a los enemigos a tu paso, que no pueden atacarte. Máximo de 2 cargas.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230193/skills/DH/acrobacia_thuoge.webp"
+      }
+    ],
+    "items": [
+      {
+        "type": "charm",
+        "class": "charm",
+        "title": "Dije Normativo Sobervio",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715781/DH/charm/charm_jlzoyk.png",
+        "bonus": [
+          "Cortina de humo 2% de daño",
+          "Disparo de ballesta +8% de daño",
+          "Lluvia de venganza +4% de daño",
+          "Venganza +8% de daño",
+          "Disparo múltiple +4% de daño"
+        ]
+      },
+      {
+        "type": "head",
+        "class": "orange",
+        "title": "Yelmo de Reservista",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715781/DH/head/head_wbzp3s.webp",
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "shoulders",
+        "class": "orange",
+        "title": "Espaldares del Reservista",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715782/DH/shoulders/shoulders_xoedzi.webp",
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "torso",
+        "class": "orange",
+        "title": "Peto del Reservista",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715782/DH/torso/torso_emyfsp.webp",
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "wrists",
+        "class": "green",
+        "title": "Ansia de la Lumbrera",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715782/DH/wrists/wrists_zwvkus.webp",
+        "set": [
+          "Ansias de Vithu",
+          "Manos: Ansia de la lumbrera",
+          "Pies: Ansia de la almenara",
+          "Cintura: Ansia del ejemplar",
+          "Cuello: Ansia del despertador",
+          "Dedo: Ansia modesta",
+          "Dedo: Ansia impudente"
+        ],
+        "bonus": [
+          "Aumenta un 30% la duración de todos los efectos beneficios que afectan a los miembros del grupo o a ti. (2 objetos de conjunto equipados)",
+          "Aumenta un 30% la velocidad de ataque del objetivo durante 3 s cada vez que usas una habilidad para otorgar un efecto beneficioso a un miembro del grupo o a ti. (4 objetos de conjunto equipados)",
+          "Cada vez que utilices una habilidad para otorgaros un beneficio a ti o a un miembro del grupo, creas una zona de apoteosis durante 12 s que os otorga un 12% de drenaje de vida a ti y a los miembros del grupo en su interior. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      },
+      {
+        "type": "waist",
+        "class": "green",
+        "title": "Ciñetormentas de Shal'baas",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715782/DH/waist/waist_qmkjqw.webp",
+        "set": [
+          "Andrajos de guerra de Shal'baas",
+          "Manos: Doce impactos de Shal'baas",
+          "Pies: Aplastavientos de Shal'baas",
+          "Cintura: Ciñetormentas de Shal'baas",
+          "Cuello: Corazón ardiente de Shal'baas",
+          "Dedo: Sierpe entrelazada de Shal'baas",
+          "Dedo: Colmillos en reposo de Shal'baas"
+        ],
+        "bonus": [
+          "Daño de ataque primario aumentado un 15%. (2 objetos de conjunto equipados)",
+          "Tus ataques primarios aumentan gradualmente tu velocidad de ataque primario hasta un máximo de un 25%. (4 objetos de conjunto equipados)",
+          "Tus ataques primarios tienen un (0.05)*100% de probabilidad de aumentar tu velocidad de ataque primario durante 12 s. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "weapon",
+        "class": "orange",
+        "title": "Rencorardor",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715782/DH/weapon/weapon_c4gof5.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Ahora Disparo múltiple dispara flechas flamígeras que infligen daño y queman a los enemigos.",
+          "Tiempo de reutilización de Disparo múltiple reducido un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Cazadora de Demonios"]
+      },
+      {
+        "type": "offhand",
+        "class": "orange",
+        "title": "La Hambrienta",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715781/DH/offhand/offhand_csd1jt.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Ahora Disparo de ballesta atraviesa a los enemigos y golpea a los que están detrás.",
+          "Daño de Disparo de ballesta aumentado un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Cazadora de Demonios"]
+      },
+      {
+        "type": "legs",
+        "class": "orange",
+        "title": "Pantalones del Reservista",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715781/DH/legs/legs_gluhli.webp",
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "feet",
+        "class": "green",
+        "title": "Ansia de la Almenara",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715781/DH/feet/feet_ftrwzw.webp",
+        "set": [
+          "Ansias de Vithu",
+          "Manos: Ansia de la lumbrera",
+          "Pies: Ansia de la almenara",
+          "Cintura: Ansia del ejemplar",
+          "Cuello: Ansia del despertador",
+          "Dedo: Ansia modesta",
+          "Dedo: Ansia impudente"
+        ],
+        "bonus": [
+          "Aumenta un 30% la duración de todos los efectos beneficios que afectan a los miembros del grupo o a ti. (2 objetos de conjunto equipados)",
+          "Aumenta un 30% la velocidad de ataque del objetivo durante 3 s cada vez que usas una habilidad para otorgar un efecto beneficioso a un miembro del grupo o a ti. (4 objetos de conjunto equipados)",
+          "Cada vez que utilices una habilidad para otorgaros un beneficio a ti o a un miembro del grupo, creas una zona de apoteosis durante 12 s que os otorga un 12% de drenaje de vida a ti y a los miembros del grupo en su interior. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      },
+      {
+        "type": "amulet",
+        "class": "green",
+        "title": "Corazón Ardiente de Shal'baas",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715781/DH/amulet/amulet_yiymrb.webp",
+        "set": [
+          "Andrajos de guerra de Shal'baas",
+          "Manos: Doce impactos de Shal'baas",
+          "Pies: Aplastavientos de Shal'baas",
+          "Cintura: Ciñetormentas de Shal'baas",
+          "Cuello: Corazón ardiente de Shal'baas",
+          "Dedo: Sierpe entrelazada de Shal'baas",
+          "Dedo: Colmillos en reposo de Shal'baas"
+        ],
+        "bonus": [
+          "Daño de ataque primario aumentado un 15%. (2 objetos de conjunto equipados)",
+          "Tus ataques primarios aumentan gradualmente tu velocidad de ataque primario hasta un máximo de un 25%. (4 objetos de conjunto equipados)",
+          "Tus ataques primarios tienen un (0.05)*100% de probabilidad de aumentar tu velocidad de ataque primario durante 12 s. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "ringR",
+        "class": "green",
+        "title": "Flotabyrecta",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715782/DH/ringR/ringR_im41ha.webp",
+        "set": [
+          "Perfección del ático ventoso",
+          "Manos: Acero precipitado",
+          "Pies: Remuevetocones",
+          "Cintura: Trallazo",
+          "Cuello: Filo de la sabiduría",
+          "Dedo: Flotajusta",
+          "Dedo: Flotabyecta"
+        ],
+        "bonus": [
+          "Obtienes Mil vientos al estar en combate, que aumenta un 15% tu velocidad de movimiento. Si sufres daño, Mil vientos se desactiva durante 2 s. (2 objetos de conjunto equipados)",
+          "Aumenta un 20% el daño que infliges mientras dure Mil vientos. (4 objetos de conjunto equipados)",
+          "Obtienes un escudo que te vuelve inmune al daño 5 veces mientras dure Mil vientos. No se puede obtener este escudo más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      },
+      {
+        "type": "ringL",
+        "class": "green",
+        "title": "Flotajusta",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715781/DH/ringL/ringL_id0vz9.webp",
+        "set": [
+          "Perfección del ático ventoso",
+          "Manos: Acero precipitado",
+          "Pies: Remuevetocones",
+          "Cintura: Trallazo",
+          "Cuello: Filo de la sabiduría",
+          "Dedo: Flotajusta",
+          "Dedo: Flotabyecta"
+        ],
+        "bonus": [
+          "Obtienes Mil vientos al estar en combate, que aumenta un 15% tu velocidad de movimiento. Si sufres daño, Mil vientos se desactiva durante 2 s. (2 objetos de conjunto equipados)",
+          "Aumenta un 20% el daño que infliges mientras dure Mil vientos. (4 objetos de conjunto equipados)",
+          "Obtienes un escudo que te vuelve inmune al daño 5 veces mientras dure Mil vientos. No se puede obtener este escudo más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      }
+    ],
+    "gems": []
+  },
+  {
+    "class": "Monje",
+    "skills": [
+      {
+        "title": "Puños del trueno",
+        "description": "Te teletransporta a un enemigo cercano y ejecuta una serie de puñetazos rápidos que infligen 1050-1680 p. de daño. Puedes teletransportarte de nuevo después de cada tercer golpe. Solo te puedes teletransportar al mismo jugador enemigo una vez cada 3 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230635/skills/monk/pu%C3%B1osDelTrueno_zitu33.webp"
+      },
+      {
+        "title": "Golpe místico",
+        "description": "Te desplazas hacia delante 4.5 m y sueltas un espíritu que vuelve y arrastra a todos los enemigos a su paso y les inflige 945 p. de daño. Solo puede arrastrar a cada jugador una vez cada 3 s. Máximo de 3 cargas.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230635/skills/monk/golpeMistico_vtmxqt.webp"
+      },
+      {
+        "title": "Patada Voladora",
+        "description": "Lanza una patada hacia delante que inflige 1260 p. de daño a los enemigos a su paso y los repele. Patada voladora puede rebotar en las paredes e infligir 1260 p. de daño adicional a todos los enemigos cercanos. Máximo de 3 cargas. Los jugadores solo se pueden ver afectados una vez cada 3 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230634/skills/monk/patadaVoladora_zbj4uk.webp"
+      },
+      {
+        "title": "Ola de luz",
+        "description": "Aplasta a los enemigos en un área con una ola de luz concentrada que inflige 1764 p. de daño. Máximo de 2 cargas.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230635/skills/monk/olaDeLuz_lbt2ns.webp"
+      },
+      {
+        "title": "Escudo Zen",
+        "description": "Te protege a ti o a un aliado con un escudo que absorbe 2100 p. de daño durante 5 s. Este escudo también previene todos los efectos de pérdida de control del personaje. Proteger a un aliado hace que te lances hacia su ubicación y ambos obtengáis el escudo.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230634/skills/monk/escudoZen_sjsnkr.webp"
+      }
+    ],
+    "items": [
+      {
+        "type": "charm",
+        "class": "charm",
+        "title": "Dije Enorme Espiritual Soberbio",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715781/DH/charm/charm_jlzoyk.png",
+        "bonus": [
+          "Escudo zen +6% de daño",
+          "Ola de luz +4% de daño",
+          "Patada Voladora +10% de daño",
+          "Golpe Místico +4% de daño",
+          "Puños del trueno +4% de daño"
+        ],
+        "req": ["Nivel necesario: 56"]
+      },
+      {
+        "type": "head",
+        "class": "orange",
+        "title": "Corona Pensativa",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680733514/items/head/coronaPensativa_ow018j.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Duración de Escudo zen aumentada un 30%.",
+          "Tiempo de reutilización de Escudo zen reducido un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Monje"]
+      },
+      {
+        "type": "shoulders",
+        "class": "orange",
+        "title": "Rielalinn",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680733740/items/shoulders/rielalinn_hvf4em.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Ahora Ola de luz libera una onda de energía que inflige daño a todos los enemigos a su paso y los quema.",
+          "Daño de Ola de luz aumentado un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Monje"]
+      },
+      {
+        "type": "torso",
+        "class": "orange",
+        "title": "Bendición de la Iluminacion",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680733762/items/torso/bendicionDeLaIluminacion_k68pqx.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Durante Escudo zen, tu velocidad de movimiento aumenta un 25% y puedes moverte sin trabas a través de los enemigos.",
+          "Tiempo de reutilización de Escudo zen reducido un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Monje"]
+      },
+      {
+        "type": "wrists",
+        "class": "green",
+        "title": "Nervio del Excursionista",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680733848/items/wrists/nervioDelExcursionista_gusob0.webp",
+        "set": [
+          "Premio del guía sombrío",
+          "Manos: Nervio del excursionista",
+          "Pies: Zancada invisible",
+          "Cintura: Dientembleque",
+          "Cuello: Lamento Ahogado",
+          "Dedo: Instantes de pánico",
+          "Dedo: Sombra enroscada"
+        ],
+        "bonus": [
+          "Aumenta tu daño infligido un 15% durante 3 s tras usar una habilidad de carrera. (2 objetos de conjunto equipados)",
+          "Aumenta tu probabilidad de golpe crítico un 22.5% durante 3 s tras usar una habilidad de carrera. (4 objetos de conjunto equipados)",
+          "Cuando termina tu habilidad de carrera, provoca una ola de terror que inflige 2625 p. de daño y hace que los enemigos cercanos huyan amedrentados durante 3 s. La oleada de terror solo se activa cuando hay enemigos cerca y no puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      },
+      {
+        "type": "waist",
+        "class": "green",
+        "title": "Dientembleque",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680731980/items/waist/dientembleque_ra1rx5.webp",
+        "set": [
+          "Premio del guía sombrío",
+          "Manos: Nervio del excursionista",
+          "Pies: Zancada invisible",
+          "Cintura: Dientembleque",
+          "Cuello: Lamento Ahogado",
+          "Dedo: Instantes de pánico",
+          "Dedo: Sombra enroscada"
+        ],
+        "bonus": [
+          "Aumenta tu daño infligido un 15% durante 3 s tras usar una habilidad de carrera. (2 objetos de conjunto equipados)",
+          "Aumenta tu probabilidad de golpe crítico un 22.5% durante 3 s tras usar una habilidad de carrera. (4 objetos de conjunto equipados)",
+          "Cuando termina tu habilidad de carrera, provoca una ola de terror que inflige 2625 p. de daño y hace que los enemigos cercanos huyan amedrentados durante 3 s. La oleada de terror solo se activa cuando hay enemigos cerca y no puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      },
+      {
+        "type": "weapon",
+        "class": "orange",
+        "title": "Ley Interviniente",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680733934/items/weapon/leyInterviniente_cyhpcw.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Ahora Escudo zen hace que te lances hacia una ubicación donde tú y todos los aliados cercanos recibís un escudo que absorbe daño.",
+          "Tiempo de reutilización de Escudo zen reducido un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Monje"]
+      },
+      {
+        "type": "offhand",
+        "class": "orange",
+        "title": "Radios de la Rueda",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680733951/items/offhand/radiosDeLaRueda_vvuuon.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Patada voladora también aumenta temporalmente un 10% todo el daño que infliges.",
+          "Tiempo de reutilización de Patada voladora reducido un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Monje"]
+      },
+      {
+        "type": "legs",
+        "class": "orange",
+        "title": "Resplandor Flagelador",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680734030/items/legs/resplandorFlagelador_fzpff9.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Daño de Ola de luz aumentado un 10%.",
+          "Tiempo de reutilización de Ola de luz reducido un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Monje"]
+      },
+      {
+        "type": "feet",
+        "class": "green",
+        "title": "Zancada Invisible",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680734045/items/feet/zancadaInvisible_nrgwsw.webp",
+        "set": [
+          "Premio del guía sombrío",
+          "Manos: Nervio del excursionista",
+          "Pies: Zancada invisible",
+          "Cintura: Dientembleque",
+          "Cuello: Lamento Ahogado",
+          "Dedo: Instantes de pánico",
+          "Dedo: Sombra enroscada"
+        ],
+        "bonus": [
+          "Aumenta tu daño infligido un 15% durante 3 s tras usar una habilidad de carrera. (2 objetos de conjunto equipados)",
+          "Aumenta tu probabilidad de golpe crítico un 22.5% durante 3 s tras usar una habilidad de carrera. (4 objetos de conjunto equipados)",
+          "Cuando termina tu habilidad de carrera, provoca una ola de terror que inflige 2625 p. de daño y hace que los enemigos cercanos huyan amedrentados durante 3 s. La oleada de terror solo se activa cuando hay enemigos cerca y no puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      },
+      {
+        "type": "amulet",
+        "class": "green",
+        "title": "Corazón Ardiente de Shal'baas",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680734106/items/neck/corazonArdienteDeShalbaas_wwvfmv.webp",
+        "set": [
+          "Andrajos de guerra de Shal'baas",
+          "Manos: Doce impactos de Shal'baas",
+          "Pies: Aplastavientos de Shal'baas",
+          "Cintura: Ciñetormentas de Shal'baas",
+          "Cuello: Corazón ardiente de Shal'baas",
+          "Dedo: Sierpe entrelazada de Shal'baas",
+          "Dedo: Colmillos en reposo de Shal'baas"
+        ],
+        "bonus": [
+          "Daño de ataque primario aumentado un 15%. (2 objetos de conjunto equipados)",
+          "Tus ataques primarios aumentan gradualmente tu velocidad de ataque primario hasta un máximo de un 25%. (4 objetos de conjunto equipados)",
+          "Tus ataques primarios tienen un (0.05)*100% de probabilidad de aumentar tu velocidad de ataque primario durante 12 s. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "ringR",
+        "class": "green",
+        "title": "Instantes de Pánico",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680732366/items/finger/instantesDePanico_orrrk6.webp",
+        "set": [
+          "Premio del guía sombrío",
+          "Manos: Nervio del excursionista",
+          "Pies: Zancada invisible",
+          "Cintura: Dientembleque",
+          "Cuello: Lamento Ahogado",
+          "Dedo: Instantes de pánico",
+          "Dedo: Sombra enroscada"
+        ],
+        "bonus": [
+          "Aumenta tu daño infligido un 15% durante 3 s tras usar una habilidad de carrera. (2 objetos de conjunto equipados)",
+          "Aumenta tu probabilidad de golpe crítico un 22.5% durante 3 s tras usar una habilidad de carrera. (4 objetos de conjunto equipados)",
+          "Cuando termina tu habilidad de carrera, provoca una ola de terror que inflige 2625 p. de daño y hace que los enemigos cercanos huyan amedrentados durante 3 s. La oleada de terror solo se activa cuando hay enemigos cerca y no puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "ringL",
+        "class": "green",
+        "title": "Sombra Enroscada",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680732366/items/finger/instantesDePanico_orrrk6.webp",
+        "set": [
+          "Premio del guía sombrío",
+          "Manos: Nervio del excursionista",
+          "Pies: Zancada invisible",
+          "Cintura: Dientembleque",
+          "Cuello: Lamento Ahogado",
+          "Dedo: Instantes de pánico",
+          "Dedo: Sombra enroscada"
+        ],
+        "bonus": [
+          "Aumenta tu daño infligido un 15% durante 3 s tras usar una habilidad de carrera. (2 objetos de conjunto equipados)",
+          "Aumenta tu probabilidad de golpe crítico un 22.5% durante 3 s tras usar una habilidad de carrera. (4 objetos de conjunto equipados)",
+          "Cuando termina tu habilidad de carrera, provoca una ola de terror que inflige 2625 p. de daño y hace que los enemigos cercanos huyan amedrentados durante 3 s. La oleada de terror solo se activa cuando hay enemigos cerca y no puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      }
+    ],
+    "gems": []
+  },
+  {
+    "class": "Nigromante",
+    "skills": [
+      {
+        "title": "Fuego de alma",
+        "description": "Lanza una bola de fuego de alma que explota al golpear a un enemigo e inflige 897 p. de daño al objetivo y un 25% de ese daño a todos los demás enemigos cercanos.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232188/skills/necromancer/fuegoDeAlma_hc7cuu.webp"
+      },
+      {
+        "title": "Armadura de hueso",
+        "description": "Te proteges a ti y a tus aliados cercanos con un escudo de huesos que absorbe 3402 p. de daño durante 12 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232188/skills/necromancer/armaduraDeHueso_nxiplp.webp"
+      },
+      {
+        "title": "Dirigir esqueletos",
+        "description": "Activa: Ordena a tus campeones esqueléticos que carguen hacia una ubicación y aumenten su velocidad de ataque un 80% durante 4.5 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232188/skills/necromancer/dirigirEsqueletos_bjrjlw.webp"
+      },
+      {
+        "title": "Invocar gólem",
+        "description": "Invoca a un gólem de hueso durante 24 s. Al invocarlo, infligirá 1050 p. de daño a todos los enemigos cercanos y los aturdirá durante 2 s. Mientras está activo, puedes ordenarle al gólem que salte a una ubicación cercana para infligir 367 p. de daño y obligar a todos los monstruos cercanos a atacarlo durante 6 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232188/skills/necromancer/invocarGolem_qj692g.webp"
+      },
+      {
+        "title": "Maldición oscura",
+        "description": "Maldice a todos los enemigos en la zona para infligirles 1428 p. de daño durante 6 s y reducir enormemente su visión.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232188/skills/necromancer/maldicionOscura_ohuklt.webp"
+      }
+    ],
+    "items": [
+      {
+        "type": "charm",
+        "class": "charm",
+        "title": "Dije Enorme Reanimado Sublime",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715781/DH/charm/charm_jlzoyk.png",
+        "bonus": [
+          "Fuego de alma +4% de daño",
+          "Lanza de hueso +2% de daño",
+          "Espíritus de hueso +2% de daño",
+          "Pica cadavérica +4% de daño",
+          "Maldición oscura +4% de daño"
+        ],
+        "req": ["Nivel necesario: 56"]
+      },
+      {
+        "type": "head",
+        "class": "orange",
+        "title": "Vidrictus",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680732775/items/head/vidrictus_e4hjmg.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Ahora los campeones esqueléticos son arqueros esqueléticos.",
+          "Tiempo de reutilización de Dirigir esqueletos reducido un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante"]
+      },
+      {
+        "type": "shoulders",
+        "class": "orange",
+        "title": "Manto Persistente",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680732836/items/shoulders/mantoPersistente_xw3q6x.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Duración de Maldición oscura aumentada un 30%.",
+          "Tiempo de reutilización de Maldición oscura reducido un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante"]
+      },
+      {
+        "type": "torso",
+        "class": "orange",
+        "title": "Regalo de Despedida",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680732877/items/torso/regaloDeDespedida_v1alg4.webp",
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante"]
+      },
+      {
+        "type": "wrists",
+        "class": "green",
+        "title": "Mano abierta de Issatar",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680733012/items/wrists/manoAbiertaDeIssatar_xvsn5y.webp",
+        "set": [
+          "Issatar imbuido",
+          "Manos: Mano abierta de Issatar",
+          "Pies: Issatar el Bruto",
+          "Cintura: Issatar contenido",
+          "Cuello: Issatar reposado",
+          "Dedo: Issatar airado",
+          "Dedo: Issatar arruinado"
+        ],
+        "bonus": [
+          "Cada vez que derrotas a un enemigo, obtienes un aumento de velocidad de movimiento de un 30% durante 3 s. (2 objetos de conjunto equipados)",
+          "El daño infligido aumenta un 2.5% por cada 5% que aumenta tu velocidad de movimiento, hasta un incremento máximo de un 25%. (4 objetos de conjunto equipados)",
+          "Cada vez que derrotas a un enemigo, tienes un 10% de probabilidad de obtener un orbe de alma que orbita a tu alrededor durante 12 s e inflige 577 p. de daño al atravesar a un enemigo. No puedes obtener un orbe de alma más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      },
+      {
+        "type": "waist",
+        "class": "green",
+        "title": "Tripa abierta",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680733042/items/waist/tripaAbierta_hifpko.webp",
+        "set": [
+          "Gracia del flagelante",
+          "Manos: Mano sangrienta",
+          "Pies: Suela desgarrada",
+          "Cintura: Tripa abierta",
+          "Cuello: Sajagargantas",
+          "Dedo: Palma rota",
+          "Dedo: Pulgar cercenado"
+        ],
+        "bonus": [
+          "Todo el daño continuo, canalizado y sobre el suelo persistente aumentado un 15%. (2 objetos de conjunto equipados)",
+          "Cada vez que infliges daño a un enemigo concreto 5 veces, le infligirás 630 p. de daño más. (4 objetos de conjunto equipados)",
+          "Cada vez que infliges daño, tienes un 4% de probabilidad de lanzar un relámpago que inflige 3780 p. de daño a todos los enemigos cercanos y los aturde durante 1 s. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      },
+      {
+        "type": "weapon",
+        "class": "orange",
+        "title": "Desolatoria",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680733100/items/weapon/desolatoria_cmon0g.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Ahora Invocar gólem invoca un gólem ígneo que quema continuamente a todos los enemigos cercanos en vez de obligarlos a atacarlo o aturdirlos.",
+          "Daño de Invocar gólem aumentado un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante"]
+      },
+      {
+        "type": "offhand",
+        "class": "orange",
+        "title": "Rencor Fétido",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680733150/items/offhand/rencorFetido_e1xu0j.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Ahora Fuego de alma tiene un 25% de probabilidad de explotar al golpear, lo que inflige daño a los enemigos cercanos y les aplica quemaduras.",
+          "Daño de Fuego de alma aumentado un 10% (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante"]
+      },
+      {
+        "type": "legs",
+        "class": "orange",
+        "title": "Destructor Apenado",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680733199/items/legs/destructorApenado_qqwn5a.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Ahora Maldición oscura maldice el suelo de una zona para que los enemigos en su interior sufran daño continuo.",
+          "Daño de Maldición oscura aumentado un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante"]
+      },
+      {
+        "type": "feet",
+        "class": "green",
+        "title": "Suela Desgarrada",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680733228/items/feet/suelaDesgarrada_o9pbdb.webp",
+        "set": [
+          "Gracia del flagelante",
+          "Manos: Mano sangrienta",
+          "Pies: Suela desgarrada",
+          "Cintura: Tripa abierta",
+          "Cuello: Sajagargantas",
+          "Dedo: Palma rota",
+          "Dedo: Pulgar cercenado"
+        ],
+        "bonus": [
+          "Todo el daño continuo, canalizado y sobre el suelo persistente aumentado un 15%. (2 objetos de conjunto equipados)",
+          "Cada vez que infliges daño a un enemigo concreto 5 veces, le infligirás 630 p. de daño más. (4 objetos de conjunto equipados)",
+          "Cada vez que infliges daño, tienes un 4% de probabilidad de lanzar un relámpago que inflige 3780 p. de daño a todos los enemigos cercanos y los aturde durante 1 s. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      },
+      {
+        "type": "amulet",
+        "class": "green",
+        "title": "Ansia del Despertador",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680733381/items/neck/ansiaDelDespertador_jcbm7t.webp",
+        "set": [
+          "Ansias de Vithu",
+          "Manos: Ansia de la lumbrera",
+          "Pies: Ansia de la almenara",
+          "Cintura: Ansia del ejemplar",
+          "Cuello: Ansia del despertador",
+          "Dedo: Ansia modesta",
+          "Dedo: Ansia impudente"
+        ],
+        "bonus": [
+          "Aumenta un 30% la duración de todos los efectos beneficios que afectan a los miembros del grupo o a ti. (2 objetos de conjunto equipados)",
+          "Aumenta un 30% la velocidad de ataque del objetivo durante 3 s cada vez que usas una habilidad para otorgar un efecto beneficioso a un miembro del grupo o a ti. (4 objetos de conjunto equipados)",
+          "Cada vez que utilices una habilidad para otorgaros un beneficio a ti o a un miembro del grupo, creas una zona de apoteosis durante 12 s que os otorga un 12% de drenaje de vida a ti y a los miembros del grupo en su interior. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      },
+      {
+        "type": "ringR",
+        "class": "green",
+        "title": "Instantes de Pánico",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680732366/items/finger/instantesDePanico_orrrk6.webp",
+        "set": [
+          "Premio del guía sombrío",
+          "Manos: Nervio del excursionista",
+          "Pies: Zancada invisible",
+          "Cintura: Dientembleque",
+          "Cuello: Lamento Ahogado",
+          "Dedo: Instantes de pánico",
+          "Dedo: Sombra enroscada"
+        ],
+        "bonus": [
+          "Aumenta tu daño infligido un 15% durante 3 s tras usar una habilidad de carrera. (2 objetos de conjunto equipados)",
+          "Aumenta tu probabilidad de golpe crítico un 22.5% durante 3 s tras usar una habilidad de carrera. (4 objetos de conjunto equipados)",
+          "Cuando termina tu habilidad de carrera, provoca una ola de terror que inflige 2625 p. de daño y hace que los enemigos cercanos huyan amedrentados durante 3 s. La oleada de terror solo se activa cuando hay enemigos cerca y no puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "ringL",
+        "class": "green",
+        "title": "Sierpe entrelazada de Shal'baas",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680733444/items/finger/sierpeEntrelazadaDeShalbaas_gizcxr.webp",
+        "set": [
+          "Andrajos de guerra de Shal'baas",
+          "Manos: Doce impactos de Shal'baas",
+          "Pies: Aplastavientos de Shal'baas",
+          "Cintura: Ciñetormentas de Shal'baas",
+          "Cuello: Corazón ardiente de Shal'baas",
+          "Dedo: Sierpe entrelazada de Shal'baas",
+          "Dedo: Colmillos en reposo de Shal'baas"
+        ],
+        "bonus": [
+          "Daño de ataque primario aumentado un 15%. (2 objetos de conjunto equipados)",
+          "Tus ataques primarios aumentan gradualmente tu velocidad de ataque primario hasta un máximo de un 25%. (4 objetos de conjunto equipados)",
+          "Tus ataques primarios tienen un (0.05)*100% de probabilidad de aumentar tu velocidad de ataque primario durante 12 s. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      }
+    ],
+    "gems": []
+  },
+  {
+    "class": "Maga",
+    "skills": [
+      {
+        "title": "Electrocutar",
+        "description": "Tus dedos lanzan rayos que infligen 840-1117 p. de daño al primer enemigo alcanzado y luego saltan a 3 enemigos más e infligen un 30% de ese daño.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232501/skills/wizard/electrocutar_o8ig4z.webp"
+      },
+      {
+        "title": "Armadura de hielo",
+        "description": "Te rodea con una barrera de hielo que absorbe hasta 3954 p. de daño durante 8 s. Cuando expira, estalla, inflige 569 p. de daño a todos los enemigos cercanos y provoca un 40% de helada durante 6 s. Activa la habilidad de nuevo para que estalle de inmediato.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232501/skills/wizard/aramaduraDeHielo_fuwyxd.webp"
+      },
+      {
+        "title": "Teletransporte",
+        "description": "Te teletransporta hacia delante. Máximo de 3 cargas.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232501/skills/wizard/teletransporte_cg1v0l.webp"
+      },
+      {
+        "title": "Nova de rayos",
+        "description": "Arroja 10 bolas de rayos en todas las direcciones para infligir 728 p. de daño en el trayecto de ida y vuelta hacia tu nueva ubicación. Máximo de 6 golpes por objetivo. A partir del golpe número 2 a un objetivo, solo le infligen un 25% de daño.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232501/skills/wizard/novaDeRayos_py1pb4.webp"
+      },
+      {
+        "title": "Meteorito",
+        "description": "Invoca un meteorito gigante que cae del cielo, inflige 1378 p. de daño y aturde a todos los enemigos en la zona del impacto durante 3 s. Esta zona queda calcinada, lo que quema a los enemigos y les inflige 1152 p. de daño durante 6 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232501/skills/wizard/meteorito_rgoxlf.webp"
+      }
+    ],
+    "items": [
+      {
+        "type": "charm",
+        "class": "charm",
+        "title": "Dije Enorme Arcano Soberbio",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715781/DH/charm/charm_jlzoyk.png",
+        "bonus": [
+          "Electrocutar +6% de daño",
+          "Desintegrar +8% de daño",
+          "Misil mágico +4% de daño",
+          "Viento arcano +6% de daño",
+          "Nova de rayos +4% de daño"
+        ],
+        "req": ["Nivel necesario: 56"]
+      },
+      {
+        "type": "head",
+        "class": "orange",
+        "title": "Lastre Aplastante",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680731735/items/head/lastreAplastante_ugiq6f.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Teletransporte también aumenta tu daño un 10% durante 3 s.",
+          "Tiempo de reutilización de Teletransporte reducido un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Maga"]
+      },
+      {
+        "type": "shoulders",
+        "class": "orange",
+        "title": "Hombros del Cataclismo",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680731816/items/shoulders/hombrosDelCataclismo_u0o12s.webp",
+        "description": [
+          "Daño de Meteorito aumentado un 10%.",
+          "Daño de Meteorito aumentado un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Maga"]
+      },
+      {
+        "type": "torso",
+        "class": "orange",
+        "title": "Rampante e Inescrutable",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680731889/items/torso/RampanteEInescrutable_prbgif.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Ahora Nova de rayos crea un orbe de rayos que orbita a tu alrededor y lanza descargas de rayos a tu objetivo cuando usas tu ataque primario.",
+          "Daño de Nova de rayos aumentado un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Maga"]
+      },
+      {
+        "type": "wrists",
+        "class": "green",
+        "title": "Ansia de la Lumbrera",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715782/DH/wrists/wrists_zwvkus.webp",
+        "set": [
+          "Ansias de Vithu",
+          "Manos: Ansia de la lumbrera",
+          "Pies: Ansia de la almenara",
+          "Cintura: Ansia del ejemplar",
+          "Cuello: Ansia del despertador",
+          "Dedo: Ansia modesta",
+          "Dedo: Ansia impudente"
+        ],
+        "bonus": [
+          "Aumenta un 30% la duración de todos los efectos beneficios que afectan a los miembros del grupo o a ti. (2 objetos de conjunto equipados)",
+          "Aumenta un 30% la velocidad de ataque del objetivo durante 3 s cada vez que usas una habilidad para otorgar un efecto beneficioso a un miembro del grupo o a ti. (4 objetos de conjunto equipados)",
+          "Cada vez que utilices una habilidad para otorgaros un beneficio a ti o a un miembro del grupo, creas una zona de apoteosis durante 12 s que os otorga un 12% de drenaje de vida a ti y a los miembros del grupo en su interior. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      },
+      {
+        "type": "waist",
+        "class": "green",
+        "title": "Dientembleque",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680731980/items/waist/dientembleque_ra1rx5.webp",
+        "set": [
+          "Premio del guía sombrío",
+          "Manos: Nervio del excursionista",
+          "Pies: Zancada invisible",
+          "Cintura: Dientembleque",
+          "Cuello: Lamento Ahogado",
+          "Dedo: Instantes de pánico",
+          "Dedo: Sombra enroscada"
+        ],
+        "bonus": [
+          "Aumenta tu daño infligido un 15% durante 3 s tras usar una habilidad de carrera. (2 objetos de conjunto equipados)",
+          "Aumenta tu probabilidad de golpe crítico un 22.5% durante 3 s tras usar una habilidad de carrera. (4 objetos de conjunto equipados)",
+          "Cuando termina tu habilidad de carrera, provoca una ola de terror que inflige 2625 p. de daño y hace que los enemigos cercanos huyan amedrentados durante 3 s. La oleada de terror solo se activa cuando hay enemigos cerca y no puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "weapon",
+        "class": "orange",
+        "title": "Viejo Rustico",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680731599/items/weapon/olRustic_nvnnws.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Nova de rayos también aumenta tu velocidad de ataque primario un 30% durante 3 s.",
+          "Daño de Nova de rayos aumentado un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Maga"]
+      },
+      {
+        "type": "offhand",
+        "class": "orange",
+        "title": "Estigma Cargado",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680732078/items/offhand/estigmaCargado_xin4hd.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Electrocutar también aumenta tu velocidad de ataque primario un 6% durante 2 s. Se acumula un máximo de 5 veces.",
+          "Daño de Electrocutar aumentado un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Maga"]
+      },
+      {
+        "type": "legs",
+        "class": "orange",
+        "title": "Evento de Impacto",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680732167/items/legs/eventoDeImpacto_hdrcwx.webp",
+        "description": [
+          "🔸 Legendario 🔸",
+          "Ahora Meteorito invoca continuamente pequeños meteoritos que infligen daño a los enemigos en la zona.",
+          "Daño de Meteorito aumentado un 10%. (Despertada)"
+        ],
+        "bonus": [
+          "Habilidad de bonificación (Clasificación 6)",
+          "Habilidad de bonificación (Clasificación 11)",
+          "Habilidad de bonificación (Clasificación 16)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Maga"]
+      },
+      {
+        "type": "feet",
+        "class": "green",
+        "title": "Ansia de la Almenara",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715781/DH/feet/feet_ftrwzw.webp",
+        "set": [
+          "Ansias de Vithu",
+          "Manos: Ansia de la lumbrera",
+          "Pies: Ansia de la almenara",
+          "Cintura: Ansia del ejemplar",
+          "Cuello: Ansia del despertador",
+          "Dedo: Ansia modesta",
+          "Dedo: Ansia impudente"
+        ],
+        "bonus": [
+          "Aumenta un 30% la duración de todos los efectos beneficios que afectan a los miembros del grupo o a ti. (2 objetos de conjunto equipados)",
+          "Aumenta un 30% la velocidad de ataque del objetivo durante 3 s cada vez que usas una habilidad para otorgar un efecto beneficioso a un miembro del grupo o a ti. (4 objetos de conjunto equipados)",
+          "Cada vez que utilices una habilidad para otorgaros un beneficio a ti o a un miembro del grupo, creas una zona de apoteosis durante 12 s que os otorga un 12% de drenaje de vida a ti y a los miembros del grupo en su interior. No puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
+      },
+      {
+        "type": "amulet",
+        "class": "green",
+        "title": "Lamento Ahogado",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680732243/items/neck/lamentoAhogado_afstls.webp",
+        "set": [
+          "Premio del guía sombrío",
+          "Manos: Nervio del excursionista",
+          "Pies: Zancada invisible",
+          "Cintura: Dientembleque",
+          "Cuello: Lamento Ahogado",
+          "Dedo: Instantes de pánico",
+          "Dedo: Sombra enroscada"
+        ],
+        "bonus": [
+          "Aumenta tu daño infligido un 15% durante 3 s tras usar una habilidad de carrera. (2 objetos de conjunto equipados)",
+          "Aumenta tu probabilidad de golpe crítico un 22.5% durante 3 s tras usar una habilidad de carrera. (4 objetos de conjunto equipados)",
+          "Cuando termina tu habilidad de carrera, provoca una ola de terror que inflige 2625 p. de daño y hace que los enemigos cercanos huyan amedrentados durante 3 s. La oleada de terror solo se activa cuando hay enemigos cerca y no puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "ringR",
+        "class": "green",
+        "title": "Instantes de Pánico",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680732366/items/finger/instantesDePanico_orrrk6.webp",
+        "set": [
+          "Premio del guía sombrío",
+          "Manos: Nervio del excursionista",
+          "Pies: Zancada invisible",
+          "Cintura: Dientembleque",
+          "Cuello: Lamento Ahogado",
+          "Dedo: Instantes de pánico",
+          "Dedo: Sombra enroscada"
+        ],
+        "bonus": [
+          "Aumenta tu daño infligido un 15% durante 3 s tras usar una habilidad de carrera. (2 objetos de conjunto equipados)",
+          "Aumenta tu probabilidad de golpe crítico un 22.5% durante 3 s tras usar una habilidad de carrera. (4 objetos de conjunto equipados)",
+          "Cuando termina tu habilidad de carrera, provoca una ola de terror que inflige 2625 p. de daño y hace que los enemigos cercanos huyan amedrentados durante 3 s. La oleada de terror solo se activa cuando hay enemigos cerca y no puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      },
+      {
+        "type": "ringL",
+        "class": "green",
+        "title": "Sombra Enroscada",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680732366/items/finger/instantesDePanico_orrrk6.webp",
+        "set": [
+          "Premio del guía sombrío",
+          "Manos: Nervio del excursionista",
+          "Pies: Zancada invisible",
+          "Cintura: Dientembleque",
+          "Cuello: Lamento Ahogado",
+          "Dedo: Instantes de pánico",
+          "Dedo: Sombra enroscada"
+        ],
+        "bonus": [
+          "Aumenta tu daño infligido un 15% durante 3 s tras usar una habilidad de carrera. (2 objetos de conjunto equipados)",
+          "Aumenta tu probabilidad de golpe crítico un 22.5% durante 3 s tras usar una habilidad de carrera. (4 objetos de conjunto equipados)",
+          "Cuando termina tu habilidad de carrera, provoca una ola de terror que inflige 2625 p. de daño y hace que los enemigos cercanos huyan amedrentados durante 3 s. La oleada de terror solo se activa cuando hay enemigos cerca y no puede ocurrir más de una vez cada 40 s. (6 objetos de conjunto equipados)"
+        ],
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
+      }
+    ],
+    "gems": []
+  }
+]

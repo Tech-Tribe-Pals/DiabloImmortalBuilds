@@ -55,7 +55,7 @@ body {
   border: solid 2px #fff;
 }
 
-progress {
+.classs progress {
   transition: ease-in 0.1s;
 }
 
@@ -63,36 +63,69 @@ progress {
 /* -- */ /* -- // BUILD // -- */ /* -- */
 .build {
   display: none;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   width: 100%;
   height: 90%;
   background-color: #222;
+  grid-template-areas: "gridL imgClass gridR buildDesc" "btns btns btns btns";
 }
 
-.build .buildGrid {
-  width: 300px;
-  height: 100%;
-  margin: 0 auto;
+.build .buildGridL {
+  grid-area: gridL;
+}
+.build .imgContainer {
+  grid-area: imgClass;
+}
+.build .buildGridR {
+  grid-area: gridR;
+  width: 200px;
+  height: 580px;
   display: grid;
-  flex-wrap: wrap;
-  grid-template-columns: repeat(100px, 1fr);
-  grid-template-rows: repeat(80px, 1fr);
-  grid-template-areas: "shoulders head charm" "wrists torso amulet" "weapon waist offhand" "ringL legs ringR" "feet feet feet";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(40px, 1fr);
+}
+.build .buildDescription {
+  grid-area: buildDesc;
+  margin-left: 20px;
 }
 
-.build img {
+.build .imgContainer {
+  position: relative;
+}
+
+.build .imgContainer .charm {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.build .buildGridL img,
+.build .buildGridR img {
   /* height: 150px; */
-  width: 70px;
+  width: 80px;
 }
 
-.build img:hover {
-  cursor: pointer;
+.build .classImg {
+  height: 550px;
 }
 
 .green {
   background-color: #231;
+  border: solid 2px #000;
   justify-self: center;
   align-self: center;
+}
+
+.green.bg {
+  background-color: transparent;
+  border: none;
+  border: solid 2px transparent;
+}
+
+.green.bg:hover {
+  background-color: #231;
   border: solid 2px #000;
 }
 
@@ -103,14 +136,9 @@ progress {
   border: solid 2px #000;
 }
 
-.orange.title {
-  background-color: transparent;
-  color: #fdbf82;
-  border: none;
-}
-
 .build .close {
   position: absolute;
+  padding: 0 5px;
   right: 15px;
   top: 15px;
   font-size: 20px;
@@ -119,6 +147,12 @@ progress {
   color: #fff;
   cursor: pointer;
   border-radius: 20px;
+  z-index: 5;
+}
+
+.build .close.closeModal {
+  top: 0;
+  right: 0;
 }
 
 .build .close:hover {
@@ -127,11 +161,9 @@ progress {
 }
 
 .build .btnBuild {
+  grid-area: btns;
   display: flex;
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  justify-content: center;
 }
 
 .build .btnBuild button {
@@ -152,63 +184,15 @@ progress {
 }
 
 .build .charm {
-  grid-area: charm;
   background-color: rgba(137, 129, 33, 0.2666666667);
   justify-self: center;
   align-self: center;
   border: solid 2px #000;
 }
 
-.build .head {
-  grid-area: head;
-}
-
-.build .soulders {
-  grid-area: shoulders;
-}
-
-.build .torso {
-  grid-area: torso;
-}
-
-.build .wrists {
-  grid-area: wrists;
-}
-
-.build .waist {
-  grid-area: waist;
-}
-
-.build .weapon {
-  grid-area: weapon;
-}
-
-.build .offhand {
-  grid-area: offhand;
-}
-
-.build .legs {
-  grid-area: legs;
-}
-
-.build .feet {
-  grid-area: feet;
-}
-
-.build .amulet {
-  grid-area: amulet;
-}
-
-.build .ringR {
-  grid-area: ringR;
-}
-
-.build .ringL {
-  grid-area: ringL;
-}
-
 .detail {
   position: absolute;
+  z-index: 2;
 }
 
 /* -- */ /* -- // FIN BUILD // -- */ /* -- */
@@ -226,16 +210,126 @@ progress {
   /* display: none; */
   padding: 5px;
   border-radius: 5px;
-  background-color: #444;
   width: 400px;
-  position: absolute;
+  max-height: 600px;
+  overflow-y: scroll;
   text-align: center;
+}
+.buildDescription::-webkit-scrollbar {
+  background-color: #444;
+  width: 7px;
+}
+.buildDescription::-webkit-scrollbar-thumb {
+  background-color: #222;
+  width: 15px;
+}
+
+.skillsModal {
+  max-height: 500px;
+  min-width: 200px;
+  padding: 5px;
+  overflow-y: scroll;
+  position: absolute;
+  text-align: left;
+  background-color: #444;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-@media (max-width: 440px) {
+.skillsModal img {
+  width: 50px;
+}
+.skillsModal::-webkit-scrollbar {
+  background-color: #444;
+  width: 7px;
+}
+.skillsModal::-webkit-scrollbar-thumb {
+  background-color: #222;
+  width: 15px;
+}
+
+@media (max-width: 1080px) {
+  .build {
+    width: 100%;
+    flex-wrap: wrap;
+    grid-template-areas: "imgClass buildDesc" "gridR gridR" "gridL gridL" "btns btns";
+  }
+  .build .classImg {
+    height: 500px;
+  }
+  .build .buildGridR, .build .buildGridL {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .build .buildGridR img, .build .buildGridL img {
+    width: 110px;
+  }
+  .build .skillsModal {
+    width: 90%;
+  }
+  .build .buildDescription {
+    height: 500px;
+  }
+  .build .btnBuild {
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 768px) {
+  .build .buildGridR img, .build .buildGridL img {
+    width: 86px;
+  }
+  .build .classImg {
+    height: 300px;
+  }
+  .build .buildDescription {
+    height: 300px;
+    margin: 0;
+  }
+  .build .buildDescription img {
+    width: 50px;
+  }
+}
+@media (max-width: 630px) {
+  .build {
+    grid-template-areas: "imgClass imgClass" "buildDesc buildDesc" "gridR gridR" "gridL gridL" "btns btns";
+  }
+  .build .imgContainer .classImg {
+    display: none;
+  }
+  .build .imgContainer .charm {
+    width: 85px;
+    position: relative;
+    left: 0;
+  }
+  .build .buildDescription {
+    width: 96%;
+  }
+  .build .buildGridR, .build .buildGridL {
+    overflow-x: scroll;
+    justify-content: flex-start;
+  }
+  .build .btnBuild {
+    top: 0;
+    justify-content: space-around;
+    padding: 10px;
+  }
+  .build .detail {
+    display: none;
+  }
+  .build .skillsModal {
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .class img {
+    width: 100%;
+    height: auto;
+  }
   .buildDescription {
     width: 100%;
   }
@@ -364,10 +458,12 @@ nav a:hover {
   color: rgb(108, 117, 125) !important;
   transition: color 0.4s ease-in-out;
 }
+
 nav img:hover {
   filter: brightness(150%);
   transition: filter 0.4s ease-in-out;
 }
+
 
 .blur {
   content: "";
@@ -376,12 +472,14 @@ nav img:hover {
   background: linear-gradient(to right, rgb(0, 0, 0), transparent);
 }
 
+
 @media (max-width: 1199.98px) {
   #inicio {
     align-items: center;
   }
   .inicio-video {
     width: 100% !important;
+
     filter: brightness(40%);
   }
   nav {
@@ -399,7 +497,9 @@ nav img:hover {
   }
   .text-title {
     width: 75% !important;
+
     align-self: center;
+
   }
   .blur {
     left: 0;
@@ -408,11 +508,7 @@ nav img:hover {
     bottom: 0;
     background: linear-gradient(to top, rgb(0, 0, 0), transparent);
   }
-}
-#story {
-  background: url("../img/story") center no-repeat;
-  background-size: contain;
-  height: 85vh;
+
 }
 
 /*# sourceMappingURL=output.css.map */
