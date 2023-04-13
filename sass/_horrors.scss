@@ -1,0 +1,25 @@
+/* boss */
+
+#horrors {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url("../img/boss/fondoseccion_boss.jpg");
+  background-position: center;
+}
+
+.mainBoss {
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+
+h5 {
+  color: whitesmoke;
+}
