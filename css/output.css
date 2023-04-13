@@ -1,3 +1,12 @@
+body::-webkit-scrollbar {
+  background-color: #222;
+  width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #666;
+  width: 15px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -10,8 +19,8 @@ body {
 
 /* -- */ /* CLASES */ /* -- */
 /**
-main {
-  min-height: 90vh;
+#buildSection, #horrors, #news, #story {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,6 +28,7 @@ main {
 }
 
 **/
+
 .class {
   display: flex;
   flex-direction: column;
@@ -75,11 +85,13 @@ main {
   display: none;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 90%;
+  height: 100vh;
+  top: 0;
   background-color: #222;
   grid-template-areas: "gridL imgClass gridR buildDesc" "btns btns btns btns";
+  z-index: 1030;
 }
 .build .buildGridL {
   grid-area: gridL;
@@ -125,12 +137,7 @@ main {
   border: solid 2px #000;
   justify-self: center;
   align-self: center;
-}
-
-.green.bg {
-  background-color: transparent;
-  border: none;
-  border: solid 2px transparent;
+  margin: 5px 0;
 }
 
 .green.bg:hover {
@@ -156,7 +163,6 @@ main {
   color: #fff;
   cursor: pointer;
   border-radius: 20px;
-  z-index: 5;
 }
 
 .build .close.closeModal {
@@ -207,12 +213,14 @@ main {
 /* -- */ /* -- // FIN BUILD // -- */ /* -- */
 /* -- */ /* -- // BUILD DESCRIPTION // -- */ /* -- */
 .bgModal {
-  width: 100%;
-  height: 150%;
-  top: -200px;
-  left: 0;
-  position: absolute;
+  width: 100vw;
+  height: 150vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: hsla(0, 9%, 9%, 0.5);
+  z-index: 1020;
 }
 
 .buildDescription {
@@ -235,15 +243,12 @@ main {
 
 .skillsModal {
   max-height: 500px;
-  min-width: 200px;
+  width: 70%;
   padding: 5px;
   overflow-y: scroll;
   position: absolute;
   text-align: left;
   background-color: #444;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 .skillsModal img {
   width: 50px;
@@ -272,12 +277,14 @@ main {
     justify-content: center;
     height: auto;
     width: 100%;
+    height: 100%;
     gap: 10px;
     margin-top: 10px;
   }
+
   .build .buildGridR img,
   .build .buildGridL img {
-    width: 110px;
+    width: 80px;
   }
   .build .skillsModal {
     width: 90%;
@@ -307,13 +314,14 @@ main {
 }
 @media (max-width: 630px) {
   .build {
-    grid-template-areas: "imgClass imgClass" "buildDesc buildDesc" "gridR gridR" "gridL gridL" "btns btns";
+    grid-template-areas: "imgClass _" "buildDesc buildDesc" "gridR gridR" "gridL gridL" "btns btns";
   }
   .build .imgContainer .classImg {
     display: none;
   }
   .build .imgContainer .charm {
     width: 85px;
+    margin: 10px 0;
     position: relative;
     left: 0;
   }
@@ -323,6 +331,7 @@ main {
   .build .buildGridR,
   .build .buildGridL {
     overflow-x: scroll;
+    overflow-y: hidden;
     justify-content: flex-start;
   }
   .build .btnBuild {
@@ -349,7 +358,6 @@ main {
 /* -- */ /* -- // FIN BUILD DESCRIPTION // -- */ /* -- */
 /* boss */
 .mainBoss {
-  background-image: url(../img/fondoseccion_boss.jpg);
   background-position: center;
   height: 100%;
   width: 100%;
@@ -448,7 +456,8 @@ h5 {
   src: url(../fonts/films.EXL_____.ttf);
 }
 * {
-  font-family: "Exocet", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Exocet", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 #inicio {
@@ -494,7 +503,8 @@ nav img:hover {
     height: auto !important;
   }
   .nav-items-desktop {
-    filter: invert(32%) sepia(99%) saturate(1134%) hue-rotate(336deg) brightness(77%) contrast(89%);
+    filter: invert(32%) sepia(99%) saturate(1134%) hue-rotate(336deg)
+      brightness(77%) contrast(89%);
     width: 79% !important;
   }
   .nav-items-desktop ul {
@@ -515,10 +525,9 @@ nav img:hover {
     background: linear-gradient(to top, rgb(0, 0, 0), transparent);
   }
 }
-#story {
-  background: url("../img/story") center no-repeat;
-  background-size: contain;
-  height: 85vh;
+
+.paper {
+  background-image: url("https://previews.123rf.com/images/roystudio/roystudio1202/roystudio120200165/12658204-hoja-de-papel-con-delicado-patr%C3%B3n-para-utilizar-como-fondo.jpg");
 }
 
 /*# sourceMappingURL=output.css.map */
