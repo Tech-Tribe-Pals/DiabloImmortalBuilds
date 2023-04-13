@@ -1,7 +1,33 @@
 [
   {
     "class": "Bárbaro",
-    "skills": [],
+    "skills": [
+      {
+        "title": "Lacerar",
+        "description": "Ejecuta una serie de ataques que infligen 1050-1512 p. de daño por golpe. Cada tercer golpe, te cura un 15% del daño infligido.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681225253/skills/barbarian/lacerar_jxiacq.webp"
+      },
+      {
+        "title": "Ira Imperecedera",
+        "description": "Te hace entrar en un estado de ira durante 6.25 s que evita que mueras y hace que tus ataques te curen un 30% del daño infligido. Ira imperecedera se activa automáticamente cuando sufres daño letal.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681225253/skills/barbarian/iraImperecedera_lizoph.webp"
+      },
+      {
+        "title": "Torbellino",
+        "description": "Te convierte en un torbellino de acero que golpea continuamente a todos los enemigos cercanos y les inflige 346 p. de daño mientras te mueves con velocidad reducida un 70%. Al usar Torbellino, su energía se consume lentamente, pero se recupera cuando la habilidad no está en uso.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681225253/skills/barbarian/torbellino_wcdsbg.webp"
+      },
+      {
+        "title": "Carga brutal",
+        "description": "Cargas hacia delante para repeler a todos los enemigos a tu paso e infligirles 1115 p. de daño. Máximo de 3 cargas. Los jugadores solo se pueden ver afectados una vez cada 3 s por esta habilidad.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681225253/skills/barbarian/cargaBrutal_kkleue.webp"
+      },
+      {
+        "title": "Cólera de berserker",
+        "description": "Te hace entrar en un estado de ira enloquecida que aumenta un 50% tu velocidad de ataque y un 20% tu velocidad de movimiento durante 7.5 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681225253/skills/barbarian/coleraDelBerserker_r0olf6.webp"
+      }
+    ],
     "items": [
       {
         "type": "charm",
@@ -145,7 +171,7 @@
       },
       {
         "type": "legs",
-        "class": "green",
+        "class": "orange",
         "title": "Alapresta",
         "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680738071/items/legs/alapresta_gls0ol.webp",
         "description": [
@@ -255,7 +281,33 @@
   },
   {
     "class": "Cruzada",
-    "skills": [],
+    "skills": [
+      {
+        "title": "Fuego sacro",
+        "description": "Prende el aire con llamas sagradas que emanan de tu arma e infligen 866-1386 p. de daño a un enemigo y un 25% de ese daño a todos los demás enemigos frente a ti.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681229592/skills/crusader/fuegoSacro_y4snos.webp"
+      },
+      {
+        "title": "Desmembrar",
+        "description": "Te monta a lomos de un caballo de guerra celestial durante 5 s, lo que disipa todos los efectos de pérdida de movimiento, aumenta un 60% tu velocidad de movimiento y sustituye tu ataque primario. Unas cadenas sagradas atan a hasta 6 monstruos cercanos y los arrastran contigo para infligirles 338 p. de daño de manera repetida.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681229592/skills/crusader/desmembrar_y7nlim.webp"
+      },
+      {
+        "title": "Escudo giratorio",
+        "description": "Arroja un escudo giratorio que inflige 831 p. de daño a todos los enemigos a su paso. El escudo vuelve, atrae a los enemigos a su paso e inflige 554 p. de daño adicional. Máximo de 3 cargas. Los jugadores solo se pueden ver afectados por Escudo giratorio una vez cada 3 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681229592/skills/crusader/escudoGiratorio_i1ocmu.webp"
+      },
+      {
+        "title": "Espada fulminante",
+        "description": "Ahora Espada fulminante invoca cinco espadas electrificadas en una formación a tu alrededor que dura 6 s. De forma periódica, se generará un arco entre las espadas y tú que infligirá 354 p. de daño a los enemigos que queden dentro de él. El tiempo de reutilización de Espada fulminante es ahora de 15 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681229592/skills/crusader/espadaFulminante_d41pxx.webp"
+      },
+      {
+        "title": "Estandarte sagrado",
+        "description": "Coloca un estandarte sagrado que inspira a los aliados cercanos durante 10 s, lo que aumenta la probabilidad de golpe crítico un 100%, pero reduce el daño de golpe crítico del doble a un 135%. La probabilidad de golpe crítico superior al 100% otorga hasta un 65% de daño de golpe crítico adicional.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681229592/skills/crusader/estandarteSagrado_xxbmgv.webp"
+      }
+    ],
     "items": [
       {
         "type": "charm",
@@ -341,7 +393,10 @@
           "Aumenta un 20% el daño que infliges mientras dure Mil vientos. (4 objetos de conjunto equipados)",
           "Obtienes un escudo que te vuelve inmune al daño 5 veces mientras dure Mil vientos. No se puede obtener este escudo más de una vez cada 40 s. (6 objetos de conjunto equipados)"
         ],
-        "req": ["Nivel necesario: 55", "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"]
+        "req": [
+          "Nivel necesario: 55",
+          "Clase: Bárbaro, Cruzado, Cazadora de demonios, o Monje"
+        ]
       },
       {
         "type": "waist",
@@ -403,7 +458,7 @@
       },
       {
         "type": "legs",
-        "class": "green",
+        "class": "orange",
         "title": "Greba de Cuchillas",
         "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680737691/items/legs/grebasDeCuchillas_mients.webp",
         "description": [
@@ -513,7 +568,33 @@
   },
   {
     "class": "Cazadora de Demonios",
-    "skills": [],
+    "skills": [
+      {
+        "title": "Disparo de ballesta",
+        "description": "Dispara una flecha que inflige 840-1176 p. de daño mientras te mueves con velocidad reducida.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230193/skills/DH/disparoDeBallesta_ydfzk8.webp"
+      },
+      {
+        "title": "Venganza",
+        "description": "Activa: Te transforma en la encarnación de la venganza durante 6 s y hace que cada ataque primario lance 2 disparos adicionales que infligen 211 p. de daño cada uno.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230193/skills/DH/venganza_zqtley.webp"
+      },
+      {
+        "title": "Empalar",
+        "description": "Lanza cuchillos con rapidez en una dirección e inflige 396 p. de daño continuamente a todos los enemigos alcanzados. Al usar Empalar, su energía se consume lentamente, pero se recupera cuando la habilidad no está en uso.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230193/skills/DH/empalar_wyvqgp.webp"
+      },
+      {
+        "title": "Huida",
+        "description": "Ejecuta una estocada para infligir 1044 p. de daño a todos los enemigos frente a ti y reducir su velocidad de movimiento un 80% durante 4 s antes de saltar hacia atrás para escapar.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230193/skills/DH/huida_qw8qym.webp"
+      },
+      {
+        "title": "Acrobacia",
+        "description": "Usa una cuerda para columpiarte a una ubicación cercana e infligir 1115 p. de daño a los enemigos a tu paso, que no pueden atacarte. Máximo de 2 cargas.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230193/skills/DH/acrobacia_thuoge.webp"
+      }
+    ],
     "items": [
       {
         "type": "charm",
@@ -654,7 +735,7 @@
       },
       {
         "type": "legs",
-        "class": "green",
+        "class": "orange",
         "title": "Pantalones del Reservista",
         "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680715781/DH/legs/legs_gluhli.webp",
         "bonus": [
@@ -759,7 +840,33 @@
   },
   {
     "class": "Monje",
-    "skills": [],
+    "skills": [
+      {
+        "title": "Puños del trueno",
+        "description": "Te teletransporta a un enemigo cercano y ejecuta una serie de puñetazos rápidos que infligen 1050-1680 p. de daño. Puedes teletransportarte de nuevo después de cada tercer golpe. Solo te puedes teletransportar al mismo jugador enemigo una vez cada 3 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230635/skills/monk/pu%C3%B1osDelTrueno_zitu33.webp"
+      },
+      {
+        "title": "Golpe místico",
+        "description": "Te desplazas hacia delante 4.5 m y sueltas un espíritu que vuelve y arrastra a todos los enemigos a su paso y les inflige 945 p. de daño. Solo puede arrastrar a cada jugador una vez cada 3 s. Máximo de 3 cargas.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230635/skills/monk/golpeMistico_vtmxqt.webp"
+      },
+      {
+        "title": "Patada Voladora",
+        "description": "Lanza una patada hacia delante que inflige 1260 p. de daño a los enemigos a su paso y los repele. Patada voladora puede rebotar en las paredes e infligir 1260 p. de daño adicional a todos los enemigos cercanos. Máximo de 3 cargas. Los jugadores solo se pueden ver afectados una vez cada 3 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230634/skills/monk/patadaVoladora_zbj4uk.webp"
+      },
+      {
+        "title": "Ola de luz",
+        "description": "Aplasta a los enemigos en un área con una ola de luz concentrada que inflige 1764 p. de daño. Máximo de 2 cargas.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230635/skills/monk/olaDeLuz_lbt2ns.webp"
+      },
+      {
+        "title": "Escudo Zen",
+        "description": "Te protege a ti o a un aliado con un escudo que absorbe 2100 p. de daño durante 5 s. Este escudo también previene todos los efectos de pérdida de control del personaje. Proteger a un aliado hace que te lances hacia su ubicación y ambos obtengáis el escudo.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681230634/skills/monk/escudoZen_sjsnkr.webp"
+      }
+    ],
     "items": [
       {
         "type": "charm",
@@ -807,10 +914,7 @@
           "Habilidad de bonificación (Clasificación 11)",
           "Habilidad de bonificación (Clasificación 16)"
         ],
-        "req": [
-          "Nivel necesario: 55",
-          "Clase: Monje"
-        ]
+        "req": ["Nivel necesario: 55", "Clase: Monje"]
       },
       {
         "type": "torso",
@@ -827,10 +931,7 @@
           "Habilidad de bonificación (Clasificación 11)",
           "Habilidad de bonificación (Clasificación 16)"
         ],
-        "req": [
-          "Nivel necesario: 55",
-          "Clase: Monje"
-        ]
+        "req": ["Nivel necesario: 55", "Clase: Monje"]
       },
       {
         "type": "wrists",
@@ -910,7 +1011,7 @@
       },
       {
         "type": "legs",
-        "class": "green",
+        "class": "orange",
         "title": "Resplandor Flagelador",
         "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1680734030/items/legs/resplandorFlagelador_fzpff9.webp",
         "description": [
@@ -1023,7 +1124,33 @@
   },
   {
     "class": "Nigromante",
-    "skills": [],
+    "skills": [
+      {
+        "title": "Fuego de alma",
+        "description": "Lanza una bola de fuego de alma que explota al golpear a un enemigo e inflige 897 p. de daño al objetivo y un 25% de ese daño a todos los demás enemigos cercanos.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232188/skills/necromancer/fuegoDeAlma_hc7cuu.webp"
+      },
+      {
+        "title": "Armadura de hueso",
+        "description": "Te proteges a ti y a tus aliados cercanos con un escudo de huesos que absorbe 3402 p. de daño durante 12 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232188/skills/necromancer/armaduraDeHueso_nxiplp.webp"
+      },
+      {
+        "title": "Dirigir esqueletos",
+        "description": "Activa: Ordena a tus campeones esqueléticos que carguen hacia una ubicación y aumenten su velocidad de ataque un 80% durante 4.5 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232188/skills/necromancer/dirigirEsqueletos_bjrjlw.webp"
+      },
+      {
+        "title": "Invocar gólem",
+        "description": "Invoca a un gólem de hueso durante 24 s. Al invocarlo, infligirá 1050 p. de daño a todos los enemigos cercanos y los aturdirá durante 2 s. Mientras está activo, puedes ordenarle al gólem que salte a una ubicación cercana para infligir 367 p. de daño y obligar a todos los monstruos cercanos a atacarlo durante 6 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232188/skills/necromancer/invocarGolem_qj692g.webp"
+      },
+      {
+        "title": "Maldición oscura",
+        "description": "Maldice a todos los enemigos en la zona para infligirles 1428 p. de daño durante 6 s y reducir enormemente su visión.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232188/skills/necromancer/maldicionOscura_ohuklt.webp"
+      }
+    ],
     "items": [
       {
         "type": "charm",
@@ -1071,10 +1198,7 @@
           "Habilidad de bonificación (Clasificación 11)",
           "Habilidad de bonificación (Clasificación 16)"
         ],
-        "req": [
-          "Nivel necesario: 55",
-          "Clase: Nigromante"
-        ]
+        "req": ["Nivel necesario: 55", "Clase: Nigromante"]
       },
       {
         "type": "torso",
@@ -1086,10 +1210,7 @@
           "Habilidad de bonificación (Clasificación 11)",
           "Habilidad de bonificación (Clasificación 16)"
         ],
-        "req": [
-          "Nivel necesario: 55",
-          "Clase: Nigromante"
-        ]
+        "req": ["Nivel necesario: 55", "Clase: Nigromante"]
       },
       {
         "type": "wrists",
@@ -1279,7 +1400,33 @@
   },
   {
     "class": "Maga",
-    "skills": [],
+    "skills": [
+      {
+        "title": "Electrocutar",
+        "description": "Tus dedos lanzan rayos que infligen 840-1117 p. de daño al primer enemigo alcanzado y luego saltan a 3 enemigos más e infligen un 30% de ese daño.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232501/skills/wizard/electrocutar_o8ig4z.webp"
+      },
+      {
+        "title": "Armadura de hielo",
+        "description": "Te rodea con una barrera de hielo que absorbe hasta 3954 p. de daño durante 8 s. Cuando expira, estalla, inflige 569 p. de daño a todos los enemigos cercanos y provoca un 40% de helada durante 6 s. Activa la habilidad de nuevo para que estalle de inmediato.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232501/skills/wizard/aramaduraDeHielo_fuwyxd.webp"
+      },
+      {
+        "title": "Teletransporte",
+        "description": "Te teletransporta hacia delante. Máximo de 3 cargas.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232501/skills/wizard/teletransporte_cg1v0l.webp"
+      },
+      {
+        "title": "Nova de rayos",
+        "description": "Arroja 10 bolas de rayos en todas las direcciones para infligir 728 p. de daño en el trayecto de ida y vuelta hacia tu nueva ubicación. Máximo de 6 golpes por objetivo. A partir del golpe número 2 a un objetivo, solo le infligen un 25% de daño.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232501/skills/wizard/novaDeRayos_py1pb4.webp"
+      },
+      {
+        "title": "Meteorito",
+        "description": "Invoca un meteorito gigante que cae del cielo, inflige 1378 p. de daño y aturde a todos los enemigos en la zona del impacto durante 3 s. Esta zona queda calcinada, lo que quema a los enemigos y les inflige 1152 p. de daño durante 6 s.",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1681232501/skills/wizard/meteorito_rgoxlf.webp"
+      }
+    ],
     "items": [
       {
         "type": "charm",
@@ -1326,10 +1473,7 @@
           "Habilidad de bonificación (Clasificación 11)",
           "Habilidad de bonificación (Clasificación 16)"
         ],
-        "req": [
-          "Nivel necesario: 55",
-          "Clase: Maga"
-        ]
+        "req": ["Nivel necesario: 55", "Clase: Maga"]
       },
       {
         "type": "torso",
@@ -1346,10 +1490,7 @@
           "Habilidad de bonificación (Clasificación 11)",
           "Habilidad de bonificación (Clasificación 16)"
         ],
-        "req": [
-          "Nivel necesario: 55",
-          "Clase: Maga"
-        ]
+        "req": ["Nivel necesario: 55", "Clase: Maga"]
       },
       {
         "type": "wrists",
