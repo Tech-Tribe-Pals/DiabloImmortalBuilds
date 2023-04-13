@@ -9,6 +9,16 @@ body {
 }
 
 /* -- */ /* CLASES */ /* -- */
+/**
+main {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+**/
 .class {
   display: flex;
   flex-direction: column;
@@ -71,7 +81,6 @@ body {
   background-color: #222;
   grid-template-areas: "gridL imgClass gridR buildDesc" "btns btns btns btns";
 }
-
 .build .buildGridL {
   grid-area: gridL;
 }
@@ -236,7 +245,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .skillsModal img {
   width: 50px;
 }
@@ -258,7 +266,8 @@ body {
   .build .classImg {
     height: 500px;
   }
-  .build .buildGridR, .build .buildGridL {
+  .build .buildGridR,
+  .build .buildGridL {
     display: flex;
     justify-content: center;
     height: auto;
@@ -266,7 +275,8 @@ body {
     gap: 10px;
     margin-top: 10px;
   }
-  .build .buildGridR img, .build .buildGridL img {
+  .build .buildGridR img,
+  .build .buildGridL img {
     width: 110px;
   }
   .build .skillsModal {
@@ -280,7 +290,8 @@ body {
   }
 }
 @media (max-width: 768px) {
-  .build .buildGridR img, .build .buildGridL img {
+  .build .buildGridR img,
+  .build .buildGridL img {
     width: 86px;
   }
   .build .classImg {
@@ -309,7 +320,8 @@ body {
   .build .buildDescription {
     width: 96%;
   }
-  .build .buildGridR, .build .buildGridL {
+  .build .buildGridR,
+  .build .buildGridL {
     overflow-x: scroll;
     justify-content: flex-start;
   }
@@ -458,12 +470,10 @@ nav a:hover {
   color: rgb(108, 117, 125) !important;
   transition: color 0.4s ease-in-out;
 }
-
 nav img:hover {
   filter: brightness(150%);
   transition: filter 0.4s ease-in-out;
 }
-
 
 .blur {
   content: "";
@@ -472,14 +482,12 @@ nav img:hover {
   background: linear-gradient(to right, rgb(0, 0, 0), transparent);
 }
 
-
 @media (max-width: 1199.98px) {
   #inicio {
     align-items: center;
   }
   .inicio-video {
     width: 100% !important;
-
     filter: brightness(40%);
   }
   nav {
@@ -497,9 +505,7 @@ nav img:hover {
   }
   .text-title {
     width: 75% !important;
-
     align-self: center;
-
   }
   .blur {
     left: 0;
@@ -508,7 +514,11 @@ nav img:hover {
     bottom: 0;
     background: linear-gradient(to top, rgb(0, 0, 0), transparent);
   }
-
+}
+#story {
+  background: url("../img/story") center no-repeat;
+  background-size: contain;
+  height: 85vh;
 }
 
 /*# sourceMappingURL=output.css.map */

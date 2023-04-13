@@ -10,6 +10,7 @@ body {
 
 /* -- */ /* CLASES */ /* -- */
 
+/**
 main {
   min-height: 90vh;
   display: flex;
@@ -17,6 +18,8 @@ main {
   justify-content: center;
   align-items: center;
 }
+
+**/
 
 .class {
   display: flex;
@@ -236,7 +239,8 @@ main {
     .classImg {
       height: 500px;
     }
-    .buildGridR, .buildGridL {
+    .buildGridR,
+    .buildGridL {
       display: flex;
       justify-content: center;
       height: auto;
@@ -260,7 +264,8 @@ main {
 }
 @media (max-width: 768px) {
   .build {
-    .buildGridR, .buildGridL {
+    .buildGridR,
+    .buildGridL {
       img {
         width: 86px;
       }
@@ -293,7 +298,8 @@ main {
       width: 96%;
     }
     grid-template-areas: "imgClass imgClass" "buildDesc buildDesc" "gridR gridR" "gridL gridL" "btns btns";
-    .buildGridR, .buildGridL {
+    .buildGridR,
+    .buildGridL {
       overflow-x: scroll;
       justify-content: flex-start;
     }
