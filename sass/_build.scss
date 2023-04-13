@@ -9,15 +9,13 @@ body {
 }
 
 /* -- */ /* CLASES */ /* -- */
-
-main {
-  min-height: 90vh;
+#buildSection, #horrors, #news, #story {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .class {
   display: flex;
   flex-direction: column;
@@ -66,11 +64,13 @@ main {
   display: none;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   width: 100%;
-  height: 90%;
+  height: 100vh;
+  top: 0;
   background-color: #222;
   grid-template-areas: "gridL imgClass gridR buildDesc" "btns btns btns btns";
+  z-index: 1030;
   .buildGridL {
     grid-area: gridL;
   }
@@ -111,11 +111,7 @@ main {
   border: solid 2px #000;
   justify-self: center;
   align-self: center;
-}
-.green.bg {
-  background-color: transparent;
-  border: none;
-  border: solid 2px transparent;
+  margin: 5px 0;
 }
 .green.bg:hover {
   background-color: #231;
@@ -138,7 +134,6 @@ main {
   color: #fff;
   cursor: pointer;
   border-radius: 20px;
-  z-index: 5;
 }
 .build .close.closeModal {
   top: 0;
@@ -181,12 +176,14 @@ main {
 
 /* -- */ /* -- // BUILD DESCRIPTION // -- */ /* -- */
 .bgModal {
-  width: 100%;
-  height: 150%;
-  top: -200px;
-  left: 0;
-  position: absolute;
+  width: 100vw;
+  height: 150vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: hsla(0, 9%, 9%, 0.5);
+  z-index: 1020;
 }
 .buildDescription {
   /* display: none; */
@@ -207,15 +204,12 @@ main {
 }
 .skillsModal {
   max-height: 500px;
-  min-width: 200px;
+  width: 70%;
   padding: 5px;
   overflow-y: scroll;
   position: absolute;
   text-align: left;
   background-color: #444;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   img {
     width: 50px;
   }
@@ -241,10 +235,11 @@ main {
       justify-content: center;
       height: auto;
       width: 100%;
+      height: 100%;
       gap: 10px;
       margin-top: 10px;
       img {
-        width: 110px;
+        width: 80px;
       }
     }
     .skillsModal {
@@ -285,6 +280,7 @@ main {
       }
       .charm {
         width: 85px;
+        margin: 10px 0;
         position: relative;
         left: 0;
       }
@@ -292,9 +288,10 @@ main {
     .buildDescription {
       width: 96%;
     }
-    grid-template-areas: "imgClass imgClass" "buildDesc buildDesc" "gridR gridR" "gridL gridL" "btns btns";
+    grid-template-areas: "imgClass _" "buildDesc buildDesc" "gridR gridR" "gridL gridL" "btns btns";
     .buildGridR, .buildGridL {
       overflow-x: scroll;
+      overflow-y: hidden;
       justify-content: flex-start;
     }
     .btnBuild {
