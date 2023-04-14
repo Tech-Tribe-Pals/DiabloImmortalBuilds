@@ -1,6 +1,8 @@
 import { getClass, getBtns } from "./components/builds.js";
+import { getNews } from "./components/news.js";
 
-export let data = []
+export let data = [];
+export let newsData = [];
 const classes = [
   {
     name: "Bárbaro",
@@ -56,10 +58,19 @@ const classes = [
 export const getFetched = async (url) => {
   const response = await fetch(url);
   const arr = await response.json();
-  return arr
+  return arr;
 };
 
+// esto va a ir en news.js
+
+
+
+// -- // -- // -- // -- //
+
 // Ejecuto las funciones para mostrar clases, botones, etc.
+data = await getFetched("./db/db.json");
 getClass(classes[0], 0);
 getBtns(classes);
-data = await getFetched("./db/db.json");
+// Hice una API para obtener las actualizaciones a medida que vayan saliendo
+newsData = await getFetched("https://diabloapi.onrender.com/en");
+getNews();

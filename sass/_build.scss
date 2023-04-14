@@ -9,13 +9,6 @@ body {
 }
 
 /* -- */ /* CLASES */ /* -- */
-#buildSection, #horrors, #news, #story {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .class {
   display: flex;
   flex-direction: column;
@@ -230,7 +223,8 @@ body {
     .classImg {
       height: 500px;
     }
-    .buildGridR, .buildGridL {
+    .buildGridR,
+    .buildGridL {
       display: flex;
       justify-content: center;
       height: auto;
@@ -255,7 +249,8 @@ body {
 }
 @media (max-width: 768px) {
   .build {
-    .buildGridR, .buildGridL {
+    .buildGridR,
+    .buildGridL {
       img {
         width: 86px;
       }
@@ -289,7 +284,8 @@ body {
       width: 96%;
     }
     grid-template-areas: "imgClass _" "buildDesc buildDesc" "gridR gridR" "gridL gridL" "btns btns";
-    .buildGridR, .buildGridL {
+    .buildGridR,
+    .buildGridL {
       overflow-x: scroll;
       overflow-y: hidden;
       justify-content: flex-start;

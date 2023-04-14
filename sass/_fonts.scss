@@ -3,7 +3,9 @@
   src: url(../fonts/films.EXL_____.ttf);
 }
 
-* {
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+
+body {
   font-family: "Exocet", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
