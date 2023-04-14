@@ -1,0 +1,113 @@
+.news {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 5fr 1fr;
+  .newsBtns {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .selected {
+      border-bottom: solid 2px #FFF;
+    }
+    button {
+      align-self: center;
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      margin: 25px;
+      transition: ease-in-out 0.2s;
+      &:hover {
+        scale: 1.25;
+      }
+    }
+  }
+  .newsField {
+    overflow-x: hidden;
+    margin-top: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    max-height: 95%;
+    &::-webkit-scrollbar {
+      background-color: #222;
+      width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #fff;
+      width: 15px;
+    }
+    .loading {
+      display: flex;
+      justify-content: center;
+    }
+    .newsCard {
+      position: relative;
+      overflow: hidden;
+      height: 250px;
+      width: 70%;
+      margin: 20px;
+      padding: 10px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: "Inter", sans-serif;
+      transition: ease-in-out .2s;
+      h3 {
+        background-color: #000C;
+      }
+      a {
+        position: absolute;
+        text-decoration: none;
+        color: #FFF;
+        font-size: 35px;
+        right: -100px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transition: ease-in-out .25s;
+        border-radius: 50px;
+        &:hover {
+          background-color: #FFF;
+          color: #000;
+        }
+      }
+      &:hover {
+        background-position: 0%;
+        a {
+          display: block;
+          right: 0;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1080px) {
+  .news {
+    .newsField {
+      .newsCard {
+        width: 95%;
+      }
+    }
+  }
+}
+@media (max-width: 630px) {
+  .news {
+    display: flex;
+    flex-direction: column-reverse;
+    .newsBtns {
+      height: auto;
+      flex-direction: row;
+      justify-content: center;
+      border-bottom: solid 2px #fff;
+    }
+    .newsField {
+      &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+      }
+    }
+  }
+}

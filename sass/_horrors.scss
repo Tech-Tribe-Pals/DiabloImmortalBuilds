@@ -8,18 +8,29 @@
 
 .mainBoss {
   background-position: center;
-  height: 100%;
-  width: 100%;
-}
-
-h2 {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: whitesmoke;
+  .carousel.slide {
+    width: 70%;
+  }
+  h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: whitesmoke;
+  }
 }
 
 h5 {
   color: whitesmoke;
+}
+
+@media (max-width: 1080px) {
+  .mainBoss {
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    .carousel.slide {
+      width: 100%;
+    }
+  }
 }

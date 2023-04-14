@@ -34,6 +34,19 @@ export const closed = () => {
 export const closeSubmodal = () => {
   build.removeChild(build.lastChild);
 };
+// Crea el boton de cierre
+export const createBtnClose = (type) => {
+  const btnClose = document.createElement('button')
+  btnClose.innerText = 'X'
+  btnClose.className = "close"
+  if (type === 'modal') {
+    btnClose.onclick = () => closed()
+  } else {
+    btnClose.onclick = () => closeSubmodal()
+    btnClose.className = `close closeModal`
+  }
+  return btnClose
+}
 
 // -- // -- // --- // -- // -- // -- // -- // --- // -- //
 
@@ -85,10 +98,7 @@ export const getBuild = async (e) => {
   img.src = "./img/imgBuilds.png"; // classes[e].img
   img.className = "classImg";
 
-  const btnClose = document.createElement('button')
-  btnClose.onclick = () => closed()
-  btnClose.innerText = 'X'
-  btnClose.className = "close"
+  const btnClose = createBtnClose('modal')
 
   actual = data[e];
 
@@ -111,21 +121,28 @@ export const getBuild = async (e) => {
       divImg.appendChild(img)
       divImg.appendChild(div)
     }
-    console.log(div);
   });
 
-  build.innerHTML += `
-  <div class="btnBuild">
-  <button onclick="getNada()">Paragon</button>
-  <button onclick="getSkills(${e})">Skills</button>
-  <button onclick="getNada()">Gems</button>
-  </div>
-  `;
+  const btnArr = ["paragon", "skills", "gems"]
+  const btnBuildDiv = document.createElement('div')
+  btnBuildDiv.className = "btnBuild"
+  btnArr.forEach(arrElem => {
+    const btnBuild = document.createElement('button')
+    btnBuild.innerText = arrElem
+    if (arrElem !== 'skills') {
+      btnBuild.onclick = () => getNada()
+    } else {
+      btnBuild.onclick = () => getSkills(e)
+    }
+    btnBuildDiv.appendChild(btnBuild)
+  })
+
   build.appendChild(btnClose)
   build.appendChild(gridL);
   build.appendChild(divImg);
   build.appendChild(gridR);
   build.appendChild(divDesc);
+  build.appendChild(btnBuildDiv)
 };
 // Muestra el titulo del item cuando haces hover en él
 export const showDetails = async (e) => {
@@ -144,7 +161,6 @@ export const hideDetails = (e) => {
   const elem = document.getElementsByClassName(e)[0];
   elem.removeChild(elem.lastChild);
 };
-
 // Genera la descripcion de cada item en el div "buildDescription"
 export const getDescription = async (e) => {
   const div = document.querySelector(".buildDescription");
@@ -205,11 +221,11 @@ export const getDescription = async (e) => {
 export const getSkills = (e) => {
   const bg = document.createElement("div");
   const modal = document.createElement("div");
+  const btnClose = createBtnClose('submodal')
+
   bg.classList = "bgModal";
   modal.className = "skillsModal";
-  modal.innerHTML += `
-  <button class="close" onclick="closeSubmodal()">X</button>
-  `;
+
   data[e].skills.forEach((e) => {
     modal.innerHTML += `
     <div>
@@ -221,19 +237,20 @@ export const getSkills = (e) => {
     bg.appendChild(modal);
     build.appendChild(bg);
   });
+
+  modal.appendChild(btnClose)
 };
 // Funcion provisoria hasta tener categorias
 export const getNada = () => {
   const bg = document.createElement("div");
   const modal = document.createElement("div");
+  const btnClose = createBtnClose('submodal')
   bg.classList = "bgModal";
   modal.className = "skillsModal";
-  modal.innerHTML += `
-  <button class="close closeModal" onclick="closeSubmodal()">X</button>
-  `;
   modal.innerHTML += `
   "Nada"
   `;
   bg.appendChild(modal);
+  modal.appendChild(btnClose)
   build.appendChild(bg);
 };

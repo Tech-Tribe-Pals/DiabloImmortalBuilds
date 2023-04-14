@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+@font-face {
+  font-family: Exocet;
+  src: url(../fonts/films.EXL_____.ttf);
+}
+body {
+  font-family: "Exocet", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
 body::-webkit-scrollbar {
   background-color: #222;
   width: 7px;
@@ -5,6 +14,14 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   background-color: #666;
   width: 15px;
+}
+
+.buildSection, .mainBoss, .news, .story {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 * {
@@ -18,14 +35,6 @@ body {
 }
 
 /* -- */ /* CLASES */ /* -- */
-#buildSection, #horrors, #news, #story {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .class {
   display: flex;
   flex-direction: column;
@@ -83,10 +92,7 @@ body {
   align-items: center;
   justify-content: center;
   position: fixed;
-  position: fixed;
   width: 100%;
-  height: 100vh;
-  top: 0;
   height: 100vh;
   top: 0;
   background-color: #222;
@@ -219,12 +225,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  height: 150vh;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: hsla(0, 9%, 9%, 0.5);
   z-index: 1020;
 }
@@ -284,11 +284,11 @@ body {
     height: auto;
     width: 100%;
     height: 100%;
-    height: 100%;
     gap: 10px;
     margin-top: 10px;
   }
-  .build .buildGridR img, .build .buildGridL img {
+  .build .buildGridR img,
+  .build .buildGridL img {
     width: 80px;
   }
   .build .skillsModal {
@@ -320,14 +320,12 @@ body {
 @media (max-width: 630px) {
   .build {
     grid-template-areas: "imgClass _" "buildDesc buildDesc" "gridR gridR" "gridL gridL" "btns btns";
-    grid-template-areas: "imgClass _" "buildDesc buildDesc" "gridR gridR" "gridL gridL" "btns btns";
   }
   .build .imgContainer .classImg {
     display: none;
   }
   .build .imgContainer .charm {
     width: 85px;
-    margin: 10px 0;
     margin: 10px 0;
     position: relative;
     left: 0;
@@ -338,7 +336,6 @@ body {
   .build .buildGridR,
   .build .buildGridL {
     overflow-x: scroll;
-    overflow-y: hidden;
     overflow-y: hidden;
     justify-content: flex-start;
   }
@@ -372,11 +369,11 @@ body {
 
 .mainBoss {
   background-position: center;
-  height: 100%;
-  width: 100%;
 }
-
-h2 {
+.mainBoss .carousel.slide {
+  width: 70%;
+}
+.mainBoss h2 {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -388,14 +385,16 @@ h5 {
   color: whitesmoke;
 }
 
-@font-face {
-  font-family: Exocet;
-  src: url(../fonts/films.EXL_____.ttf);
+@media (max-width: 1080px) {
+  .mainBoss {
+    background-position: center;
+    height: 100%;
+    width: 100%;
+  }
+  .mainBoss .carousel.slide {
+    width: 100%;
+  }
 }
-* {
-  font-family: "Exocet", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
 #inicio {
   width: 100%;
   align-items: start;
@@ -464,6 +463,114 @@ nav img:hover {
   background-image: url("https://previews.123rf.com/images/roystudio/roystudio1202/roystudio120200165/12658204-hoja-de-papel-con-delicado-patr%C3%B3n-para-utilizar-como-fondo.jpg");
 }
 
+.news {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 5fr 1fr;
+}
+.news .newsBtns {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.news .newsBtns .selected {
+  border-bottom: solid 2px #FFF;
+}
+.news .newsBtns button {
+  align-self: center;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  margin: 25px;
+  transition: ease-in-out 0.2s;
+}
+.news .newsBtns button:hover {
+  scale: 1.25;
+}
+.news .newsField {
+  overflow-x: hidden;
+  margin-top: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+  max-height: 95%;
+}
+.news .newsField::-webkit-scrollbar {
+  background-color: #222;
+  width: 5px;
+}
+.news .newsField::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  width: 15px;
+}
+.news .newsField .loading {
+  display: flex;
+  justify-content: center;
+}
+.news .newsField .newsCard {
+  position: relative;
+  overflow: hidden;
+  height: 250px;
+  width: 70%;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Inter", sans-serif;
+  transition: ease-in-out 0.2s;
+}
+.news .newsField .newsCard h3 {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.news .newsField .newsCard a {
+  position: absolute;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 35px;
+  right: -100px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: ease-in-out 0.25s;
+  border-radius: 50px;
+}
+.news .newsField .newsCard a:hover {
+  background-color: #FFF;
+  color: #000;
+}
+.news .newsField .newsCard:hover {
+  background-position: 0%;
+}
+.news .newsField .newsCard:hover a {
+  display: block;
+  right: 0;
+}
+
+@media (max-width: 1080px) {
+  .news .newsField .newsCard {
+    width: 95%;
+  }
+}
+@media (max-width: 630px) {
+  .news {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .news .newsBtns {
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: solid 2px #fff;
+  }
+  .news .newsField::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}
 .footer {
   width: 100%;
   background-color: #0a141d;
@@ -537,81 +644,6 @@ nav img:hover {
     grid-gap: 30px;
     padding: 35px 0px;
   }
-}
-@font-face {
-  font-family: Exocet;
-  src: url(../fonts/films.EXL_____.ttf);
-}
-* {
-  font-family: "Exocet", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-
-#inicio {
-  width: 100%;
-  align-items: start;
-}
-#inicio h1 {
-  margin-left: 7rem;
-}
-
-.inicio-video {
-  right: 0;
-}
-
-nav {
-  height: 100px !important;
-}
-nav a:hover {
-  color: rgb(108, 117, 125) !important;
-  transition: color 0.4s ease-in-out;
-}
-nav img:hover {
-  filter: brightness(150%);
-  transition: filter 0.4s ease-in-out;
-}
-
-.blur {
-  content: "";
-  width: 35%;
-  left: 25%;
-  background: linear-gradient(to right, rgb(0, 0, 0), transparent);
-}
-
-@media (max-width: 1199.98px) {
-  #inicio {
-    align-items: center;
-  }
-  .inicio-video {
-    width: 100% !important;
-    filter: brightness(40%);
-  }
-  nav {
-    height: auto !important;
-  }
-  .nav-items-desktop {
-    filter: invert(32%) sepia(99%) saturate(1134%) hue-rotate(336deg) brightness(77%) contrast(89%);
-    width: 79% !important;
-  }
-  .nav-items-desktop ul {
-    display: none;
-  }
-  .nav-items-desktop li {
-    display: none;
-  }
-  .text-title {
-    width: 75% !important;
-    align-self: center;
-  }
-  .blur {
-    left: 0;
-    height: 20% !important;
-    width: 100% !important;
-    bottom: 0;
-    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
-  }
-}
-.paper {
-  background-image: url("https://previews.123rf.com/images/roystudio/roystudio1202/roystudio120200165/12658204-hoja-de-papel-con-delicado-patr%C3%B3n-para-utilizar-como-fondo.jpg");
 }
 
 /*# sourceMappingURL=output.css.map */

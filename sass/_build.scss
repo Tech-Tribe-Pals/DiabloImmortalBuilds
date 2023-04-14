@@ -9,13 +9,6 @@ body {
 }
 
 /* -- */ /* CLASES */ /* -- */
-#buildSection, #horrors, #news, #story {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .class {
   display: flex;
   flex-direction: column;
@@ -291,7 +284,8 @@ body {
       width: 96%;
     }
     grid-template-areas: "imgClass _" "buildDesc buildDesc" "gridR gridR" "gridL gridL" "btns btns";
-    .buildGridR, .buildGridL {
+    .buildGridR,
+    .buildGridL {
       overflow-x: scroll;
       overflow-y: hidden;
       justify-content: flex-start;
