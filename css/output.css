@@ -15,9 +15,33 @@ body::-webkit-scrollbar-thumb {
 body {
   background-color: #222;
   color: #fff;
+  margin: 0;
 }
 
 /* -- */ /* CLASES */ /* -- */
+.circulo {
+  background-color: #552121;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 33px -19px rgb(255, 255, 255);
+  -moz-box-shadow: 0px 0px 33px -19px rgb(255, 255, 255);
+  box-shadow: 0px 0px 33px -19px rgb(255, 255, 255);
+  left: 13%;
+}
+
+.img-builds {
+  height: 200px;
+  width: 250px;
+  left: 3rem !important;
+  bottom: 60px !important;
+}
+
+.video-builds {
+  width: 300px;
+  height: 180px;
+}
+
 #buildSection,
 #horrors,
 #news,
@@ -27,6 +51,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
 }
 
 .class {
@@ -63,7 +92,15 @@ body {
   border-radius: 20px;
 }
 
-.class .btnBuild {
+.class {
+  color: #fff;
+  padding: 10px;
+  background-color: transparent;
+  border: solid 2px transparent;
+  margin: 10px 0;
+}
+
+.btnBuild {
   color: #fff;
   padding: 10px;
   background-color: transparent;
@@ -486,6 +523,7 @@ nav img:hover {
   color: #fff;
   margin-bottom: 25px;
   font-size: 20px;
+  margin-right: 22rem;
 }
 
 .footer .grupo-1 .box p {
@@ -523,10 +561,15 @@ nav img:hover {
 
 @media screen and (max-width: 800px) {
   .footer .grupo-1 {
-    width: 90%;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap: 30px;
-    padding: 35px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .h3_footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
   }
 }
 

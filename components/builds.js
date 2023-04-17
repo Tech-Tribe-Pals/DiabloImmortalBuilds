@@ -43,12 +43,19 @@ export const getClass = (e, value) => {
   btn.onclick = () => getBuild(value);
   btn.className = "btnBuild";
   btn.innerText = "Ver build";
-  myClass.innerHTML = `
-    <p class="p-header">${e.name}</p>
-    <img src="${e.img}">
+  myClass.innerHTML = ` <div id="personaje" class="position-absolute circulo position-relative">
+    <img class="position-absolute start-0 img-builds" src="${e.img}">
+    </div>
+    <h2 class="align-self-start  fs-1">${e.name}</h2>
+    <p class="description w-100">${e.description}</p>
+    <div class="d-flex flex-row w-100 ">
+    <div class="d-flex flex-column justify-content-center text-start w-50">
     PvE<progress value='${e.pve}' max="100"></progress>
     PvP<progress value='${e.pvp}' max="100"></progress>
     Dificultad<progress value='${e.dif}' max="100"></progress>
+    </div>
+    <video src='${e.video}' class="video-builds" controls muted></video>
+    </div>
     `;
   myClass.appendChild(btn);
 };
@@ -85,10 +92,10 @@ export const getBuild = async (e) => {
   img.src = "./img/imgBuilds.png"; // classes[e].img
   img.className = "classImg";
 
-  const btnClose = document.createElement('button')
-  btnClose.onclick = () => closed()
-  btnClose.innerText = 'X'
-  btnClose.className = "close"
+  const btnClose = document.createElement("button");
+  btnClose.onclick = () => closed();
+  btnClose.innerText = "X";
+  btnClose.className = "close";
 
   actual = data[e];
 
@@ -102,14 +109,14 @@ export const getBuild = async (e) => {
     div.onmouseover = () => showDetails(e.type);
     div.onmouseleave = () => hideDetails(e.type);
     imgItem.src = e.img;
-    div.appendChild(imgItem)
+    div.appendChild(imgItem);
     if (e.class === "orange") {
       gridR.appendChild(div);
     } else if (e.class === "green") {
-      gridL.appendChild(div)
+      gridL.appendChild(div);
     } else {
-      divImg.appendChild(img)
-      divImg.appendChild(div)
+      divImg.appendChild(img);
+      divImg.appendChild(div);
     }
     console.log(div);
   });
@@ -121,7 +128,7 @@ export const getBuild = async (e) => {
   <button onclick="getNada()">Gems</button>
   </div>
   `;
-  build.appendChild(btnClose)
+  build.appendChild(btnClose);
   build.appendChild(gridL);
   build.appendChild(divImg);
   build.appendChild(gridR);

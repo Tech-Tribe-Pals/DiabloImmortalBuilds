@@ -33,7 +33,7 @@
             class="d-flex flex-row justify-content-around list-unstyled nav-items-desktop w-100 align-items-center fs-4"
           >
             <li>
-              <a class="text-decoration-none text-white" href="#story">Story</a>
+              <a class="text-decoration-none text-white" href="#story">Historia</a>
             </li>
             <li>
               <a class="text-decoration-none text-white" href="#buildSection"
@@ -58,11 +58,11 @@
             </picture>
             <li>
               <a class="text-decoration-none text-white" href="#horrors"
-                >Horrors</a
+                >Horrores</a
               >
             </li>
             <li>
-              <a class="text-decoration-none text-white" href="#news">News</a>
+              <a class="text-decoration-none text-white" href="#news">Noticias</a>
             </li>
           </ul>
           <button
@@ -79,16 +79,16 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav d-lg-none">
               <li class="nav-item">
-                <a class="nav-link" href="#story">Story</a>
+                <a class="nav-link" href="#story">Historia</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#buildSection">Builds</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#horrors">Horrors</a>
+                <a class="nav-link" href="#horrors">Horrores</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#news">News</a>
+                <a class="nav-link" href="#news">Noticias</a>
               </li>
             </ul>
           </div>
@@ -120,20 +120,20 @@
               srcset=""
             />
             <h5 class="text-secondary text-center fst-italic">
-              Begin the adventure
+              Empieza la aventura
             </h5>
           </div>
         </div>
         <div class="blur h-100 position-absolute"></div>
       </section>
       <section id="story" class="story"></section>
-      <section class="buildSection" id="buildSection">
-        <article class="class" id="class"></article>
+      <section class="buildSection position-relative justify-content-end  d-flex flex-column  p-5" id="buildSection">
+         <article class="class align-self-end  d-flex flex-column align-items-center mb-4 me-2 w-50" id="class"></article>
         <div class="btns" id="btnClass"></div>
-        <article id="build" class="build"></article>
+        <article id="build" class="build"><div id="itsparticle"></div></article>
       </section>
       <section id="horrors" class="mainBoss">
-        <h2>Horrors</h2>
+        <h2>Horrores</h2>
         <section>
             <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
               <div class="carousel-indicators">
@@ -263,7 +263,7 @@
           </figure>
         </div>
         <div class="box">
-          <h2>Networks</h2>
+          <h3 class="h3_footer">Networks</h3>
           <div class="red-social">
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-instagram"></a>
@@ -287,5 +287,7 @@
       integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
   </body>
 </html>

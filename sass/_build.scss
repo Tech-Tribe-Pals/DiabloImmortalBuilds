@@ -6,9 +6,33 @@
 body {
   background-color: #222;
   color: #fff;
+  margin: 0;
 }
 
 /* -- */ /* CLASES */ /* -- */
+
+.circulo {
+  background-color: #552121;
+  height: 350px;
+  width: 350px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 33px -19px rgba(255, 255, 255, 1);
+  -moz-box-shadow: 0px 0px 33px -19px rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 33px -19px rgba(255, 255, 255, 1);
+  left: 13%;
+}
+
+.img-builds {
+  height: 200px;
+  width: 250px;
+  left: 3rem !important;
+  bottom: 60px !important;
+}
+
+.video-builds {
+  width: 300px;
+  height: 180px;
+}
 
 #buildSection,
 #horrors,
@@ -19,6 +43,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
 }
 
 .class {
@@ -49,12 +78,21 @@ body {
   /* animation: roll .3s infinite; */
   border-radius: 20px;
 }
-.class .btnBuild {
+.class {
   color: #fff;
   padding: 10px;
   background-color: transparent;
   border: solid 2px transparent;
   margin: 10px 0;
+}
+
+.btnBuild {
+  color: #fff;
+  padding: 10px;
+  background-color: transparent;
+  border: solid 2px transparent;
+  margin: 10px 0;
+  
 }
 .class .btnBuild:hover {
   border: solid 2px #fff;
@@ -227,6 +265,7 @@ body {
     width: 15px;
   }
 }
+
 @media (max-width: 1080px) {
   .build {
     width: 100%;
@@ -325,4 +364,5 @@ body {
     width: 100%;
   }
 }
+
 /* -- */ /* -- // FIN BUILD DESCRIPTION // -- */ /* -- */
