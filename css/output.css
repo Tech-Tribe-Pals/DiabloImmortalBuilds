@@ -105,7 +105,7 @@ canvas {
   padding: 10px;
   background-color: transparent;
   border: solid 2px transparent;
-  margin: 10px 0;
+  margin: 2rem 0;
 }
 
 .class .btnBuild:hover {
