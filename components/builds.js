@@ -1,4 +1,4 @@
-import { data } from "../index.js";
+import { data, classes } from "../index.js";
 
 const myClass = document.getElementById("class"); // Aca se muestran las clases
 const myBtns = document.getElementById("btnClass"); // Botones de las clases
@@ -36,17 +36,17 @@ export const closeSubmodal = () => {
 };
 // Crea el boton de cierre
 export const createBtnClose = (type) => {
-  const btnClose = document.createElement('button')
-  btnClose.innerText = 'X'
-  btnClose.className = "close"
-  if (type === 'modal') {
-    btnClose.onclick = () => closed()
+  const btnClose = document.createElement("button");
+  btnClose.innerText = "X";
+  btnClose.className = "close";
+  if (type === "modal") {
+    btnClose.onclick = () => closed();
   } else {
-    btnClose.onclick = () => closeSubmodal()
-    btnClose.className = `close closeModal`
+    btnClose.onclick = () => closeSubmodal();
+    btnClose.className = `close closeModal`;
   }
-  return btnClose
-}
+  return btnClose;
+};
 
 // -- // -- // --- // -- // -- // -- // -- // --- // -- //
 
@@ -54,14 +54,22 @@ export const createBtnClose = (type) => {
 export const getClass = (e, value) => {
   const btn = document.createElement("button");
   btn.onclick = () => getBuild(value);
-  btn.className = "btnBuild";
+  btn.className = "btn-Build";
   btn.innerText = "Ver build";
-  myClass.innerHTML = `
-    <p class="p-header">${e.name}</p>
-    <img src="${e.img}">
+  myClass.innerHTML = ` <div id="personaje" class="position-absolute circulo position-relative">
+    <img class="position-absolute start-0 coso" src="${e.img}">
+    </div>
+    <h2 class="align-self-start  fs-1">${e.name}</h2>
+    <p class="description-p">${e.description}</p>
+    <div class="d-flex flex-row w-100 ">
+    <div class="d-flex flex-column text-start w-50 align-items-center justify-content-center">
     PvE<progress value='${e.pve}' max="100"></progress>
     PvP<progress value='${e.pvp}' max="100"></progress>
     Dificultad<progress value='${e.dif}' max="100"></progress>
+    </div>
+    <video src='${e.video}' class="video-builds " autoplay muted loop></video>
+    </div>
+    </div>
     `;
   myClass.appendChild(btn);
 };
@@ -95,10 +103,10 @@ export const getBuild = async (e) => {
   divDesc.innerText = "Sin items seleccionados";
 
   const img = document.createElement("img");
-  img.src = "./img/imgBuilds.png"; // classes[e].img
+  img.src = classes[e].imageBuild;
   img.className = "classImg";
 
-  const btnClose = createBtnClose('modal')
+  const btnClose = createBtnClose("modal");
 
   actual = data[e];
 
@@ -112,37 +120,39 @@ export const getBuild = async (e) => {
     div.onmouseover = () => showDetails(e.type);
     div.onmouseleave = () => hideDetails(e.type);
     imgItem.src = e.img;
-    div.appendChild(imgItem)
+    div.appendChild(imgItem);
     if (e.class === "orange") {
       gridR.appendChild(div);
     } else if (e.class === "green") {
-      gridL.appendChild(div)
+      gridL.appendChild(div);
     } else {
-      divImg.appendChild(img)
-      divImg.appendChild(div)
+      divImg.appendChild(img);
+      divImg.appendChild(div);
     }
   });
 
-  const btnArr = ["paragon", "skills", "gems"]
-  const btnBuildDiv = document.createElement('div')
-  btnBuildDiv.className = "btnBuild"
-  btnArr.forEach(arrElem => {
-    const btnBuild = document.createElement('button')
-    btnBuild.innerText = arrElem
-    if (arrElem !== 'skills') {
-      btnBuild.onclick = () => getNada()
+  //  botones dentro del modal
+  const btnArr = ["paragon", "skills", "gems"];
+  const btnBuildDiv = document.createElement("div");
+  btnBuildDiv.className = "btnBuild";
+  btnArr.forEach((arrElem) => {
+    const btnBuild = document.createElement("button");
+    btnBuild.className = "btnBuilds";
+    btnBuild.innerText = arrElem;
+    if (arrElem !== "skills") {
+      btnBuild.onclick = () => getNada();
     } else {
-      btnBuild.onclick = () => getSkills(e)
+      btnBuild.onclick = () => getSkills(e);
     }
-    btnBuildDiv.appendChild(btnBuild)
-  })
+    btnBuildDiv.appendChild(btnBuild);
+  });
 
-  build.appendChild(btnClose)
+  build.appendChild(btnClose);
   build.appendChild(gridL);
   build.appendChild(divImg);
   build.appendChild(gridR);
   build.appendChild(divDesc);
-  build.appendChild(btnBuildDiv)
+  build.appendChild(btnBuildDiv);
 };
 // Muestra el titulo del item cuando haces hover en él
 export const showDetails = async (e) => {
@@ -177,7 +187,7 @@ export const getDescription = async (e) => {
   if (found.description) {
     found.description.forEach((e) => {
       div.innerHTML += `
-      <p>${e}</p>
+      <p class="p-desc-items">${e}</p>
       `;
     });
     div.innerHTML += `
@@ -188,11 +198,11 @@ export const getDescription = async (e) => {
     found.set.map((e, i) => {
       if (i === 0) {
         div.innerHTML += `
-        <p>Set: ${e}</p>
+        <p class="p-desc-items">Set: ${e}</p>
         `;
       } else {
         div.innerHTML += `
-        <p>${e}</p>
+        <p class="p-desc-items">${e}</p>
         `;
       }
     });
@@ -202,7 +212,7 @@ export const getDescription = async (e) => {
   }
   found.bonus.forEach((e) => {
     div.innerHTML += `
-    <p>${e}</p>
+    <p class="p-desc-items">${e}</p>
     `;
   });
 
@@ -212,7 +222,7 @@ export const getDescription = async (e) => {
     `;
     found.req.forEach((e) => {
       div.innerHTML += `
-    <p>${e}</p>
+    <p class="p-desc-items">${e}</p>
     `;
     });
   }
@@ -221,14 +231,16 @@ export const getDescription = async (e) => {
 export const getSkills = (e) => {
   const bg = document.createElement("div");
   const modal = document.createElement("div");
-  const btnClose = createBtnClose('submodal')
+  const btnClose = createBtnClose("submodal");
+  const videoSkills = document.createElement("video");
 
   bg.classList = "bgModal";
   modal.className = "skillsModal";
+  videoSkills.className = "videoSkills";
 
   data[e].skills.forEach((e) => {
     modal.innerHTML += `
-    <div>
+    <div class= "w-50 h-100  bg-danger">
     <img src=${e.img}>
     <p>${e.title}</p>
     <p>${e.description}</p>
@@ -238,19 +250,24 @@ export const getSkills = (e) => {
     build.appendChild(bg);
   });
 
-  modal.appendChild(btnClose)
+  videoSkills.src = classes[e].videoSkills;
+  videoSkills.controls = true;
+  videoSkills.muted = true;
+
+  modal.appendChild(btnClose);
+  modal.appendChild(videoSkills);
 };
 // Funcion provisoria hasta tener categorias
 export const getNada = () => {
   const bg = document.createElement("div");
   const modal = document.createElement("div");
-  const btnClose = createBtnClose('submodal')
+  const btnClose = createBtnClose("submodal");
   bg.classList = "bgModal";
   modal.className = "skillsModal";
   modal.innerHTML += `
   "Nada"
   `;
   bg.appendChild(modal);
-  modal.appendChild(btnClose)
+  modal.appendChild(btnClose);
   build.appendChild(bg);
 };

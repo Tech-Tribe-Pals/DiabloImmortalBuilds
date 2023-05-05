@@ -9,7 +9,7 @@
     flex-direction: column;
     gap: 20px;
     .selected {
-      border-bottom: solid 2px #FFF;
+      border-bottom: solid 2px #fff;
     }
     button {
       align-self: center;
@@ -56,22 +56,22 @@
       background-repeat: no-repeat;
       background-size: cover;
       font-family: "Inter", sans-serif;
-      transition: ease-in-out .2s;
+      transition: ease-in-out 0.2s;
       h3 {
-        background-color: #000C;
+        background-color: #000c;
       }
       a {
         position: absolute;
         text-decoration: none;
-        color: #FFF;
+        color: #fff;
         font-size: 35px;
         right: -100px;
         top: 50%;
         transform: translate(-50%, -50%);
-        transition: ease-in-out .25s;
+        transition: ease-in-out 0.25s;
         border-radius: 50px;
         &:hover {
-          background-color: #FFF;
+          background-color: #fff;
           color: #000;
         }
       }
