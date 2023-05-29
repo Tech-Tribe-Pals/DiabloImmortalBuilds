@@ -9,10 +9,22 @@ body {
   }
 }
 
-.buildSection, .mainBoss, .news, .story {
+.buildSection,
+.mainBoss,
+.news {
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.separacion {
+  height: 10vh;
+  width: 100%;
+  background-color: #000000;
+}
+
+.fondo {
+  background: url("/img/inicio/aaaaaaaaaaaaaaaaaaaaaaaaaa.PNG") center no-repeat;
 }

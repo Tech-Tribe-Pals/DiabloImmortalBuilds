@@ -11,7 +11,7 @@ export const getNews = () => {
     news.innerHTML += `
     <div class="newsCard" style="background-image: url(${e.img})">
     <h3>${e.title}</h3>
-    <a target="_blank" href="${e.link}">>></a>
+    <a target="_blank" href="${e.link}">Leer</a>
     </div>`;
     });
   }

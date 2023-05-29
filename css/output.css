@@ -16,7 +16,9 @@ body::-webkit-scrollbar-thumb {
   width: 15px;
 }
 
-.buildSection, .mainBoss, .news, .story {
+.buildSection,
+.mainBoss,
+.news {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,13 +26,23 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
 }
 
+.separacion {
+  height: 10vh;
+  width: 100%;
+  background-color: #000000;
+}
+
+.fondo {
+  background: url("/img/inicio/aaaaaaaaaaaaaaaaaaaaaaaaaa.PNG") center no-repeat;
+}
+
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #222;
   color: #fff;
   margin: 0;
 }
@@ -60,8 +72,15 @@ body {
 }
 
 .videoSkills {
-  width: 500px;
-  height: auto;
+  width: 700px;
+  height: 400px;
+  position: sticky;
+  top: 20%;
+}
+
+#buildSection {
+  background: url("/img/inicio/wallpapersden.com_diablo-immortal-new-2022_1920x1080.jpg") center no-repeat;
+  background-size: cover;
 }
 
 #buildSection,
@@ -190,7 +209,8 @@ canvas {
   width: 100%;
   height: 100vh;
   top: 0;
-  background-color: #222;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("/img/inicio/aaaaaaaaaaaaaaaaaaaaaaaaaa.PNG") center no-repeat;
+  background-size: cover;
   grid-template-areas: "gridL imgClass gridR buildDesc" "btns btns btns btns";
   z-index: 1030;
 }
@@ -403,9 +423,9 @@ canvas {
 }
 
 .skillsModal {
-  max-height: 500px;
-  width: 70%;
-  padding: 5px;
+  max-height: 700px;
+  width: 85%;
+  padding: 25px;
   display: flex;
   flex-flow: row;
   overflow-y: scroll;
@@ -414,15 +434,19 @@ canvas {
   background-color: #444;
 }
 .skillsModal img {
-  width: 50px;
+  width: 75px;
+  height: 75px;
 }
 .skillsModal::-webkit-scrollbar {
   background-color: #444;
-  width: 7px;
+  width: 1px;
 }
 .skillsModal::-webkit-scrollbar-thumb {
   background-color: #222;
-  width: 15px;
+  width: 8px;
+}
+.skillsModal p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 @media (max-width: 1080px) {
@@ -475,6 +499,9 @@ canvas {
   }
 }
 @media (max-width: 630px) {
+  .circulo {
+    display: none;
+  }
   .build {
     grid-template-areas: "imgClass _" "buildDesc buildDesc" "gridR gridR" "gridL gridL" "btns btns";
   }
@@ -616,10 +643,6 @@ nav img:hover {
     background: linear-gradient(to top, rgb(0, 0, 0), transparent);
   }
 }
-.paper {
-  background-image: url("https://previews.123rf.com/images/roystudio/roystudio1202/roystudio120200165/12658204-hoja-de-papel-con-delicado-patr%C3%B3n-para-utilizar-como-fondo.jpg");
-}
-
 .news {
   display: grid;
   width: 100%;
@@ -633,13 +656,13 @@ nav img:hover {
   gap: 20px;
 }
 .news .newsBtns .selected {
-  border-bottom: solid 2px #fff;
+  border-bottom: solid 2px whitesmoke;
 }
 .news .newsBtns button {
   align-self: center;
   background-color: transparent;
   border: none;
-  color: #fff;
+  color: rgb(225, 136, 20);
   margin: 25px;
   transition: ease-in-out 0.2s;
 }
@@ -655,11 +678,11 @@ nav img:hover {
   max-height: 95%;
 }
 .news .newsField::-webkit-scrollbar {
-  background-color: #222;
+  background-color: rgb(225, 136, 20);
   width: 5px;
 }
 .news .newsField::-webkit-scrollbar-thumb {
-  background-color: #fff;
+  background-color: rgb(225, 136, 20);
   width: 15px;
 }
 .news .newsField .loading {
@@ -667,6 +690,7 @@ nav img:hover {
   justify-content: center;
 }
 .news .newsField .newsCard {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   position: relative;
   overflow: hidden;
   height: 250px;
@@ -679,7 +703,6 @@ nav img:hover {
   justify-content: end;
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "Inter", sans-serif;
   transition: ease-in-out 0.2s;
 }
 .news .newsField .newsCard h3 {
@@ -687,14 +710,18 @@ nav img:hover {
 }
 .news .newsField .newsCard a {
   position: absolute;
+  padding: 5px 15px;
   text-decoration: none;
-  color: #fff;
-  font-size: 35px;
-  right: -100px;
+  font-size: 20px;
+  right: -120px;
   top: 50%;
   transform: translate(-50%, -50%);
-  transition: ease-in-out 0.25s;
-  border-radius: 50px;
+  transition: ease-in-out 0.5s;
+  border-radius: 15px;
+  color: whitesmoke;
+  z-index: 1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
 }
 .news .newsField .newsCard a:hover {
   background-color: #fff;
@@ -779,8 +806,9 @@ nav img:hover {
   transition: all 300ms ease ease-in-out;
 }
 
-.footer .grupo-1 .red-social a:hover {
-  color: rgb(225, 136, 20);
+.fa:hover {
+  color: rgb(225, 136, 20) !important;
+  transition: ease-in-out 1s !important;
 }
 
 .footer .grupo-2 {
@@ -801,6 +829,97 @@ nav img:hover {
     grid-gap: 30px;
     padding: 35px 0px;
   }
+}
+* {
+  margin: 0;
+  padding: 0%;
+}
+
+#Pantalla {
+  padding: 1rem;
+  margin: 0 auto;
+  height: auto;
+  width: 100% !important;
+}
+#Pantalla video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+#Pantalla article {
+  border: #643843 2px solid;
+  background: url("../img/inicio/fondo_historia.jpg") center no-repeat;
+  background-size: cover;
+  width: 80%;
+}
+
+.Pantallas {
+  display: none;
+}
+
+.escritorio {
+  color: #643843 !important;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: small;
+}
+
+.pag-2 {
+  margin-left: 4rem;
+}
+
+.tele {
+  display: none !important;
+}
+
+.texto {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  #Pantalla {
+    width: 100%;
+    padding: 0 !important;
+  }
+  .Pantallas {
+    background: url("../img/inicio/fondo_historia.jpg") no-repeat;
+    background-position-x: 15%;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    color: #643843 !important;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .Pantallas p {
+    height: 60vh !important;
+    font-size: 1.1rem;
+  }
+  .article-main {
+    display: none !important;
+  }
+  .div-main button {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  .text {
+    padding: 2rem;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+  }
+}
+section img {
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=output.css.map */

@@ -42,8 +42,9 @@
   text-align: center;
   transition: all 300ms ease ease-in-out;
 }
-.footer .grupo-1 .red-social a:hover {
-  color: rgb(225, 136, 20);
+.fa:hover {
+  color: rgb(225, 136, 20) !important;
+  transition:ease-in-out 1s !important;
 }
 .footer .grupo-2 {
   background-color: #0a1a2a;

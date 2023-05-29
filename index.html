@@ -21,7 +21,9 @@
     <link rel="stylesheet" href="css/output.css" />
     <title>Diablo Inmortal</title>
   </head>
-  <body>
+
+  <!-- HEADER -->
+  <body id="body" class="position-relative">
     <header class="fixed-top">
       <nav
         class="navbar navbar-expand-lg bg-body-tertiary sticky-top"
@@ -32,7 +34,9 @@
             class="d-flex flex-row justify-content-around list-unstyled nav-items-desktop w-100 align-items-center fs-4"
           >
             <li>
-              <a class="text-decoration-none text-white" href="#story">Story</a>
+              <a class="text-decoration-none text-white" href="#story"
+                >Historia</a
+              >
             </li>
             <li>
               <a class="text-decoration-none text-white" href="#buildSection"
@@ -57,11 +61,13 @@
             </picture>
             <li>
               <a class="text-decoration-none text-white" href="#horrors"
-                >Horrors</a
+                >Horrores</a
               >
             </li>
             <li>
-              <a class="text-decoration-none text-white" href="#news">News</a>
+              <a class="text-decoration-none text-white" href="#news"
+                >Noticias</a
+              >
             </li>
           </ul>
           <button
@@ -95,6 +101,8 @@
       </nav>
     </header>
 
+    <!-- INICIO -->
+
     <main>
       <section
         id="#inicio"
@@ -125,28 +133,137 @@
         </div>
         <div class="blur h-100 position-absolute"></div>
       </section>
-      <section id="story" class="story"></section>
+
+      <div class="separacion"></div>
+
       <section
-        class="buildSection position-relative justify-content-end d-flex flex-column p-5"
+        id="Pantalla"
+        class="d-flex flex-row justify-content-center align-items-center position-relative z-2"
+      >
+        <video
+          src="./videos/background_build.mp4"
+          loop
+          autoplay
+          class="h-100 w-100 position-absolute z-0"
+        ></video>
+
+        <article
+          class="d-flex flex-row vh-100 p-5 align-items-center text-black article-main justify-content-center gap-5 atr escritorio z-1"
+        >
+          <div
+            class="d-flex flex-column justify-content-center w-50 h-100 gap-1"
+          >
+            <h2 class="align-self-center">Introduccion</h2>
+            <p>
+              Un mundo llamado Santuario, asolado por el caos y la oscuridad.
+              Los demonios habían escapado de su prisión y se estaban
+              extendiendo por todo el reino, sembrando terror y destrucción a su
+              paso. Los héroes de antaño,se habían levantado para enfrentar la
+              amenaza demoníaca, pero sus esfuerzos parecían insuficientes. En
+              medio de este caos, un nuevo grupo de valientes guerreros emergió:
+              los Guardianes de la Luz. Estos guerreros eran la última esperanza
+              para salvar Santuario. Conocedores de la antigua profecía que
+              hablaba del renacimiento de los Nephalem en tiempos oscuros, los
+              Guardianes se entrenaron para luchar contra los demonios y
+              restaurar el equilibrio en el mundo.
+            </p>
+
+            <p>
+              El jugador toma el papel de uno de los Guardianes de la Luz. Su
+              viaje comienza en la ciudad de Westmarch, un bastión en ruinas que
+              alguna vez fue un faro de esperanza. Los demonios habían invadido
+              la ciudad, y sus calles estaban infestadas de monstruos retorcidos
+              y malvados. El jugador se encuentra con otros héroes y juntos
+              forman una alianza para enfrentar la oscuridad.
+            </p>
+
+            <p>
+              A medida que avanzan, los Guardianes de la Luz descubren que los
+              demonios están siendo liderados por un poderoso señor demonio
+              llamado Skarn, el Heraldo del Terror. Skarn ha descubierto una
+              manera de invocar a los demonios desde el Infierno Ardiente y los
+              está enviando a Santuario para sembrar el caos. Los Guardianes
+              deben detenerlo antes de que su poder crezca aún más.
+            </p>
+          </div>
+          <div
+            class="d-flex flex-column justify-content-center w-50 h-100 gap-3"
+          >
+            <img
+              src="./img/inicio/diablo_historia.png"
+              class="w-100 mt-4"
+              alt=""
+            />
+            <p>
+              A lo largo de la historia, los Guardianes de la Luz exploran
+              diferentes ubicaciones del mundo de Diablo, desde las
+              profundidades de los bosques oscuros hasta las catacumbas
+              infernales. Se enfrentan a hordas interminables de demonios,
+              utilizan poderosas habilidades y se equipan con armas y armaduras
+              legendarias para fortalecer su lucha.
+            </p>
+
+            <p>
+              A medida que la batalla se intensifica, el jugador descubre pistas
+              sobre una antigua reliquia conocida como la Piedra del Alma. Se
+              dice que esta piedra contiene un poder inmenso capaz de derrotar a
+              Skarn y cerrar el portal que une los reinos infernales con
+              Santuario. Los Guardianes de la Luz deben encontrar las piezas
+              dispersas de la Piedra del Alma y reunirlas antes de que sea
+              demasiado tarde. En su épica búsqueda, el jugador se enfrenta a
+              jefes demoníacos descomunales, se sumerge en mazmorras llenas de
+              trampas mortales y descubre secretos ancestrales ocultos en cada
+              rincón de Santuario.
+            </p>
+
+            <p>
+              A medida que la historia avanza, el jugador se enfrenta a una
+              elección crucial: sacrificar su propia alma para fortalecer la
+              Piedra del Alma y derrotar a Skarn o resistir la tentación y
+              encontrar otra manera de vencerlo. Esta elección afecta el
+              desenlace del juego y el destino del Santuario.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section
+        class="buildSection bg-black sition-relative justify-content-end d-flex flex-column p-5"
         id="buildSection"
       >
         <article
-          class="class align-self-end d-flex flex-column align-items-center mb-4 me-2 w-50"
+          class="class align-self-end d-flex flex-column align-items-center mb-4 z-2 me-2 w-50"
           id="class"
         ></article>
         <div class="btns" id="btnClass"></div>
-        <article id="build" class="build">
-          <video
-            src="./videos/background_build.mp4"
-            class="background_build position-absolute w-100 h-100 object-fit-cover z-0"
-            autoplay
-            muted
-            loop
-          ></video>
-        </article>
+        <article id="build" class="build"></article>
       </section>
+
+      <section class="position-relative d-flex flex-column">
+        <video
+          loop
+          autoplay
+          src="./background_build.mp4"
+          class="position-absolute objet-fit-cover w-100 h-100 z-1"
+        ></video>
+      </section>
+
+            <!-- DIVISOR -->
+
+            <section>
+              <div>
+                <img
+                  src="./img/divisor/divisor.PNG"
+                  alt="banner"
+                  class="w-100 h-75"
+                />
+              </div>
+            </section>
+
+      <!-- HORRORES -->
+
       <section id="horrors" class="mainBoss">
-        <h1>Horrors</h1>
+        <h1>Horrores</h1>
         <div id="carouselExampleCaptions" class="carousel slide">
           <div class="carousel-indicators">
             <button
@@ -290,7 +407,11 @@
         </div>
       </section>
 
-      <section id="news" class="news">
+
+
+      <!-- PARCHES -->
+
+      <section id="news" class="news bg-dark z-1">
         <article id="newsField" class="newsField"></article>
         <div class="newsBtns">
           <button class="selected">News</button>
@@ -299,6 +420,8 @@
         </div>
       </section>
     </main>
+
+    <!-- FOOTER -->
 
     <footer class="footer">
       <div class="grupo-1">
@@ -333,6 +456,64 @@
       integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
       crossorigin="anonymous"
     ></script>
+
     <script type="module" src="index.js"></script>
+    <script>
+      // const story = document.getElementById('story')
+      const story = document.getElementById("story");
+      const texto = document.createElement("div");
+      let txt = document.createElement("article");
+      const pantalla = document.getElementById("Pantalla");
+      texto.className = "Pantallas";
+      const arr = [
+        "Había una vez un mundo llamado Santuario, asolado por el caos y la oscuridad. Los demonios habían escapado de su prisión y se estaban extendiendo por todo el reino, sembrando terror y destrucción a su paso. Los héroes de antaño, los Nep se habían levantado para enfrentar la amenaza demoníaca, pero sus esfuerzos parecían insuficientes.",
+
+        "En medio de este caos, un nuevo grupo de valientes guerreros emergió: los Guardianes de la Luz. Estos guerreros eran la última esperanza para salvar Santuario. Conocedores de la antigua profecía que hablaba del renacimiento de los Nephalem en tiempos oscuros, los Guardianes se entrenaron para luchar contra los demonios y restaurar el equilibrio en el mundo.",
+
+        "El jugador toma el papel de uno de los Guardianes de la Luz. Su viaje comienza en la ciudad de Westmarch, un bastión en ruinas que alguna vez fue un faro de esperanza. Los demonios habían invadido la ciudad, y sus calles estaban infestadas de monstruos retorcidos y malvados. El jugador se encuentra con otros héroes y juntos forman una alianza para enfrentar la oscuridad.",
+
+        "A medida que avanzan, los Guardianes de la Luz descubren que los demonios están siendo liderados por un poderoso señor demonio llamado Skarn, el Heraldo del Terror. Skarn ha descubierto una manera de invocar a los demonios desde el Infierno Ardiente y los está enviando a Santuario para sembrar el caos. Los Guardianes deben detenerlo antes de que su poder crezca aún más.",
+      ];
+
+      let tamaño = arr.length;
+      const izquierda = document.getElementById("Izquierda");
+      const derecha = document.getElementById("Derecha");
+
+      function cosaQueMuestra(num) {
+        if (num == -1) {
+          return num + 1;
+        } else if (num >= tamaño) {
+          return num--;
+        }
+
+        texto.innerHTML = `
+          <p class="w-100 text animate__animated animate__fadeInDown" >${
+            arr[num]
+          }</p>
+          
+          <div class="d-flex w-100 flex-row-reverse justify-content-between div-main">
+          
+          <button id="Derecha" onclick="cosaQueMuestra(${
+            num + 1
+          })"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+          <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+        </svg></button>
+          <button id="Izquierda" onclick="cosaQueMuestra(${
+            num - 1
+          })"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+          <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+        </svg></button>
+          </div>
+        `;
+      }
+
+      cosaQueMuestra(0);
+
+      pantalla.appendChild(texto);
+
+      // export const getPaper = () => {
+      // const paper = document.createElement('div')
+      // }
+    </script>
   </body>
 </html>

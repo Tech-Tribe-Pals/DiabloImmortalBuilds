@@ -1,5 +1,5 @@
 import { data, classes } from "../index.js";
-
+let fede = document.getElementById("body");
 const myClass = document.getElementById("class"); // Aca se muestran las clases
 const myBtns = document.getElementById("btnClass"); // Botones de las clases
 const build = document.getElementById("build"); // modal principal de build
@@ -56,6 +56,7 @@ export const getClass = (e, value) => {
   btn.onclick = () => getBuild(value);
   btn.className = "btn-Build";
   btn.innerText = "Ver build";
+
   myClass.innerHTML = ` <div id="personaje" class="position-absolute circulo position-relative">
     <img class="position-absolute start-0 coso" src="${e.img}">
     </div>
@@ -71,6 +72,7 @@ export const getClass = (e, value) => {
     </div>
     </div>
     `;
+
   myClass.appendChild(btn);
 };
 // Dentro del div myButns se generara el numero de clases que haya en el juego
@@ -231,27 +233,32 @@ export const getDescription = async (e) => {
 export const getSkills = (e) => {
   const bg = document.createElement("div");
   const modal = document.createElement("div");
+  const skills = document.createElement("div");
   const btnClose = createBtnClose("submodal");
   const videoSkills = document.createElement("video");
-
+  skills.className = "skillsContainer";
   bg.classList = "bgModal";
   modal.className = "skillsModal";
   videoSkills.className = "videoSkills";
 
   data[e].skills.forEach((e) => {
-    modal.innerHTML += `
-    <div class= "w-50 h-100  bg-danger">
-    <img src=${e.img}>
-    <p>${e.title}</p>
+    skills.innerHTML += `
+    <div class= "w-100 h-auto d-flex flex-row justify-content-evenly align-items-center mt-5">
+    <img src=${e.img} class="img-builds-skills">
+    <div class="d-flex flex-column w-50">
+    <h3>${e.title}</h3>
     <p>${e.description}</p>
     </div>
+    </div>
     `;
+    modal.appendChild(skills);
     bg.appendChild(modal);
     build.appendChild(bg);
   });
 
   videoSkills.src = classes[e].videoSkills;
-  videoSkills.controls = true;
+  videoSkills.autoplay = true;
+  videoSkills.controls = false;
   videoSkills.muted = true;
 
   modal.appendChild(btnClose);

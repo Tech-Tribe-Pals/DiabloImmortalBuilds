@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0%;
+}
+
+#Pantalla {
+  padding: 1rem;
+  margin: 0 auto;
+  height: auto;
+  width: 100% !important;
+
+  video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+  }
+
+  article {
+    border: #643843 2px solid;
+    background: url("../img/inicio/fondo_historia.jpg") center no-repeat;
+    background-size: cover;
+    width: 80%;
+  }
+}
+
+.Pantallas {
+  display: none;
+}
+
+.escritorio {
+  color: #643843 !important;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: small;
+}
+
+.pag-2 {
+  margin-left: 4rem;
+}
+
+.tele {
+  display: none !important;
+}
+
+.texto {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  #Pantalla {
+    width: 100%;
+    padding: 0 !important;
+  }
+
+  .Pantallas {
+    background: url("../img/inicio/fondo_historia.jpg") no-repeat;
+    background-position-x: 15%;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    color: #643843 !important;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    p {
+      height: 60vh !important;
+      font-size: 1.1rem;
+    }
+  }
+
+  .article-main {
+    display: none !important;
+  }
+
+  .div-main button {
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .text {
+    padding: 2rem;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+  }
+}

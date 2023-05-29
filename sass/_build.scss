@@ -1,10 +1,10 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #222;
   color: #fff;
   margin: 0;
 }
@@ -35,8 +35,16 @@ body {
 }
 
 .videoSkills {
-  width: 500px;
-  height: auto;
+  width: 700px;
+  height: 400px;
+  position: sticky;
+  top:20%;
+}
+
+#buildSection {
+  background: url("/img/inicio/wallpapersden.com_diablo-immortal-new-2022_1920x1080.jpg")
+    center no-repeat;
+  background-size: cover;
 }
 
 #buildSection,
@@ -160,7 +168,9 @@ canvas {
   width: 100%;
   height: 100vh;
   top: 0;
-  background-color: #222;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+    url("/img/inicio/aaaaaaaaaaaaaaaaaaaaaaaaaa.PNG") center no-repeat;
+  background-size: cover;
   grid-template-areas: "gridL imgClass gridR buildDesc" "btns btns btns btns";
   z-index: 1030;
   .buildGridL {
@@ -361,9 +371,9 @@ canvas {
   }
 }
 .skillsModal {
-  max-height: 500px;
-  width: 70%;
-  padding: 5px;
+  max-height: 700px;
+  width: 85%;
+  padding: 25px;
   display: flex;
   flex-flow: row;
   overflow-y: scroll;
@@ -371,15 +381,20 @@ canvas {
   text-align: left;
   background-color: #444;
   img {
-    width: 50px;
+    width: 75px;
+    height: 75px;
   }
   &::-webkit-scrollbar {
     background-color: #444;
-    width: 7px;
+    width: 1px;
   }
   &::-webkit-scrollbar-thumb {
     background-color: #222;
-    width: 15px;
+    width: 8px;
+  }
+  p {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
 }
 
@@ -436,6 +451,10 @@ canvas {
   }
 }
 @media (max-width: 630px) {
+  .circulo {
+    display: none;
+  }
+
   .build {
     .imgContainer {
       .classImg {
