@@ -277,7 +277,61 @@
         ]
       }
     ],
-    "gems": []
+    "gems": [
+      {
+        "title": "Jade Ensangrentado",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685461089/DH/gems/jadeEnsagrentado_xmhmmz.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30",
+          "+18 p. de índice de combate.",
+          "Aumenta hasta un 8.00% todo el daño que infliges cuando tienes la vida al máximo, con un bonus mínimo de un 8.00*0.5% cuando tienes poca vida. Aumenta un 10% la velocidad de movimiento.",
+          "Daño aumentado un 10.50%. (Se desbloquea en el rango 2)"
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Subyugación",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467622/DH/gems/gui_img_legendarygem_28_enUS_eatwf5.webp",
+        "bonus": [
+          "Aumenta la resonancia un 15.",
+          "+8 p. de índice de combate.",
+          "Infliges un 5.50% más de daño a los enemigos que sufren efectos de pérdida de control.",
+          "Daño aumentado un 6.50%. (Se desbloquea en el rango 2)."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Corazón Congelado",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467716/DH/gems/gui_img_legendarygem_10_yo851l.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Cuando sufres daño, activa un escudo gélido durante 6 s que hiela a tus atacantes y absorbe una cantidad de daño equivalente a un 150% de tu daño base + 1458 p. de daño.",
+          "Escudo gélido no puede obtenerse más de una vez cada 20 s."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Bilis Rezumante",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467775/DH/gems/gui_img_legendarygem_14_enUS_mpmpj9.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Tus ataques tienen un 4% de probabilidad de envenenar a los enemigos para infligirles 25% p. de daño base + 263:.:,; p. de daño por segundo durante 6 s."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Bendición de Valia",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467928/DH/gems/gui_img_legendarygem_19_oj59dz.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Cuando sufres daño, tienes un 20% de probabilidad de desatar la justicia sobre todos los enemigos cercanos, lo que inflige una cantidad de daño equivalente a un 12% de tu vida actual. No puede ocurrir más de una vez cada 20 s."
+        ],
+        "socket": "Legendario"
+      }
+    ]
   },
   {
     "class": "Cruzada",
@@ -564,7 +618,61 @@
         "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
       }
     ],
-    "gems": []
+    "gems": [
+      {
+        "title": "Jade Ensangrentado",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685461089/DH/gems/jadeEnsagrentado_xmhmmz.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30",
+          "+18 p. de índice de combate.",
+          "Aumenta hasta un 8.00% todo el daño que infliges cuando tienes la vida al máximo, con un bonus mínimo de un 8.00*0.5% cuando tienes poca vida. Aumenta un 10% la velocidad de movimiento.",
+          "Daño aumentado un 10.50%. (Se desbloquea en el rango 2)"
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Subyugación",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467622/DH/gems/gui_img_legendarygem_28_enUS_eatwf5.webp",
+        "bonus": [
+          "Aumenta la resonancia un 15.",
+          "+8 p. de índice de combate.",
+          "Infliges un 5.50% más de daño a los enemigos que sufren efectos de pérdida de control.",
+          "Daño aumentado un 6.50%. (Se desbloquea en el rango 2)."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Corazón Congelado",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467716/DH/gems/gui_img_legendarygem_10_yo851l.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Cuando sufres daño, activa un escudo gélido durante 6 s que hiela a tus atacantes y absorbe una cantidad de daño equivalente a un 150% de tu daño base + 1458 p. de daño.",
+          "Escudo gélido no puede obtenerse más de una vez cada 20 s."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Bilis Rezumante",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467775/DH/gems/gui_img_legendarygem_14_enUS_mpmpj9.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Tus ataques tienen un 4% de probabilidad de envenenar a los enemigos para infligirles 25% p. de daño base + 263:.:,; p. de daño por segundo durante 6 s."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Bendición de Valia",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467928/DH/gems/gui_img_legendarygem_19_oj59dz.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Cuando sufres daño, tienes un 20% de probabilidad de desatar la justicia sobre todos los enemigos cercanos, lo que inflige una cantidad de daño equivalente a un 12% de tu vida actual. No puede ocurrir más de una vez cada 20 s."
+        ],
+        "socket": "Legendario"
+      }
+    ]
   },
   {
     "class": "Cazadora de Demonios",
@@ -836,7 +944,61 @@
         "req": ["Nivel necesario: 55", "Clase: Nigromante o Maga"]
       }
     ],
-    "gems": []
+    "gems": [
+      {
+        "title": "Jade Ensangrentado",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685461089/DH/gems/jadeEnsagrentado_xmhmmz.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30",
+          "+18 p. de índice de combate.",
+          "Aumenta hasta un 8.00% todo el daño que infliges cuando tienes la vida al máximo, con un bonus mínimo de un 8.00*0.5% cuando tienes poca vida. Aumenta un 10% la velocidad de movimiento.",
+          "Daño aumentado un 10.50%. (Se desbloquea en el rango 2)"
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Subyugación",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467622/DH/gems/gui_img_legendarygem_28_enUS_eatwf5.webp",
+        "bonus": [
+          "Aumenta la resonancia un 15.",
+          "+8 p. de índice de combate.",
+          "Infliges un 5.50% más de daño a los enemigos que sufren efectos de pérdida de control.",
+          "Daño aumentado un 6.50%. (Se desbloquea en el rango 2)."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Corazón Congelado",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467716/DH/gems/gui_img_legendarygem_10_yo851l.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Cuando sufres daño, activa un escudo gélido durante 6 s que hiela a tus atacantes y absorbe una cantidad de daño equivalente a un 150% de tu daño base + 1458 p. de daño.",
+          "Escudo gélido no puede obtenerse más de una vez cada 20 s."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Bilis Rezumante",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467775/DH/gems/gui_img_legendarygem_14_enUS_mpmpj9.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Tus ataques tienen un 4% de probabilidad de envenenar a los enemigos para infligirles 25% p. de daño base + 263:.:,; p. de daño por segundo durante 6 s."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Bendición de Valia",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467928/DH/gems/gui_img_legendarygem_19_oj59dz.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Cuando sufres daño, tienes un 20% de probabilidad de desatar la justicia sobre todos los enemigos cercanos, lo que inflige una cantidad de daño equivalente a un 12% de tu vida actual. No puede ocurrir más de una vez cada 20 s."
+        ],
+        "socket": "Legendario"
+      }
+    ]
   },
   {
     "class": "Monje",
@@ -1120,7 +1282,61 @@
         ]
       }
     ],
-    "gems": []
+    "gems": [
+      {
+        "title": "Jade Ensangrentado",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685461089/DH/gems/jadeEnsagrentado_xmhmmz.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30",
+          "+18 p. de índice de combate.",
+          "Aumenta hasta un 8.00% todo el daño que infliges cuando tienes la vida al máximo, con un bonus mínimo de un 8.00*0.5% cuando tienes poca vida. Aumenta un 10% la velocidad de movimiento.",
+          "Daño aumentado un 10.50%. (Se desbloquea en el rango 2)"
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Subyugación",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467622/DH/gems/gui_img_legendarygem_28_enUS_eatwf5.webp",
+        "bonus": [
+          "Aumenta la resonancia un 15.",
+          "+8 p. de índice de combate.",
+          "Infliges un 5.50% más de daño a los enemigos que sufren efectos de pérdida de control.",
+          "Daño aumentado un 6.50%. (Se desbloquea en el rango 2)."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Corazón Congelado",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467716/DH/gems/gui_img_legendarygem_10_yo851l.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Cuando sufres daño, activa un escudo gélido durante 6 s que hiela a tus atacantes y absorbe una cantidad de daño equivalente a un 150% de tu daño base + 1458 p. de daño.",
+          "Escudo gélido no puede obtenerse más de una vez cada 20 s."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Bilis Rezumante",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467775/DH/gems/gui_img_legendarygem_14_enUS_mpmpj9.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Tus ataques tienen un 4% de probabilidad de envenenar a los enemigos para infligirles 25% p. de daño base + 263:.:,; p. de daño por segundo durante 6 s."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Bendición de Valia",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467928/DH/gems/gui_img_legendarygem_19_oj59dz.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Cuando sufres daño, tienes un 20% de probabilidad de desatar la justicia sobre todos los enemigos cercanos, lo que inflige una cantidad de daño equivalente a un 12% de tu vida actual. No puede ocurrir más de una vez cada 20 s."
+        ],
+        "socket": "Legendario"
+      }
+    ]
   },
   {
     "class": "Nigromante",
@@ -1396,7 +1612,61 @@
         ]
       }
     ],
-    "gems": []
+    "gems": [
+      {
+        "title": "Jade Ensangrentado",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685461089/DH/gems/jadeEnsagrentado_xmhmmz.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30",
+          "+18 p. de índice de combate.",
+          "Aumenta hasta un 8.00% todo el daño que infliges cuando tienes la vida al máximo, con un bonus mínimo de un 8.00*0.5% cuando tienes poca vida. Aumenta un 10% la velocidad de movimiento.",
+          "Daño aumentado un 10.50%. (Se desbloquea en el rango 2)"
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Subyugación",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467622/DH/gems/gui_img_legendarygem_28_enUS_eatwf5.webp",
+        "bonus": [
+          "Aumenta la resonancia un 15.",
+          "+8 p. de índice de combate.",
+          "Infliges un 5.50% más de daño a los enemigos que sufren efectos de pérdida de control.",
+          "Daño aumentado un 6.50%. (Se desbloquea en el rango 2)."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Corazón Congelado",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467716/DH/gems/gui_img_legendarygem_10_yo851l.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Cuando sufres daño, activa un escudo gélido durante 6 s que hiela a tus atacantes y absorbe una cantidad de daño equivalente a un 150% de tu daño base + 1458 p. de daño.",
+          "Escudo gélido no puede obtenerse más de una vez cada 20 s."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Bilis Rezumante",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467775/DH/gems/gui_img_legendarygem_14_enUS_mpmpj9.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Tus ataques tienen un 4% de probabilidad de envenenar a los enemigos para infligirles 25% p. de daño base + 263:.:,; p. de daño por segundo durante 6 s."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Bendición de Valia",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467928/DH/gems/gui_img_legendarygem_19_oj59dz.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Cuando sufres daño, tienes un 20% de probabilidad de desatar la justicia sobre todos los enemigos cercanos, lo que inflige una cantidad de daño equivalente a un 12% de tu vida actual. No puede ocurrir más de una vez cada 20 s."
+        ],
+        "socket": "Legendario"
+      }
+    ]
   },
   {
     "class": "Maga",
@@ -1682,6 +1952,60 @@
         ]
       }
     ],
-    "gems": []
+    "gems": [
+      {
+        "title": "Jade Ensangrentado",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685461089/DH/gems/jadeEnsagrentado_xmhmmz.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30",
+          "+18 p. de índice de combate.",
+          "Aumenta hasta un 8.00% todo el daño que infliges cuando tienes la vida al máximo, con un bonus mínimo de un 8.00*0.5% cuando tienes poca vida. Aumenta un 10% la velocidad de movimiento.",
+          "Daño aumentado un 10.50%. (Se desbloquea en el rango 2)"
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Subyugación",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467622/DH/gems/gui_img_legendarygem_28_enUS_eatwf5.webp",
+        "bonus": [
+          "Aumenta la resonancia un 15.",
+          "+8 p. de índice de combate.",
+          "Infliges un 5.50% más de daño a los enemigos que sufren efectos de pérdida de control.",
+          "Daño aumentado un 6.50%. (Se desbloquea en el rango 2)."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Corazón Congelado",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467716/DH/gems/gui_img_legendarygem_10_yo851l.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Cuando sufres daño, activa un escudo gélido durante 6 s que hiela a tus atacantes y absorbe una cantidad de daño equivalente a un 150% de tu daño base + 1458 p. de daño.",
+          "Escudo gélido no puede obtenerse más de una vez cada 20 s."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Bilis Rezumante",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467775/DH/gems/gui_img_legendarygem_14_enUS_mpmpj9.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Tus ataques tienen un 4% de probabilidad de envenenar a los enemigos para infligirles 25% p. de daño base + 263:.:,; p. de daño por segundo durante 6 s."
+        ],
+        "socket": "Legendario"
+      },
+      {
+        "title": "Bendición de Valia",
+        "img": "https://res.cloudinary.com/dcmic2snw/image/upload/v1685467928/DH/gems/gui_img_legendarygem_19_oj59dz.webp",
+        "bonus": [
+          "Aumenta la resonancia un 30.",
+          "+18 p. de índice de combate.",
+          "Cuando sufres daño, tienes un 20% de probabilidad de desatar la justicia sobre todos los enemigos cercanos, lo que inflige una cantidad de daño equivalente a un 12% de tu vida actual. No puede ocurrir más de una vez cada 20 s."
+        ],
+        "socket": "Legendario"
+      }
+    ]
   }
 ]

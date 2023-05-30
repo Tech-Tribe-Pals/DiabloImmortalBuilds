@@ -141,10 +141,16 @@ export const getBuild = async (e) => {
     const btnBuild = document.createElement("button");
     btnBuild.className = "btnBuilds";
     btnBuild.innerText = arrElem;
-    if (arrElem !== "skills") {
-      btnBuild.onclick = () => getNada();
-    } else {
-      btnBuild.onclick = () => getSkills(e);
+    switch(arrElem) {
+      case "paragon":
+        btnBuild.onclick = () => getNada();
+        break;
+      case "skills":
+        btnBuild.onclick = () => getSkills(e);
+        break;
+      case "gems":
+        btnBuild.onclick = () => getGems(e);
+        break;
     }
     btnBuildDiv.appendChild(btnBuild);
   });
