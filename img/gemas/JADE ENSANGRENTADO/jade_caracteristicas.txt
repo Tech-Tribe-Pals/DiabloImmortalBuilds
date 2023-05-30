@@ -1,0 +1,6 @@
+Aumenta la resonancia un 30
+
++18 p. de índice de combate.
+
+Aumenta hasta un 8.00% todo el daño que infliges cuando tienes la vida al máximo, con un bonus mínimo de un 8.00*0.5% cuando tienes poca vida. Aumenta un 10% la velocidad de movimiento.
+Daño aumentado un 10.50%. (Se desbloquea en el rango 2

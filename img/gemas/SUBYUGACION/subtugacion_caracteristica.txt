@@ -1,0 +1,6 @@
+Increases Resonance by 15
+
++8 Combat Rating
+
+You deal 5.50% increased damage to enemies suffering loss of control.
+Damage increased by 6.50%. (Unlocks at Rank 2)

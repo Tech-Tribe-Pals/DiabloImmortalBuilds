@@ -1,0 +1,5 @@
+Aumenta la resonancia un 30
+
++18 p. de índice de combate.
+
+Cuando sufres daño, tienes un 20% de probabilidad de desatar la justicia sobre todos los enemigos cercanos, lo que inflige una cantidad de daño equivalente a un 12% de tu vida actual. No puede ocurrir más de una vez cada 20 s.

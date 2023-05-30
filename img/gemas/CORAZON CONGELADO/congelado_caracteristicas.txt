@@ -1,0 +1,6 @@
+Aumenta la resonancia un 30
+
++18 p. de índice de combate.
+
+Cuando sufres daño, activa un escudo gélido durante 6 s que hiela a tus atacantes y absorbe una cantidad de daño equivalente a un 150% de tu daño base + 1458 p. de daño.
+ Escudo gélido no puede obtenerse más de una vez cada 20 s.
