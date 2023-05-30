@@ -60,9 +60,9 @@ export const getClass = (e, value) => {
   myClass.innerHTML = ` <div id="personaje" class="position-absolute circulo position-relative">
     <img class="position-absolute start-0 coso" src="${e.img}">
     </div>
-    <h2 class="align-self-start  fs-1">${e.name}</h2>
+    <h2 class="align-self-start fs-1 title-build">${e.name}</h2>
     <p class="description-p">${e.description}</p>
-    <div class="d-flex flex-row w-100 ">
+    <div class="d-flex flex-row w-100">
     <div class="d-flex flex-column text-start w-50 align-items-center justify-content-center">
     PvE<progress value='${e.pve}' max="100"></progress>
     PvP<progress value='${e.pvp}' max="100"></progress>
@@ -272,7 +272,7 @@ export const getNada = () => {
   bg.classList = "bgModal";
   modal.className = "skillsModal";
   modal.innerHTML += `
-  "Nada"
+  "No se actualizo la informacion"
   `;
   bg.appendChild(modal);
   modal.appendChild(btnClose);

@@ -38,7 +38,7 @@ body {
   width: 700px;
   height: 400px;
   position: sticky;
-  top:20%;
+  top: 20%;
 }
 
 #buildSection {
@@ -394,7 +394,7 @@ canvas {
   }
   p {
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
 }
 
@@ -492,12 +492,38 @@ canvas {
   }
 }
 @media (max-width: 450px) {
+  #buildSection {
+    overflow: hidden !important;
+  }
+
   .class img {
     width: 100%;
     height: auto;
   }
   .buildDescription {
     width: 100%;
+  }
+
+  .btn-Build {
+    font-size: 15px;
+    margin-right: 9rem;
+    background: transparent;
+    border: none;
+    padding: 1em 1.5em;
+    color: whitesmoke;
+    text-transform: uppercase;
+    position: relative;
+    transition: 0.5s ease;
+  }
+
+  .title-build {
+    display: none;
+  }
+  .description-p {
+    display: none;
+  }
+  .article-build {
+    margin-right: 14rem !important;
   }
 }
 

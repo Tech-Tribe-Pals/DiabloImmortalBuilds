@@ -103,6 +103,7 @@
   .news {
     display: flex;
     flex-direction: column-reverse;
+    overflow: hidden;
     .newsBtns {
       height: auto;
       flex-direction: row;
