@@ -253,7 +253,6 @@ export const getSkills = (e) => {
     <img src=${e.img} class="img-builds-skills">
     <div class="d-flex flex-column w-50">
     <h3>${e.title}</h3>
-    <p>${e.description}</p>
     </div>
     </div>
     `;
@@ -270,6 +269,30 @@ export const getSkills = (e) => {
   modal.appendChild(btnClose);
   modal.appendChild(videoSkills);
 };
+const getGems = (e) => {
+  const bg = document.createElement("div");
+  const modal = document.createElement("div");
+  const skills = document.createElement("div");
+  const btnClose = createBtnClose("submodal");
+
+  data[e].gems.forEach((e) => {
+    skills.innerHTML += `
+    <div class= "w-100 h-auto d-flex flex-row justify-content-evenly align-items-center mt-5">
+    <img src=${e.img} class="img-builds-skills">
+    <div class="d-flex flex-column w-50">
+    <h3>${e.title}</h3>
+    <p>${e.description}</p>
+    </div>
+    </div>
+    `;
+    modal.appendChild(skills);
+    bg.appendChild(modal);
+    build.appendChild(bg);
+  });
+
+  modal.appendChild(btnClose);
+  modal.appendChild(videoSkills);
+}
 // Funcion provisoria hasta tener categorias
 export const getNada = () => {
   const bg = document.createElement("div");
