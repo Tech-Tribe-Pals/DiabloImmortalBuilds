@@ -830,6 +830,11 @@ nav img:hover {
   transition: all 300ms ease ease-in-out;
 }
 
+img:hover {
+  filter: brightness(150%);
+  transition: filter 0.4s ease-in-out;
+}
+
 .fa:hover {
   color: rgb(225, 136, 20) !important;
   transition: ease-in-out 1s !important;
